@@ -6,6 +6,7 @@ import IntroSection from "@/components/intro-section";
 import AboutSection from "@/components/about-section";
 import FullWidthSection from "@/components/full-width-section";
 import ServicesSection from "@/components/services-section";
+import CollageSection from "@/components/collage-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";

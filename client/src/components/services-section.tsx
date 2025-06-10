@@ -2,6 +2,7 @@ import familyImage from "@assets/Family Session_1749518229765.jpg";
 import coupleImage from "@assets/Family Session (1)_1749518229765.jpg";
 import maternityImage from "@assets/Brielle Enhanced NR (2)_1749518229764.jpg";
 import newbornImage from "@assets/Brielle Enhanced NR (1)_1749518229763.jpg";
+import collageImage from "@assets/Image 6-9-25 at 9.46 PM_1749520147087.jpeg";
 
 const sessions = [
   {
@@ -37,16 +38,18 @@ export default function ServicesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {sessions.map((session, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="aspect-[3/4] overflow-hidden mb-4">
+              <div className="aspect-[3/4] overflow-hidden relative">
                 <img
                   src={session.image}
                   alt={session.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="font-script text-3xl text-white text-center bg-black/20 backdrop-blur-sm px-6 py-3 rounded-lg group-hover:bg-black/30 transition-all duration-300">
+                    {session.title}
+                  </h3>
+                </div>
               </div>
-              <h3 className="font-serif text-xl text-center group-hover:opacity-70 transition-opacity duration-300">
-                {session.title}
-              </h3>
             </div>
           ))}
         </div>

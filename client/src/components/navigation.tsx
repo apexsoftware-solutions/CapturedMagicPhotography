@@ -38,21 +38,21 @@ export default function Navigation() {
           <div className="hidden lg:flex space-x-8 text-sm font-sans uppercase tracking-wider">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:opacity-70 transition-opacity duration-300"
+              className="text-white hover:opacity-70 transition-opacity duration-300"
             >
               ABOUT AIMEE
             </button>
-            <span className="text-foreground/40">/</span>
+            <span className="text-white/40">/</span>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:opacity-70 transition-opacity duration-300"
+              className="text-white hover:opacity-70 transition-opacity duration-300"
             >
               PRICING
             </button>
-            <span className="text-foreground/40">/</span>
+            <span className="text-white/40">/</span>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:opacity-70 transition-opacity duration-300"
+              className="text-white hover:opacity-70 transition-opacity duration-300"
             >
               ENQUIRE
             </button>
@@ -60,8 +60,8 @@ export default function Navigation() {
 
           {/* Logo - Center */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
-              <div className="font-serif text-xs text-center leading-tight">
+            <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+              <div className="font-serif text-xs text-center leading-tight text-white">
                 <div className="font-semibold">CAPTURED</div>
                 <div className="font-semibold">MAGIC</div>
               </div>
@@ -70,21 +70,21 @@ export default function Navigation() {
 
           {/* Right side social */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="#" className="text-foreground hover:opacity-70 transition-opacity duration-300">
+            <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
               <Instagram size={16} />
             </a>
-            <a href="#" className="text-foreground hover:opacity-70 transition-opacity duration-300">
+            <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
               <Facebook size={16} />
             </a>
-            <div className="w-6 h-6 border border-foreground/20 rounded-sm flex items-center justify-center">
-              <ShoppingBag size={12} />
+            <div className="w-6 h-6 border border-white/20 rounded-sm flex items-center justify-center">
+              <ShoppingBag size={12} className="text-white" />
             </div>
-            <span className="text-xs">0</span>
+            <span className="text-xs text-white">0</span>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-foreground hover:opacity-70 transition-opacity duration-300"
+            className="lg:hidden text-white hover:opacity-70 transition-opacity duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
