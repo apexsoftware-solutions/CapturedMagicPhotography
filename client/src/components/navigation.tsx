@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Instagram, ShoppingBag } from "lucide-react";
+import { Menu, X, Instagram, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import threadsIconWhite from "@assets/Threads icon_1749566558658.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSessionsDropdownOpen, setIsSessionsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,12 +75,52 @@ export default function Navigation() {
                 ABOUT US
               </button>
               <span className="text-white/40">/</span>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-white hover:opacity-70 transition-opacity duration-300"
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsSessionsDropdownOpen(true)}
+                onMouseLeave={() => setIsSessionsDropdownOpen(false)}
               >
-                PRICING
-              </button>
+                <button className="text-white hover:opacity-70 transition-opacity duration-300 flex items-center gap-1">
+                  SESSIONS
+                  <ChevronDown size={12} />
+                </button>
+                {isSessionsDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 py-2 z-50">
+                    <button
+                      onClick={() => scrollToSection("services")}
+                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
+                    >
+                      FAMILIES
+                    </button>
+                    <button
+                      onClick={() => scrollToSection("services")}
+                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
+                    >
+                      COUPLES
+                    </button>
+                    <button
+                      onClick={() => scrollToSection("services")}
+                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
+                    >
+                      MATERNITY
+                    </button>
+                    <button
+                      onClick={() => scrollToSection("services")}
+                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
+                    >
+                      NEWBORN
+                    </button>
+                    <div className="border-t border-gray-200 mt-2 pt-2">
+                      <button
+                        onClick={() => scrollToSection("contact")}
+                        className="w-full text-left px-4 py-2 text-sm font-medium text-foreground hover:bg-black/5 transition-colors duration-300"
+                      >
+                        ENQUIRE
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
               <span className="text-white/40">/</span>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -107,10 +148,6 @@ export default function Navigation() {
               <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
                 <img src={threadsIconWhite} alt="Threads" className="w-4 h-4" />
               </a>
-              <div className="w-6 h-6 border border-white/20 rounded-sm flex items-center justify-center">
-                <ShoppingBag size={12} className="text-white" />
-              </div>
-              <span className="text-xs text-white">0</span>
             </div>
 
             {/* Mobile menu button */}
