@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'Gravity2';
-  src: url('/Fonts/Gravity 2 Regular.ttf') format('truetype');
+  src: url('/gravity2-regular.ttf') format('truetype'),
+       url('/Fonts/Gravity%202%20Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
