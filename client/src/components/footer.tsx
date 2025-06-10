@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="font-sans text-sm text-foreground/60 mb-2">
             Kimberly & Jeff Johnson | Fredericksburg, VA
           </p>
-          <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2">
+          <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2 ml-[-2px] mr-[-2px]">
             <Instagram size={16} />
             @capturedmagicfxbg
             <img src={threadsIconBlack} alt="Threads" className="w-4 h-4 ml-2" />
