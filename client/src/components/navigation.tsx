@@ -140,7 +140,7 @@ export default function Navigation() {
                 <a href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-70 transition-opacity duration-300">
                   <Instagram size={18} />
                 </a>
-                <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
+                <a href="https://www.threads.com/@capturedmagicfxbg" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-70 transition-opacity duration-300">
                   <img src={threadsIconWhite} alt="Threads" className="w-4 h-4" />
                 </a>
               </div>

@@ -13,8 +13,12 @@ export default function Footer() {
             Kimberly & Jeff Johnson | Fredericksburg, VA
           </p>
           <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2">
-            <Instagram size={16} />
-            <img src={threadsIconBlack} alt="Threads" className="w-4 h-4" />
+            <a href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
+              <Instagram size={16} />
+            </a>
+            <a href="https://www.threads.com/@capturedmagicfxbg" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
+              <img src={threadsIconBlack} alt="Threads" className="w-4 h-4" />
+            </a>
             @capturedmagicfxbg
           </p>
           <div className="border-t border-gray-100 pt-8">
