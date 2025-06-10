@@ -23,6 +23,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
+import contactBgImage from "@assets/image_1749565660062.png";
 
 export default function ContactSection() {
   const { toast } = useToast();
@@ -66,24 +67,31 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-32 bg-white">
-      <div className="max-w-2xl mx-auto px-6 lg:px-12 text-center">
+    <section 
+      id="contact" 
+      className="py-32 bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${contactBgImage})` }}
+    >
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      <div className="max-w-2xl mx-auto px-6 lg:px-12 text-center relative z-10">
         <div className="mb-16">
-          <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-4 text-foreground/80">
+          <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-4 text-white/90">
             @capturedmagicfxbg
           </h2>
           <a 
             href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 mb-8"
+            className="inline-block border border-white hover:bg-white hover:text-black text-white px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 mb-8"
           >
             FOLLOW ME ON INSTAGRAM
           </a>
         </div>
 
         {/* Contact Form */}
-        <div className="bg-gray-50 p-8 rounded-lg">
+        <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg">
           <h3 className="font-serif text-2xl mb-8">Get in Touch</h3>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
