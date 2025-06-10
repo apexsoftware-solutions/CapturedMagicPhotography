@@ -9,25 +9,29 @@ const sessions = [
     image: familyImage,
     title: "Families",
     alt: "family photoshoot at countryside location",
-    position: "center center" // Adjust: "left center", "right center", "center top", "center bottom", etc.
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
   },
   {
     image: coupleImage,
     title: "couples",
     alt: "couples photoshoot in beautiful landscape",
-    position: "center center" // Adjust: "left center", "right center", "center top", "center bottom", etc.
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
   },
   {
     image: maternityImage,
     title: "maternity",
     alt: "intimate maternity photoshoot",
-    position: "center center" // Adjust: "left center", "right center", "center top", "center bottom", etc.
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
   },
   {
     image: newbornImage,
     title: "newborn",
     alt: "gentle newborn photoshoot",
-    position: "center center" // Adjust: "left center", "right center", "center top", "center bottom", etc.
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
   }
 ];
 
@@ -47,7 +51,7 @@ export default function ServicesSection() {
                   src={session.image}
                   alt={session.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ objectPosition: session.position }}
+                  style={{ objectPosition: `${session.positionX}% ${session.positionY}%` }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h3 className="font-script text-3xl text-white text-center px-6 py-3 group-hover:opacity-80 transition-all duration-300 font-light border-b border-white pb-2">
