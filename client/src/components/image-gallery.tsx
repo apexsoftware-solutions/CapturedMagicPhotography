@@ -4,6 +4,7 @@ import image2 from "@assets/Brielle Enhanced NR (1)_1749518229763.jpg";
 import image3 from "@assets/Family Session DSC07537_1749518229765.jpg";
 import image4 from "@assets/Brielle Enhanced NR (3)_1749518229764.jpg";
 import image5 from "@assets/Family Session (2)_1749518229765.jpg";
+import image6 from "@assets/test5_1749524606286.jpeg";
 
 const galleryImages = [
   {
@@ -25,6 +26,10 @@ const galleryImages = [
   {
     src: image5,
     alt: "beautiful rural landscape at golden hour"
+  },
+  {
+    src: image6,
+    alt: "professional family photography session"
   }
 ];
 
