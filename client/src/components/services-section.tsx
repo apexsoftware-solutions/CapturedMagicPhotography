@@ -9,8 +9,8 @@ const sessions = [
     image: familyImage,
     title: "Families",
     alt: "family photoshoot at countryside location",
-    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionX: 100, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 100  // Vertical position: 0 = top, 50 = center, 100 = bottom
   },
   {
     image: coupleImage,
@@ -23,8 +23,8 @@ const sessions = [
     image: maternityImage,
     title: "maternity",
     alt: "intimate maternity photoshoot",
-    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionX: 0, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 0  // Vertical position: 0 = top, 50 = center, 100 = bottom
   },
   {
     image: newbornImage,
