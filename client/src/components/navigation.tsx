@@ -111,14 +111,6 @@ export default function Navigation() {
                       >
                         NEWBORN
                       </button>
-                      <div className="mt-2 pt-2">
-                        <button
-                          onClick={() => scrollToSection("contact")}
-                          className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
-                        >
-                          ENQUIRE
-                        </button>
-                      </div>
                     </div>
                   </div>
                 )}
