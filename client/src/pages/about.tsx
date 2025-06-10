@@ -1,10 +1,14 @@
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import { useEffect } from "react";
 import aboutImage1 from "@assets/IMG_0843_1749571537894.jpg";
 import aboutImage2 from "@assets/IMG_3279_1749571542677.jpg";
 import aboutImage3 from "@assets/IMG_0843_1749569934112.jpg";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
