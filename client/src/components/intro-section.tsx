@@ -1,3 +1,7 @@
+import handsImage from "@assets/Family Session (5)_1749523168826.jpg";
+import childImage from "@assets/Family Session DSC06856_1749523172272.jpg";
+import flowersImage from "@assets/Family Session (4)_1749523175905.jpg";
+
 export default function IntroSection() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -6,9 +10,26 @@ export default function IntroSection() {
     }
   };
 
+  const images = [handsImage, childImage, flowersImage];
+
   return (
-    <section className="py-32 bg-white">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+    <section className="py-32 bg-white relative overflow-hidden">
+      {/* Background Images */}
+      <div className="absolute inset-0 flex">
+        {images.map((image, index) => (
+          <div key={index} className="flex-1 relative">
+            <img
+              src={image}
+              alt={`Family moment ${index + 1}`}
+              className="w-full h-full object-cover opacity-10"
+              style={{ aspectRatio: '3/4', objectPosition: 'center' }}
+            />
+          </div>
+        ))}
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <div className="mb-16">
           <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
             HONEST & POETIC CAPTURES OF YOUR LIFE
