@@ -41,20 +41,90 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="aspect-square overflow-hidden cursor-pointer group"
-              onClick={() => onImageClick?.(image.src, image.alt)}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-          ))}
+        <div className="grid grid-cols-6 grid-rows-4 gap-2 h-[800px]">
+          {/* Image 1 - Top left, medium size */}
+          <div
+            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[0].src, galleryImages[0].alt)}
+          >
+            <img
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Image 2 - Top right, tall */}
+          <div
+            className="col-span-2 row-span-3 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[1].src, galleryImages[1].alt)}
+          >
+            <img
+              src={galleryImages[1].src}
+              alt={galleryImages[1].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Image 3 - Top far right, small */}
+          <div
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[2].src, galleryImages[2].alt)}
+          >
+            <img
+              src={galleryImages[2].src}
+              alt={galleryImages[2].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Image 4 - Middle left, small */}
+          <div
+            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[3].src, galleryImages[3].alt)}
+          >
+            <img
+              src={galleryImages[3].src}
+              alt={galleryImages[3].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Image 5 - Middle center, small */}
+          <div
+            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[4].src, galleryImages[4].alt)}
+          >
+            <img
+              src={galleryImages[4].src}
+              alt={galleryImages[4].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Image 6 (test5) - Far right, medium portrait, fully visible */}
+          <div
+            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
+          >
+            <img
+              src={galleryImages[5].src}
+              alt={galleryImages[5].alt}
+              className="w-full h-full object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Bottom spanning image for visual balance */}
+          <div
+            className="col-span-4 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            onClick={() => onImageClick?.(galleryImages[2].src, galleryImages[2].alt)}
+          >
+            <img
+              src={galleryImages[2].src}
+              alt={galleryImages[2].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
         </div>
       </div>
     </section>
