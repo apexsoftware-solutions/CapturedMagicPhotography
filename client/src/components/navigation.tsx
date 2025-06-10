@@ -85,38 +85,40 @@ export default function Navigation() {
                   <ChevronDown size={12} />
                 </button>
                 {isSessionsDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-white/20 py-2 z-50">
-                    <button
-                      onClick={() => scrollToSection("services")}
-                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
-                    >
-                      FAMILIES
-                    </button>
-                    <button
-                      onClick={() => scrollToSection("services")}
-                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
-                    >
-                      COUPLES
-                    </button>
-                    <button
-                      onClick={() => scrollToSection("services")}
-                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
-                    >
-                      MATERNITY
-                    </button>
-                    <button
-                      onClick={() => scrollToSection("services")}
-                      className="w-full text-left px-4 py-2 text-sm text-foreground hover:bg-black/5 transition-colors duration-300"
-                    >
-                      NEWBORN
-                    </button>
-                    <div className="border-t border-gray-200 mt-2 pt-2">
+                  <div className="absolute top-full left-0 mt-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="flex flex-col space-y-3 text-sm font-sans uppercase tracking-wider">
                       <button
-                        onClick={() => scrollToSection("contact")}
-                        className="w-full text-left px-4 py-2 text-sm font-medium text-foreground hover:bg-black/5 transition-colors duration-300"
+                        onClick={() => scrollToSection("services")}
+                        className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
                       >
-                        ENQUIRE
+                        FAMILIES
                       </button>
+                      <button
+                        onClick={() => scrollToSection("services")}
+                        className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
+                      >
+                        COUPLES
+                      </button>
+                      <button
+                        onClick={() => scrollToSection("services")}
+                        className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
+                      >
+                        MATERNITY
+                      </button>
+                      <button
+                        onClick={() => scrollToSection("services")}
+                        className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
+                      >
+                        NEWBORN
+                      </button>
+                      <div className="mt-2 pt-2">
+                        <button
+                          onClick={() => scrollToSection("contact")}
+                          className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
+                        >
+                          ENQUIRE
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
