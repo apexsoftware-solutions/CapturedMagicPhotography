@@ -1,4 +1,4 @@
-import aboutImage from "@assets/Family Session_1749518229765.jpg";
+import aboutImage from "@assets/Brielle Enhanced NR (5)_1749518229764.jpg";
 
 export default function AboutSection() {
   const scrollToSection = (sectionId: string) => {
@@ -9,51 +9,51 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="py-20 lg:py-32 animate-slide-up">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="font-script text-4xl lg:text-6xl text-primary mb-8">
-              Hello, I'm Sarah
+            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
+              HEY, I'M AIMEE
             </h2>
-            <div className="space-y-6 font-serif text-lg leading-relaxed text-foreground">
+            <div className="mb-8">
+              <h3 className="font-script text-xl text-foreground/80 mb-4 italic">
+                your storytelling family & wedding photographer based out of Bristol, UK
+              </h3>
+            </div>
+            <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
-                For over a decade, I've had the privilege of capturing love stories and precious family moments. 
-                My approach combines artistic vision with genuine emotion, creating timeless images that tell your unique story.
+                I've been lucky enough to capture people and their stories for over 5 beautiful years now, and to me it's as simple as this; your life is special and it deserves to be documented. Every story is welcome here.
               </p>
               <p>
-                Based in the heart of the countryside, I draw inspiration from natural light and authentic moments. 
-                Whether it's the gentle touch between newlyweds or the joyful laughter of a growing family, 
-                I believe every moment deserves to be preserved with care and artistry.
+                My work was born from my own little family, starting in the early days when my daughter, Sierra, was just a baby. I want to capture all of it, the grit, the love, the passion you have for the people you've dedicated your life to.
               </p>
               <p>
-                My work has been featured in several wedding publications, but what matters most to me is the 
-                trust my clients place in me to document their most treasured memories.
+                The way I create is heavily inspired by film, art and the connections between us all. I value <em>real</em> stories over all else. The carefree, organic moments that make your life beautiful. I'll guide you gently through your session, moving with the light and laughing alongside you. No forced smiles here. The best moments happen when you allow yourself to just <em>be</em>.
+              </p>
+              <p>
+                Come as you are, honestly, openly, perfectly you.
+              </p>
+              <p>
+                I can't wait to capture your story, but first, let me introduce myself,
               </p>
             </div>
             <div className="mt-8">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="inline-block bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-full font-serif text-lg transition-all duration-300"
+                className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
               >
-                Let's Connect
+                GET TO KNOW ME
               </button>
             </div>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative">
-              <img
-                src={aboutImage}
-                alt="Sarah - Wedding and Family Photographer"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-accent p-6 rounded-2xl shadow-lg">
-                <p className="font-script text-2xl text-primary">
-                  "Capturing magic in <br />every moment"
-                </p>
-              </div>
-            </div>
+            <img
+              src={aboutImage}
+              alt="portrait photoshoot at countryside location"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </div>

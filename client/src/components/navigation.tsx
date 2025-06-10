@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Facebook, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -26,53 +26,65 @@ export default function Navigation() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6",
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-lg"
-          : "bg-background/95 backdrop-blur-sm"
+          ? "bg-background/95 backdrop-blur-sm shadow-sm py-4"
+          : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="font-script text-2xl lg:text-3xl text-primary font-semibold">
-            Captured Magic Photography
-          </div>
-
-          <div className="hidden md:flex space-x-8">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="font-serif text-foreground hover:text-primary transition-colors duration-300"
-            >
-              Home
-            </button>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex justify-between items-center">
+          {/* Left side menu */}
+          <div className="hidden lg:flex space-x-8 text-sm font-sans uppercase tracking-wider">
             <button
               onClick={() => scrollToSection("about")}
-              className="font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:opacity-70 transition-opacity duration-300"
             >
-              About
+              ABOUT AIMEE
             </button>
-            <button
-              onClick={() => scrollToSection("portfolio")}
-              className="font-serif text-foreground hover:text-primary transition-colors duration-300"
-            >
-              Portfolio
-            </button>
+            <span className="text-foreground/40">/</span>
             <button
               onClick={() => scrollToSection("services")}
-              className="font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:opacity-70 transition-opacity duration-300"
             >
-              Services
+              PRICING
             </button>
+            <span className="text-foreground/40">/</span>
             <button
               onClick={() => scrollToSection("contact")}
-              className="font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:opacity-70 transition-opacity duration-300"
             >
-              Contact
+              ENQUIRE
             </button>
           </div>
 
+          {/* Logo - Center */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
+              <div className="font-serif text-xs text-center leading-tight">
+                <div className="font-semibold">CAPTURED</div>
+                <div className="font-semibold">MAGIC</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side social */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a href="#" className="text-foreground hover:opacity-70 transition-opacity duration-300">
+              <Instagram size={16} />
+            </a>
+            <a href="#" className="text-foreground hover:opacity-70 transition-opacity duration-300">
+              <Facebook size={16} />
+            </a>
+            <div className="w-6 h-6 border border-foreground/20 rounded-sm flex items-center justify-center">
+              <ShoppingBag size={12} />
+            </div>
+            <span className="text-xs">0</span>
+          </div>
+
+          {/* Mobile menu button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors duration-300"
+            className="lg:hidden text-foreground hover:opacity-70 transition-opacity duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,37 +94,37 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t border-accent">
-          <div className="px-4 py-2 space-y-2">
+        <div className="lg:hidden bg-background border-t border-accent">
+          <div className="px-6 py-4 space-y-4">
             <button
               onClick={() => scrollToSection("home")}
-              className="block w-full text-left py-2 font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
             >
-              Home
+              HOME
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left py-2 font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
             >
-              About
+              ABOUT AIMEE
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="block w-full text-left py-2 font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
             >
-              Portfolio
+              PORTFOLIO
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left py-2 font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
             >
-              Services
+              PRICING
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="block w-full text-left py-2 font-serif text-foreground hover:text-primary transition-colors duration-300"
+              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
             >
-              Contact
+              ENQUIRE
             </button>
           </div>
         </div>
