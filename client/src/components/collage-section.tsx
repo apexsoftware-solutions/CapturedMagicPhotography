@@ -27,7 +27,10 @@ export default function CollageSection() {
         <img
           src={collageImage}
           alt="Beautiful collage of family and wedding photography sessions"
-          className="w-full h-full object-cover"
+          className="w-full h-[120%] object-cover absolute top-0 left-0"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`
+          }}
           onError={(e) => {
             console.error('Image failed to load:', e);
             console.log('Image source:', collageImage);
