@@ -41,10 +41,11 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-6 grid-rows-4 gap-2 h-[800px]">
-          {/* Image 1 - Top left, medium size */}
+        <div className="grid grid-cols-8 gap-1 auto-rows-[150px]">
+          {/* Row 1 */}
+          {/* Image 1 - Large square */}
           <div
-            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-3 row-span-2 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[0].src, galleryImages[0].alt)}
           >
             <img
@@ -54,9 +55,9 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 2 - Top right, tall */}
+          {/* Image 2 - Medium rectangle */}
           <div
-            className="col-span-2 row-span-3 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[1].src, galleryImages[1].alt)}
           >
             <img
@@ -66,9 +67,9 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 3 - Top far right, small */}
+          {/* Image 3 - Tall rectangle */}
           <div
-            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-3 row-span-3 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[2].src, galleryImages[2].alt)}
           >
             <img
@@ -78,9 +79,10 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 4 - Middle left, small */}
+          {/* Row 2 continues */}
+          {/* Image 4 - Small square */}
           <div
-            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[3].src, galleryImages[3].alt)}
           >
             <img
@@ -90,9 +92,9 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 5 - Middle center, small */}
+          {/* Image 5 - Small square */}
           <div
-            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-1 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[4].src, galleryImages[4].alt)}
           >
             <img
@@ -102,9 +104,10 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 6 (test5) - Far right, medium portrait, fully visible */}
+          {/* Row 3 */}
+          {/* Image 6 (test5) - Medium portrait, fully visible */}
           <div
-            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group rounded-lg"
+            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
           >
             <img
@@ -114,14 +117,27 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Bottom spanning image for visual balance */}
+          {/* Image 1 repeated for balance */}
           <div
-            className="col-span-4 row-span-1 overflow-hidden cursor-pointer group rounded-lg"
-            onClick={() => onImageClick?.(galleryImages[2].src, galleryImages[2].alt)}
+            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[0].src, galleryImages[0].alt)}
           >
             <img
-              src={galleryImages[2].src}
-              alt={galleryImages[2].alt}
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Row 4 */}
+          {/* Image 2 repeated */}
+          <div
+            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[1].src, galleryImages[1].alt)}
+          >
+            <img
+              src={galleryImages[1].src}
+              alt={galleryImages[1].alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
