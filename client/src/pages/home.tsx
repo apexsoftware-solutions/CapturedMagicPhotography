@@ -31,8 +31,8 @@ export default function Home() {
       <ImageGallery onImageClick={openLightbox} />
       <IntroSection />
       <AboutSection />
-      <ServicesSection />
       <CollageSection />
+      <ServicesSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
