@@ -1,4 +1,4 @@
-import aboutImage from "@assets/Brielle Enhanced NR (5)_1749518229764.jpg";
+import aboutImage from "@assets/IMG_0843_1749569934112.jpg";
 
 export default function AboutSection() {
   const scrollToSection = (sectionId: string) => {
@@ -50,7 +50,7 @@ export default function AboutSection() {
           <div className="order-1 lg:order-2">
             <img
               src={aboutImage}
-              alt="portrait photoshoot at countryside location"
+              alt="mother embracing young child in warm indoor family session"
               className="w-full h-auto object-cover"
             />
           </div>
