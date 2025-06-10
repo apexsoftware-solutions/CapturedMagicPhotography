@@ -134,14 +134,23 @@ export default function Navigation() {
               </div>
             </div>
 
-            {/* Right side social */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <a href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-70 transition-opacity duration-300">
-                <Instagram size={16} />
-              </a>
-              <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
-                <img src={threadsIconWhite} alt="Threads" className="w-4 h-4" />
-              </a>
+            {/* Right side social and info */}
+            <div className="hidden lg:flex items-center space-x-6 text-sm font-sans uppercase tracking-wider">
+              <div className="flex items-center space-x-4">
+                <a href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-70 transition-opacity duration-300">
+                  <Instagram size={18} />
+                </a>
+                <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
+                  <img src={threadsIconWhite} alt="Threads" className="w-4 h-4" />
+                </a>
+              </div>
+              <span className="text-white/40">/</span>
+              <button
+                onClick={() => scrollToSection("portfolio")}
+                className="text-white hover:opacity-70 transition-opacity duration-300"
+              >
+                PORTFOLIO
+              </button>
             </div>
 
             {/* Mobile menu button */}
