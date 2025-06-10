@@ -4,7 +4,6 @@ import HeroSection from "@/components/hero-section";
 import ImageGallery from "@/components/image-gallery";
 import IntroSection from "@/components/intro-section";
 import AboutSection from "@/components/about-section";
-import FullWidthSection from "@/components/full-width-section";
 import ServicesSection from "@/components/services-section";
 import CollageSection from "@/components/collage-section";
 import TestimonialsSection from "@/components/testimonials-section";
@@ -32,7 +31,6 @@ export default function Home() {
       <ImageGallery onImageClick={openLightbox} />
       <IntroSection />
       <AboutSection />
-      <FullWidthSection />
       <ServicesSection />
       <CollageSection />
       <TestimonialsSection />
