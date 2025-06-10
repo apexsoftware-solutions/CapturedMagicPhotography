@@ -100,7 +100,7 @@ export default function Navigation() {
 
             {/* Right side social */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
+              <a href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-70 transition-opacity duration-300">
                 <Instagram size={16} />
               </a>
               <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">

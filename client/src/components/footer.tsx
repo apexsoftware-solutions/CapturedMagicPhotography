@@ -6,8 +6,11 @@ export default function Footer() {
           <div className="font-serif text-2xl mb-4">
             Captured Magic Photography
           </div>
-          <p className="font-sans text-sm text-foreground/60 mb-8">
+          <p className="font-sans text-sm text-foreground/60 mb-2">
             Kimberly & Jeff Johnson | Fredericksburg, VA
+          </p>
+          <p className="font-sans text-sm text-foreground/60 mb-8">
+            @capturedmagicfxbg
           </p>
           <div className="border-t border-gray-100 pt-8">
             <p className="font-sans text-xs text-foreground/40">
