@@ -5,6 +5,10 @@ import image3 from "@assets/Family Session DSC07537_1749518229765.jpg";
 import image4 from "@assets/Brielle Enhanced NR (3)_1749518229764.jpg";
 import image5 from "@assets/Family Session (2)_1749518229765.jpg";
 import image6 from "@assets/test5_1749524606286.jpeg";
+import familySessionNewImg from "@assets/Family Session_1749567960547.jpg";
+import cherryBlossomImg from "@assets/Cherry Blossom Mini Session_1749568020409.jpg";
+import autumnMiniImg from "@assets/Autumn Mini 2024_1749568024891.jpg";
+import rainsFamilyImg from "@assets/Rains Family Photo 2024_1749568035923.jpg";
 
 const galleryImages = [
   {
@@ -28,8 +32,20 @@ const galleryImages = [
     alt: "beautiful rural landscape at golden hour"
   },
   {
-    src: image6,
-    alt: "professional family photography session"
+    src: familySessionNewImg,
+    alt: "adorable child in green dress outdoor session"
+  },
+  {
+    src: cherryBlossomImg,
+    alt: "two children running through cherry blossoms"
+  },
+  {
+    src: autumnMiniImg,
+    alt: "intimate autumn mini session couple embrace"
+  },
+  {
+    src: rainsFamilyImg,
+    alt: "mother and daughter embrace golden hour"
   }
 ];
 
@@ -105,19 +121,51 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
           </div>
 
           {/* Row 3 */}
-
-
-          
-
-          {/* Row 4 */}
-          {/* Image 2 repeated */}
+          {/* New Family Session Image */}
           <div
-            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[1].src, galleryImages[1].alt)}
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
           >
             <img
-              src={galleryImages[1].src}
-              alt={galleryImages[1].alt}
+              src={galleryImages[5].src}
+              alt={galleryImages[5].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Cherry Blossom Image */}
+          <div
+            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[6].src, galleryImages[6].alt)}
+          >
+            <img
+              src={galleryImages[6].src}
+              alt={galleryImages[6].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Row 4 */}
+          {/* Autumn Mini Session */}
+          <div
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[7].src, galleryImages[7].alt)}
+          >
+            <img
+              src={galleryImages[7].src}
+              alt={galleryImages[7].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Rains Family Photo */}
+          <div
+            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[8].src, galleryImages[8].alt)}
+          >
+            <img
+              src={galleryImages[8].src}
+              alt={galleryImages[8].alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
