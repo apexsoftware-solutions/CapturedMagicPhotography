@@ -70,11 +70,16 @@ export default function ContactSection() {
       <div className="max-w-2xl mx-auto px-6 lg:px-12 text-center">
         <div className="mb-16">
           <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-4 text-foreground/80">
-            @aimeelaoisephotography
+            @capturedmagicfxbg
           </h2>
-          <button className="border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 mb-8">
+          <a 
+            href="https://www.instagram.com/capturedmagicfxbg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 mb-8"
+          >
             FOLLOW ME ON INSTAGRAM
-          </button>
+          </a>
         </div>
 
         {/* Contact Form */}
