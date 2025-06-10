@@ -39,7 +39,7 @@ export default function CollageSection() {
         {/* Text overlay */}
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="text-white">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 italic">
+            <h2 className="font-gravity2 text-4xl md:text-5xl lg:text-6xl mb-4">
               Your story awaits
             </h2>
             <p className="text-sm md:text-base lg:text-lg tracking-[0.2em] uppercase font-light">
