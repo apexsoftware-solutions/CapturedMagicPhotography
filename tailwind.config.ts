@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'gravity': ['Kalam', 'cursive'],
+        'gravity': ['Allura', 'Alex Brush', 'Herr Von Muellerhoff', 'Pinyon Script', 'Allison', 'cursive'],
         'script': ['Dancing Script', 'Great Vibes', 'cursive'],
         'serif': ['Playfair Display', 'serif'],
         'sans': ['Lato', 'sans-serif'],
