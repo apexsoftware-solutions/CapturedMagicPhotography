@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Instagram, Facebook, ShoppingBag } from "lucide-react";
+import { Menu, X, Instagram, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+// Threads icon component (custom SVG)
+const ThreadsIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.4v-.4C1.5 8.814 2.35 5.96 3.995 3.91 5.852 1.605 8.605.424 12.186.4h.014c2.746 0 5.043.725 6.826 2.155 1.834 1.472 2.974 3.608 2.974 5.845 0 1.247-.4 2.418-1.125 3.295-.725.877-1.79 1.36-2.995 1.36-1.22 0-2.24-.49-2.87-1.38-.63-.89-.63-2.07 0-3.32.315-.625.78-1.1 1.345-1.375.565-.275 1.215-.275 1.78 0 .565.275 1.03.75 1.345 1.375.63 1.25.63 2.43 0 3.32-.63.89-1.65 1.38-2.87 1.38-1.205 0-2.27-.483-2.995-1.36-.725-.877-1.125-2.048-1.125-3.295 0-2.237 1.14-4.373 2.974-5.845C7.143 1.125 9.44.4 12.186.4h.007z"/>
+  </svg>
+);
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
