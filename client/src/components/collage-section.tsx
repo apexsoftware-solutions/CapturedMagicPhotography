@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import collageImage from "@assets/image_1749563645643.png";
+import collageImage from "@assets/Family Session DSC07537_1749518229765.jpg";
 
 export default function CollageSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -24,7 +24,7 @@ export default function CollageSection() {
       </div>
 
       {/* Full-width parallax image */}
-      <div className="relative h-[60vh] overflow-hidden">
+      <div className="relative h-[60vh] overflow-hidden bg-gray-200">
         <div 
           className="absolute inset-0 w-full h-[120%]"
           style={{
@@ -35,6 +35,11 @@ export default function CollageSection() {
             src={collageImage}
             alt="Beautiful collage of family and wedding photography sessions"
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.error('Image failed to load:', e);
+              e.currentTarget.style.display = 'none';
+            }}
+            onLoad={() => console.log('Image loaded successfully')}
           />
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
