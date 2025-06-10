@@ -9,29 +9,33 @@ const sessions = [
     image: familyImage,
     title: "Families",
     alt: "family photoshoot at countryside location",
-    positionX: 100, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 100  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
     image: coupleImage,
     title: "couples",
     alt: "couples photoshoot in beautiful landscape",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
     image: maternityImage,
     title: "maternity",
     alt: "intimate maternity photoshoot",
-    positionX: 0, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 0  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
     image: newbornImage,
     title: "newborn",
     alt: "gentle newborn photoshoot",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 50  // Vertical position: 0 = top, 50 = center, 100 = bottom
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   }
 ];
 
@@ -50,8 +54,11 @@ export default function ServicesSection() {
                 <img
                   src={session.image}
                   alt={session.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ objectPosition: `${session.positionX}% ${session.positionY}%` }}
+                  className="w-full h-full object-cover transition-transform duration-500"
+                  style={{ 
+                    objectPosition: `${session.positionX}% ${session.positionY}%`,
+                    transform: `scale(${session.scale / 100})`
+                  }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h3 className="font-script text-3xl text-white text-center px-6 py-3 group-hover:opacity-80 transition-all duration-300 font-light border-b border-white pb-2">
