@@ -12,10 +12,10 @@ export default function Footer() {
           <p className="font-sans text-sm text-foreground/60 mb-2">
             Kimberly & Jeff Johnson | Fredericksburg, VA
           </p>
-          <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2 ml-[-2px] mr-[-2px]">
+          <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2">
             <Instagram size={16} />
+            <img src={threadsIconBlack} alt="Threads" className="w-4 h-4" />
             @capturedmagicfxbg
-            <img src={threadsIconBlack} alt="Threads" className="w-4 h-4 ml-2" />
           </p>
           <div className="border-t border-gray-100 pt-8">
             <p className="font-sans text-xs text-foreground/40">© 2025 Captured Magic Photography. All rights reserved.</p>
