@@ -23,19 +23,13 @@ export default function AboutSection() {
             </div>
             <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
-                We've been lucky enough to capture people and their stories for over 5 beautiful years now, and to us it's as simple as this; your life is special and it deserves to be documented. Every story is welcome here.
+                We've been capturing people and their stories for over 5 beautiful years. To us it's simple: your life is special and deserves to be documented. Every story is welcome here.
               </p>
               <p>
-                Our work was born from our own love story and growing family. We want to capture all of it, the grit, the love, the passion you have for the people you've dedicated your life to.
-              </p>
-              <p>
-                The way we create is heavily inspired by film, art and the connections between us all. We value <em>real</em> stories over all else. The carefree, organic moments that make your life beautiful. We'll guide you gently through your session, moving with the light and laughing alongside you. No forced smiles here. The best moments happen when you allow yourself to just <em>be</em>.
+                We value <em>real</em> stories over all else. The carefree, organic moments that make your life beautiful. We'll guide you gently through your session, moving with the light and laughing alongside you. The best moments happen when you allow yourself to just <em>be</em>.
               </p>
               <p>
                 Come as you are, honestly, openly, perfectly you.
-              </p>
-              <p>
-                We can't wait to capture your story, but first, let us introduce ourselves,
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
