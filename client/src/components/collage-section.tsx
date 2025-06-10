@@ -60,7 +60,7 @@ export default function CollageSection() {
             <h2 className="font-gravity2 md:text-5xl lg:text-6xl text-[96px] font-normal mt-[2px] mb-[2px] bg-[#ffffff42]">
               Your story awaits
             </h2>
-            <p className="text-sm md:text-base lg:text-lg tracking-[0.2em] uppercase font-light">
+            <p className="text-sm md:text-base lg:text-lg tracking-[0.2em] uppercase font-light bg-[#ffffff42]">
               Let's create something beautiful together
             </p>
           </div>
