@@ -55,13 +55,37 @@ interface ImageGalleryProps {
 
 export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-8 gap-1 auto-rows-[150px]">
+    <section className="py-24">
+      <div className="max-w-8xl mx-auto px-4 lg:px-8">
+        <div className="grid grid-cols-8 gap-2 auto-rows-[180px]">
           {/* Row 1 */}
-          {/* Image 1 - Large square */}
+          {/* Cherry Blossom - Featured large image */}
           <div
-            className="col-span-3 row-span-2 overflow-hidden cursor-pointer group"
+            className="col-span-4 row-span-2 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[6].src, galleryImages[6].alt)}
+          >
+            <img
+              src={galleryImages[6].src}
+              alt={galleryImages[6].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Family Session (child) - Portrait orientation */}
+          <div
+            className="col-span-2 row-span-3 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
+          >
+            <img
+              src={galleryImages[5].src}
+              alt={galleryImages[5].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Brielle Enhanced - Small square */}
+          <div
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[0].src, galleryImages[0].alt)}
           >
             <img
@@ -71,7 +95,8 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 2 - Medium rectangle */}
+          {/* Row 2 */}
+          {/* Newborn session - Medium rectangle */}
           <div
             className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[1].src, galleryImages[1].alt)}
@@ -83,9 +108,9 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 3 - Tall rectangle */}
+          {/* Family Session DSC - Medium rectangle */}
           <div
-            className="col-span-3 row-span-3 overflow-hidden cursor-pointer group"
+            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[2].src, galleryImages[2].alt)}
           >
             <img
@@ -95,8 +120,20 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Row 2 continues */}
-          {/* Image 4 - Small square */}
+          {/* Row 3 */}
+          {/* Rains Family - Large featured */}
+          <div
+            className="col-span-3 row-span-2 overflow-hidden cursor-pointer group"
+            onClick={() => onImageClick?.(galleryImages[8].src, galleryImages[8].alt)}
+          >
+            <img
+              src={galleryImages[8].src}
+              alt={galleryImages[8].alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Brielle Enhanced - Small square */}
           <div
             className="col-span-1 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[3].src, galleryImages[3].alt)}
@@ -108,7 +145,7 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Image 5 - Small square */}
+          {/* Family Session - Small square */}
           <div
             className="col-span-1 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[4].src, galleryImages[4].alt)}
@@ -120,52 +157,15 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
             />
           </div>
 
-          {/* Row 3 */}
-          {/* New Family Session Image */}
-          <div
-            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
-          >
-            <img
-              src={galleryImages[5].src}
-              alt={galleryImages[5].alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-
-          {/* Cherry Blossom Image */}
+          {/* Row 4 */}
+          {/* Autumn Mini Session - Medium rectangle */}
           <div
             className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[6].src, galleryImages[6].alt)}
-          >
-            <img
-              src={galleryImages[6].src}
-              alt={galleryImages[6].alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-
-          {/* Row 4 */}
-          {/* Autumn Mini Session */}
-          <div
-            className="col-span-2 row-span-1 overflow-hidden cursor-pointer group"
             onClick={() => onImageClick?.(galleryImages[7].src, galleryImages[7].alt)}
           >
             <img
               src={galleryImages[7].src}
               alt={galleryImages[7].alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-
-          {/* Rains Family Photo */}
-          <div
-            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[8].src, galleryImages[8].alt)}
-          >
-            <img
-              src={galleryImages[8].src}
-              alt={galleryImages[8].alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
