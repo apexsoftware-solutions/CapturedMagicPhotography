@@ -34,7 +34,7 @@ export default function HeroSection() {
         <div className="font-sans text-sm uppercase tracking-[0.2em] mb-4 opacity-90">
           CAPTURED MAGIC PHOTOGRAPHY
         </div>
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl mb-6 leading-tight tracking-wide font-thin text-center" style={{fontFamily: 'Gravity2, cursive'}}>
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-6 leading-tight tracking-wide font-thin text-center" style={{fontFamily: 'Gravity2, cursive'}}>
           Your story, <em>authentically</em> told
         </h1>
         <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
