@@ -25,10 +25,11 @@ export default function CollageSection() {
 
       {/* Full-width parallax image */}
       <div className="relative h-[60vh] overflow-hidden bg-gray-200">
+        {/* Image layer with parallax - lowest z-index */}
         <div 
-          className="absolute inset-0 w-full h-[120%]"
+          className="absolute inset-0 w-full h-[120%] z-0"
           style={{
-            transform: `translateY(${scrollY * 0.5}px)`,
+            transform: `translateY(${scrollY * 0.3}px)`,
           }}
         >
           <img
@@ -37,13 +38,17 @@ export default function CollageSection() {
             className="w-full h-full object-cover"
             onError={(e) => {
               console.error('Image failed to load:', e);
-              e.currentTarget.style.display = 'none';
+              console.log('Image source:', collageImage);
             }}
-            onLoad={() => console.log('Image loaded successfully')}
+            onLoad={() => console.log('Image loaded successfully:', collageImage)}
           />
         </div>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        
+        {/* Overlay layer - middle z-index */}
+        <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+        
+        {/* Text layer - highest z-index */}
+        <div className="absolute inset-0 flex items-center justify-center z-20">
           <div className="text-center text-white px-8 py-6">
             <h3 className="font-script text-4xl lg:text-5xl mb-4 drop-shadow-lg">
               Your story awaits
