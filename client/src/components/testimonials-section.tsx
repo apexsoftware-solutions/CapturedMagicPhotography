@@ -1,67 +1,38 @@
-import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Emily & James",
-    type: "Wedding Clients",
-    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "Sarah captured our wedding day perfectly. Every photo tells a story and brings back all the emotions we felt. Her artistic eye and gentle approach made us feel so comfortable.",
-  },
-  {
-    name: "The Thompson Family",
-    type: "Family Session",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "Our family photos are absolutely stunning! Sarah has such a gift for capturing natural moments. Our kids were so comfortable with her, and it shows in every image.",
-  },
-  {
-    name: "Lisa & David",
-    type: "Newborn Session",
-    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100",
-    testimonial: "The newborn photos Sarah took of our daughter are treasures we'll keep forever. Her patience and skill created the most beautiful, gentle images during such a special time.",
-  },
-];
+import testimonialsImage from "@assets/Brielle Enhanced NR (3)_1749518229764.jpg";
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 lg:py-32 bg-accent/20 animate-slide-up">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-script text-4xl lg:text-6xl text-primary mb-6">
-            Kind Words
-          </h2>
-          <p className="font-serif text-xl text-foreground max-w-3xl mx-auto">
-            What my clients say about their experience
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="mb-6">
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                </div>
-                <p className="font-serif text-foreground leading-relaxed mb-6">
-                  "{testimonial.testimonial}"
-                </p>
-              </div>
-              <div className="flex items-center">
-                <img
-                  src={testimonial.photo}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-serif font-semibold text-foreground">
-                    {testimonial.name}
-                  </h4>
-                  <p className="font-sans text-sm text-primary">{testimonial.type}</p>
-                </div>
+    <section className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="order-2 lg:order-1">
+            <img
+              src={testimonialsImage}
+              alt="intimate family moment"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          
+          <div className="order-1 lg:order-2">
+            <div className="mb-8">
+              <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
+                L O V E N O T E S
+              </h2>
+            </div>
+            <div className="space-y-8">
+              <blockquote className="font-sans text-base leading-relaxed text-foreground">
+                From the second you meet her, Aimee puts you at ease. Her personality is magic and she makes you feel like you've known her forever<strong>.</strong> She captured such a wide array of details and moments that I will <strong>cherish forever</strong>. Her ability to capture <strong>natural</strong>, <strong>candid</strong> and <strong>fun</strong> moments is a true art and completely down to her gorgeous personality. Thank you so much Aimee for capturing my family, such wonderful memories we'll have on our walls <strong>forever</strong>!
+              </blockquote>
+              <div className="font-serif text-lg">
+                <strong>- Kirstin and family</strong>
               </div>
             </div>
-          ))}
+            <div className="mt-12">
+              <button className="border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300">
+                CAPTURE YOUR STORY
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
