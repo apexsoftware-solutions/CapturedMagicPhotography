@@ -33,9 +33,9 @@ export default function Navigation() {
       )}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-center items-center">
-          {/* Navigation menu - always visible when scrolled, hidden when at top */}
-          {isScrolled && (
+        {/* When scrolled - simple centered navigation */}
+        {isScrolled && (
+          <div className="flex justify-center items-center">
             <div className="flex space-x-8 text-sm font-sans uppercase tracking-wider">
               <button
                 onClick={() => scrollToSection("about")}
@@ -58,69 +58,69 @@ export default function Navigation() {
                 ENQUIRE
               </button>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Full navigation - only visible when at top */}
-          {!isScrolled && (
-            <>
-              {/* Left side menu */}
-              <div className="hidden lg:flex space-x-8 text-sm font-sans uppercase tracking-wider">
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-white hover:opacity-70 transition-opacity duration-300"
-                >
-                  ABOUT US
-                </button>
-                <span className="text-white/40">/</span>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-white hover:opacity-70 transition-opacity duration-300"
-                >
-                  PRICING
-                </button>
-                <span className="text-white/40">/</span>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-white hover:opacity-70 transition-opacity duration-300"
-                >
-                  ENQUIRE
-                </button>
-              </div>
-
-              {/* Logo - Center */}
-              <div className="absolute left-1/2 transform -translate-x-1/2">
-                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-                  <div className="font-serif text-xs text-center leading-tight text-white">
-                    <div className="font-semibold">CAPTURED</div>
-                    <div className="font-semibold">MAGIC</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right side social */}
-              <div className="hidden lg:flex items-center space-x-4">
-                <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
-                  <Instagram size={16} />
-                </a>
-                <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
-                  <Facebook size={16} />
-                </a>
-                <div className="w-6 h-6 border border-white/20 rounded-sm flex items-center justify-center">
-                  <ShoppingBag size={12} className="text-white" />
-                </div>
-                <span className="text-xs text-white">0</span>
-              </div>
-
-              {/* Mobile menu button */}
+        {/* When at top - full navigation layout */}
+        {!isScrolled && (
+          <div className="flex justify-between items-center">
+            {/* Left side menu */}
+            <div className="hidden lg:flex space-x-8 text-sm font-sans uppercase tracking-wider">
               <button
-                className="lg:hidden text-white hover:opacity-70 transition-opacity duration-300"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onClick={() => scrollToSection("about")}
+                className="text-white hover:opacity-70 transition-opacity duration-300"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                ABOUT US
               </button>
-            </>
-          )}
-        </div>
+              <span className="text-white/40">/</span>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-white hover:opacity-70 transition-opacity duration-300"
+              >
+                PRICING
+              </button>
+              <span className="text-white/40">/</span>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-white hover:opacity-70 transition-opacity duration-300"
+              >
+                ENQUIRE
+              </button>
+            </div>
+
+            {/* Logo - Center */}
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                <div className="font-serif text-xs text-center leading-tight text-white">
+                  <div className="font-semibold">CAPTURED</div>
+                  <div className="font-semibold">MAGIC</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side social */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
+                <Instagram size={16} />
+              </a>
+              <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
+                <Facebook size={16} />
+              </a>
+              <div className="w-6 h-6 border border-white/20 rounded-sm flex items-center justify-center">
+                <ShoppingBag size={12} className="text-white" />
+              </div>
+              <span className="text-xs text-white">0</span>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="lg:hidden text-white hover:opacity-70 transition-opacity duration-300"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu - only show when at top of page */}
