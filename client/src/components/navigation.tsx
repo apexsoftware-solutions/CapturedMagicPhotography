@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Instagram, ShoppingBag } from "lucide-react";
 import { cn } from "@/lib/utils";
-import threadsIcon from "@assets/Threads_1749566320973.png";
+import threadsIconWhite from "@assets/Threads icon_1749566558658.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,7 +105,7 @@ export default function Navigation() {
                 <Instagram size={16} />
               </a>
               <a href="#" className="text-white hover:opacity-70 transition-opacity duration-300">
-                <img src={threadsIcon} alt="Threads" className="w-4 h-4" />
+                <img src={threadsIconWhite} alt="Threads" className="w-4 h-4" />
               </a>
               <div className="w-6 h-6 border border-white/20 rounded-sm flex items-center justify-center">
                 <ShoppingBag size={12} className="text-white" />
