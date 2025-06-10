@@ -35,7 +35,7 @@ export default function HeroSection() {
         <div className="font-sans text-sm uppercase tracking-[0.2em] mb-4 opacity-90">
           CAPTURED MAGIC PHOTOGRAPHY
         </div>
-        <h1 className="font-script text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">
+        <h1 className="font-gravity text-4xl sm:text-5xl lg:text-6xl mb-6 leading-tight">
           Your story, <em>authentically</em> told
         </h1>
         <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
