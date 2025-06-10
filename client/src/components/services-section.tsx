@@ -22,20 +22,20 @@ const sessions = [
     scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
+    image: newbornImage,
+    title: "newborn",
+    alt: "gentle newborn photoshoot",
+    positionX: 100, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
+  },
+  {
     image: maternityImage,
     title: "maternity",
     alt: "intimate maternity photoshoot",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
     positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
-    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
-  },
-  {
-    image: newbornImage,
-    title: "newborn",
-    alt: "gentle newborn photoshoot",
-    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
-    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
-    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
+    scale: 110     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   }
 ];
 
