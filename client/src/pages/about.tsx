@@ -136,7 +136,15 @@ export default function About() {
               We would love to learn about your family and create something beautiful together.
             </p>
             <Link
-              href="/#contact"
+              href="/"
+              onClick={() => {
+                setTimeout(() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 100);
+              }}
               className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
             >
               GET IN TOUCH
