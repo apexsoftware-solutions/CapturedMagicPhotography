@@ -1,4 +1,4 @@
-import collageImage from "@assets/Image 6-9-25 at 9.46 PM_1749520147087.jpeg";
+import collageImage from "@assets/Family Session DSC07537_1749518229765.jpg";
 
 export default function CollageSection() {
   return (

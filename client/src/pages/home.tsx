@@ -34,6 +34,7 @@ export default function Home() {
       <AboutSection />
       <FullWidthSection />
       <ServicesSection />
+      <CollageSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
