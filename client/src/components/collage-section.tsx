@@ -56,7 +56,7 @@ export default function CollageSection() {
         
         {/* Text overlay */}
         <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="text-white">
+          <div className="text-white -mt-12">
             <h2 className="font-gravity2 font-normal mt-[2px] mb-[2px] text-[120px] md:text-[140px] lg:text-[160px] pt-[3px] pb-[3px] bg-[#ffffff00]">
               Your story awaits
             </h2>
