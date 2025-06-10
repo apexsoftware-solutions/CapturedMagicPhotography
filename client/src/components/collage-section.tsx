@@ -23,33 +23,20 @@ export default function CollageSection() {
         </div>
       </div>
 
-      {/* Full-width parallax image */}
+      {/* Full-width parallax image - simplified */}
       <div className="relative h-[60vh] overflow-hidden">
-        <div 
-          className="w-full h-full"
-          style={{
-            transform: `translateY(${scrollY * 0.3}px)`,
+        <img
+          src={collageImage}
+          alt="Beautiful collage of family and wedding photography sessions"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Image failed to load:', e);
+            console.log('Image source:', collageImage);
           }}
-        >
-          <img
-            src={collageImage}
-            alt="Beautiful collage of family and wedding photography sessions"
-            className="w-full h-full object-cover"
-            onLoad={() => console.log('Image loaded and should be visible:', collageImage)}
-          />
-        </div>
+          onLoad={() => console.log('Image loaded and should be visible:', collageImage)}
+        />
         
-        {/* Text overlay - positioned absolutely on top */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="text-center text-white px-8 py-6 bg-black bg-opacity-40 rounded-lg">
-            <h3 className="font-script text-4xl lg:text-5xl mb-4 drop-shadow-lg">
-              Your story awaits
-            </h3>
-            <p className="font-sans text-sm uppercase tracking-[0.15em] opacity-90 drop-shadow-lg">
-              Let's create something beautiful together
-            </p>
-          </div>
-        </div>
+
       </div>
 
       {/* Bottom spacing */}
