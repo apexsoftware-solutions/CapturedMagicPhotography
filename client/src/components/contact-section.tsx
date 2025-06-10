@@ -74,7 +74,6 @@ export default function ContactSection() {
     >
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
-      
       <div className="max-w-2xl mx-auto px-6 lg:px-12 text-center relative z-10">
         <div className="mb-16">
           <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-4 text-white/90">
@@ -91,7 +90,7 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg">
+        <div className="backdrop-blur-sm p-8 rounded-lg bg-[#ffffff40]">
           <h3 className="font-serif text-2xl mb-8">Get in Touch</h3>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
