@@ -105,29 +105,9 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
           </div>
 
           {/* Row 3 */}
-          {/* Image 6 (test5) - Medium portrait, fully visible */}
-          <div
-            className="col-span-2 row-span-2 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[5].src, galleryImages[5].alt)}
-          >
-            <img
-              src={galleryImages[5].src}
-              alt={galleryImages[5].alt}
-              className="w-full h-full object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
 
-          {/* Image 1 repeated for balance */}
-          <div
-            className="col-span-3 row-span-1 overflow-hidden cursor-pointer group"
-            onClick={() => onImageClick?.(galleryImages[0].src, galleryImages[0].alt)}
-          >
-            <img
-              src={galleryImages[0].src}
-              alt={galleryImages[0].alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
+
+          
 
           {/* Row 4 */}
           {/* Image 2 repeated */}
