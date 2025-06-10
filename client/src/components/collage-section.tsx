@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import collageImage from "@assets/Family Session DSC07537_1749518229765.jpg";
+import collageImage from "@assets/DSC05259_websize_1749561044691.jpg";
 
 export default function CollageSection() {
   const [scrollY, setScrollY] = useState(0);
