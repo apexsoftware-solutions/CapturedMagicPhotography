@@ -22,7 +22,6 @@ export default function CollageSection() {
           </p>
         </div>
       </div>
-
       {/* Full-width parallax image with text overlay */}
       <div className="relative h-[60vh] overflow-hidden">
         <img
@@ -39,7 +38,7 @@ export default function CollageSection() {
         {/* Text overlay */}
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="text-white">
-            <h2 className="font-gravity2 text-4xl md:text-5xl lg:text-6xl mb-4">
+            <h2 className="font-gravity2 md:text-5xl lg:text-6xl text-[96px] font-normal mt-[2px] mb-[2px]">
               Your story awaits
             </h2>
             <p className="text-sm md:text-base lg:text-lg tracking-[0.2em] uppercase font-light">
@@ -49,7 +48,6 @@ export default function CollageSection() {
         </div>
 
       </div>
-
       {/* Bottom spacing */}
       <div className="py-20"></div>
     </section>
