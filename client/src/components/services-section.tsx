@@ -41,7 +41,7 @@ const sessions = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="pt-12 pb-8 bg-white">
+    <section id="services" className="pt-12 pb-2 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl mb-8">Explore the sessions</h2>
