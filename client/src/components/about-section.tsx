@@ -1,4 +1,5 @@
 import aboutImage from "@assets/IMG_0843_1749569934112.jpg";
+import { Link } from "wouter";
 
 export default function AboutSection() {
   const scrollToSection = (sectionId: string) => {
@@ -39,11 +40,12 @@ export default function AboutSection() {
               >
                 GET TO KNOW US
               </button>
-              <button
+              <Link
+                href="/about"
                 className="inline-block border border-foreground/40 hover:border-foreground text-foreground/70 hover:text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
               >
                 CAN'T GET ENOUGH? READ MORE
-              </button>
+              </Link>
             </div>
           </div>
 
