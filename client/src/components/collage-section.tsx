@@ -23,7 +23,7 @@ export default function CollageSection() {
         </div>
       </div>
 
-      {/* Full-width parallax image - simplified */}
+      {/* Full-width parallax image with text overlay */}
       <div className="relative h-[60vh] overflow-hidden">
         <img
           src={collageImage}
@@ -36,6 +36,17 @@ export default function CollageSection() {
           onLoad={() => console.log('Image loaded and should be visible:', collageImage)}
         />
         
+        {/* Text overlay */}
+        <div className="absolute inset-0 flex items-center justify-center text-center">
+          <div className="text-white">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4 italic">
+              Your story awaits
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg tracking-[0.2em] uppercase font-light">
+              Let's create something beautiful together
+            </p>
+          </div>
+        </div>
 
       </div>
 
