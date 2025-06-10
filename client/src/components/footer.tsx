@@ -7,7 +7,7 @@ export default function Footer() {
             Captured Magic Photography
           </div>
           <p className="font-sans text-sm text-foreground/60 mb-8">
-            Preserving life's most precious moments with timeless elegance
+            Kimberly & Jeff Johnson | Fredericksburg, VA
           </p>
           <div className="border-t border-gray-100 pt-8">
             <p className="font-sans text-xs text-foreground/40">

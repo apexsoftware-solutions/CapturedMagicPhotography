@@ -21,7 +21,7 @@ export default function CollageSection() {
             />
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white bg-black/30 backdrop-blur-sm px-8 py-6 rounded-lg">
+            <div className="text-center text-white px-8 py-6">
               <h3 className="font-script text-4xl lg:text-5xl mb-4">
                 Your story awaits
               </h3>

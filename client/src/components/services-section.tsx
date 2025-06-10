@@ -45,7 +45,7 @@ export default function ServicesSection() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <h3 className="font-script text-3xl text-white text-center bg-black/20 backdrop-blur-sm px-6 py-3 rounded-lg group-hover:bg-black/30 transition-all duration-300">
+                  <h3 className="font-script text-3xl text-white text-center px-6 py-3 group-hover:opacity-80 transition-all duration-300">
                     {session.title}
                   </h3>
                 </div>

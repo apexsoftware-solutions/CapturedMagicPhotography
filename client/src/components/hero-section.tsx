@@ -39,7 +39,7 @@ export default function HeroSection() {
           Your story, <em>authentically</em> told
         </h1>
         <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
-          BRISTOL FAMILY AND WEDDING PHOTOGRAPHER
+          FREDERICKSBURG, VA FAMILY AND WEDDING PHOTOGRAPHERS
         </div>
         <button
           onClick={() => scrollToSection("contact")}

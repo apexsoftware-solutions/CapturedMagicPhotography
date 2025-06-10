@@ -40,7 +40,7 @@ export default function Navigation() {
               onClick={() => scrollToSection("about")}
               className="text-white hover:opacity-70 transition-opacity duration-300"
             >
-              ABOUT AIMEE
+              ABOUT US
             </button>
             <span className="text-white/40">/</span>
             <button
