@@ -85,8 +85,8 @@ export default function Navigation() {
                   <ChevronDown size={12} />
                 </button>
                 {isSessionsDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="flex flex-col space-y-3 text-sm font-sans uppercase tracking-wider">
+                  <div className="absolute top-full left-0 pt-4 z-50">
+                    <div className="flex flex-col space-y-3 text-sm font-sans uppercase tracking-wider animate-in fade-in slide-in-from-top-2 duration-200">
                       <button
                         onClick={() => scrollToSection("services")}
                         className="text-left text-white hover:opacity-70 transition-opacity duration-300 transform hover:translate-x-1 transition-transform"
