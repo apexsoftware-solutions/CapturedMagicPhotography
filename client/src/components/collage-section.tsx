@@ -1,17 +1,33 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import collageImage from "@assets/Family Session DSC07537_1749518229765.jpg";
 
 export default function CollageSection() {
-  const [scrollY, setScrollY] = useState(0);
+  const [parallaxOffset, setParallaxOffset] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Only apply parallax when section is in viewport
+      if (rect.bottom >= 0 && rect.top <= windowHeight) {
+        // Calculate how much the section has scrolled into view
+        const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
+        const maxOffset = rect.height * 0.3; // Adjust this multiplier for parallax intensity
+        setParallaxOffset(scrollProgress * maxOffset);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <section className="bg-background">
+    <section ref={sectionRef} className="bg-background">
       {/* Header content with container */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
         <div className="text-center mb-16">
@@ -29,7 +45,7 @@ export default function CollageSection() {
           alt="Beautiful collage of family and wedding photography sessions"
           className="w-full h-[120%] object-cover absolute top-0 left-0"
           style={{
-            transform: `translateY(${scrollY * 0.5}px)`
+            transform: `translateY(-${parallaxOffset}px)`
           }}
           onError={(e) => {
             console.error('Image failed to load:', e);
