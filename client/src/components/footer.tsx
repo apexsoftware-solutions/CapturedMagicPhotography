@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="bg-white py-16 border-t border-gray-100">
@@ -9,7 +11,8 @@ export default function Footer() {
           <p className="font-sans text-sm text-foreground/60 mb-2">
             Kimberly & Jeff Johnson | Fredericksburg, VA
           </p>
-          <p className="font-sans text-sm text-foreground/60 mb-8">
+          <p className="font-sans text-sm text-foreground/60 mb-8 flex items-center justify-center gap-2">
+            <Instagram size={16} />
             @capturedmagicfxbg
           </p>
           <div className="border-t border-gray-100 pt-8">
