@@ -7,21 +7,24 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install frontend dependencies
+        run: |
+          cd client
+          npm ci
 
       - name: Build frontend
-        run: npm run build --workspace=client
+        run: |
+          cd client
+          npm run build
 
-      - name: Deploy to Hostinger deploy repo
+      - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.HOSTINGER_DEPLOY_TOKEN }}
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
-          publish_branch: main
+          publish_branch: main          # or 'build'—must match Hostinger
           publish_dir: ./client/dist
