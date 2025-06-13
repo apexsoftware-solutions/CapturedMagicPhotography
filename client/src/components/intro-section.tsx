@@ -46,19 +46,19 @@ export default function IntroSection() {
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => scrollToSection("contact")}
-              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10"
+              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
             >
               FAQS
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10"
+              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
             >
               ENQUIRE
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10"
+              className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
             >
               PRICING
             </button>
