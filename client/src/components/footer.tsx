@@ -22,7 +22,7 @@ export default function Footer() {
             @capturedmagicfxbg
           </p>
           <div className="border-t border-gray-100 pt-8">
-            <p className="font-sans text-xs text-foreground/40">© 2025 Captured Magic Photography. All rights reserved.</p>
+            <p className="font-sans text-xs text-foreground/40">© 2025 Captured Magic Photography. All rights reserved</p>
           </div>
         </div>
       </div>
