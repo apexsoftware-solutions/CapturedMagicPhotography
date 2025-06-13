@@ -1,4 +1,4 @@
-import { users, contactInquiries, type User, type InsertUser, type ContactInquiry, type InsertContactInquiry } from "@shared/schema";
+import { users, contactInquiries, emailNotifications, type User, type InsertUser, type ContactInquiry, type InsertContactInquiry, type EmailNotification, type InsertEmailNotification } from "@shared/schema";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -6,6 +6,10 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createContactInquiry(inquiry: InsertContactInquiry): Promise<ContactInquiry>;
   getContactInquiries(): Promise<ContactInquiry[]>;
+  updateContactInquiryStatus(id: number, status: string, sesMessageId?: string, sesStatus?: string): Promise<ContactInquiry | undefined>;
+  createEmailNotification(notification: InsertEmailNotification): Promise<EmailNotification>;
+  getEmailNotificationsByInquiry(inquiryId: number): Promise<EmailNotification[]>;
+  updateEmailNotificationStatus(id: number, sesStatus: string, deliveredAt?: Date, error?: string): Promise<EmailNotification | undefined>;
 }
 
 export class MemStorage implements IStorage {
