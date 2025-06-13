@@ -1,6 +1,6 @@
 # Captured Magic Photography
 
-An elegant wedding and family photography portfolio website featuring sophisticated visual presentation and seamless navigation.
+An elegant family photography portfolio website featuring sophisticated visual presentation and seamless navigation.
 
 ## Features
 
@@ -70,4 +70,4 @@ The application is configured for Replit Deployments with automatic TLS and heal
 
 ---
 
-*Built for professional photography portfolios with emphasis on visual storytelling and user experience.*
+*Built for professional family photography portfolios with emphasis on visual storytelling and user experience.*

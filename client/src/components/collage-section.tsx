@@ -42,7 +42,7 @@ export default function CollageSection() {
       <div className="relative h-[60vh] overflow-hidden">
         <img
           src={collageImage}
-          alt="Beautiful collage of family and wedding photography sessions"
+          alt="Beautiful collage of family photography sessions"
           className="w-full h-[120%] object-cover absolute top-0 left-0"
           style={{
             transform: `translateY(-${parallaxOffset}px)`

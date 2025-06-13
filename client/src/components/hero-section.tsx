@@ -38,7 +38,7 @@ export default function HeroSection() {
           Capturing the magic <em>in the ordinary</em>
         </h1>
         <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
-          FREDERICKSBURG, VA FAMILY AND WEDDING PHOTOGRAPHERS
+          FREDERICKSBURG, VA FAMILY PHOTOGRAPHERS
         </div>
         <button
           onClick={() => scrollToSection("contact")}
