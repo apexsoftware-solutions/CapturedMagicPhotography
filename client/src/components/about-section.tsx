@@ -18,9 +18,7 @@ export default function AboutSection() {
               HEY, WE'RE KIMBERLY & JEFF
             </h2>
             <div className="mb-8">
-              <h3 className="font-script text-xl text-foreground/80 mb-4 italic">
-                your storytelling family & wedding photographers based in Fredericksburg, VA
-              </h3>
+              <h3 className="font-script text-xl text-foreground/80 mb-4 italic">your storytelling family photographers based in Fredericksburg, VA</h3>
             </div>
             <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
