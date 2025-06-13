@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,9 +19,9 @@ jobs:
         run: npm run build --workspace=client
 
       - name: Deploy to Hostinger deploy repo
-        uses: s0/git-publish-subdir-action@v1.5.1
-        env:
-          REPO: https://github.com/apexsoftware-solutions/CapturedMagicDeploy.git
-          BRANCH: main
-          FOLDER: client/dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.HOSTINGER_DEPLOY_TOKEN }}
+          external_repository: apexsoftware-solutions/CapturedMagicDeploy
+          publish_branch: main
+          publish_dir: ./client/dist
