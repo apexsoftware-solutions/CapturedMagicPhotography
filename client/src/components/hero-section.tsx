@@ -35,7 +35,7 @@ export default function HeroSection() {
           CAPTURED MAGIC PHOTOGRAPHY
         </div>
         <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-6 leading-tight tracking-wide font-thin text-center" style={{fontFamily: 'Gravity2, cursive'}}>
-          Your story, <em>authentically</em> told
+          Capturing the magic <em>in the ordinary</em>
         </h1>
         <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
           FREDERICKSBURG, VA FAMILY AND WEDDING PHOTOGRAPHERS
