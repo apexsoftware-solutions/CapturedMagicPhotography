@@ -1,4 +1,5 @@
 name: Build & Deploy to Hostinger
+
 on:
   push:
     branches: [main]
@@ -6,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,10 +18,10 @@ jobs:
       - name: Build frontend
         run: npm run build --workspace=client
 
-      - name: Push to deploy branch
+      - name: Deploy to Hostinger deploy repo
         uses: s0/git-publish-subdir-action@v2
         env:
-          REPO: https://github.com/apexsoftware-solutions/CapturedMagicPhotography.git
-          BRANCH: main # <- or 'build' if you set that in Hostinger
+          REPO: https://github.com/apexsoftware-solutions/CapturedMagicDeploy.git
+          BRANCH: main
           FOLDER: client/dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
