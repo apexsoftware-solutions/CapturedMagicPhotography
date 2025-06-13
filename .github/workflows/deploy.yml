@@ -28,3 +28,4 @@ jobs:
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
           publish_branch: main          # or 'build'—must match Hostinger
           publish_dir: ./client/dist
+          
