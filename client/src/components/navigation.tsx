@@ -166,7 +166,7 @@ export default function Navigation() {
 
       {/* Mobile Menu - only show when at top of page */}
       {isMenuOpen && !isScrolled && (
-        <div className="lg:hidden flex justify-end pr-6 pt-4">
+        <div className="lg:hidden flex justify-start pl-6 pt-4">
           <div className="bg-background border border-accent rounded-lg shadow-lg w-fit animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-4 py-3 space-y-2">
               <button
