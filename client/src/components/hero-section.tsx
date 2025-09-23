@@ -34,9 +34,7 @@ export default function HeroSection() {
         <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-6 leading-tight tracking-wide font-thin text-center" style={{fontFamily: 'Gravity2, cursive'}}>
           Capturing the magic <em>in the ordinary</em>
         </h1>
-        <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">
-          FREDERICKSBURG, VA FAMILY PHOTOGRAPHERS
-        </div>
+        <div className="font-sans text-sm uppercase tracking-[0.15em] mb-8 opacity-90">FREDERICKSBURG, VA FAMILY PHOTOGRAPHER</div>
         <button
           onClick={() => scrollToSection("contact")}
           className="inline-block border border-white hover:bg-white hover:text-black text-white px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
