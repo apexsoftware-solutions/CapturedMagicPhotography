@@ -154,7 +154,6 @@ export default function Navigation() {
           </div>
         )}
       </div>
-
       {/* Mobile Menu - only show when at top of page */}
       {isMenuOpen && !isScrolled && (
         <div className="lg:hidden flex justify-start pl-6 pt-4">
@@ -171,9 +170,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection("about")}
                 className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
                 data-testid="button-about-mobile"
-              >
-                ABOUT US
-              </button>
+              >ABOUT ME</button>
               <button
                 onClick={() => scrollToSection("services")}
                 className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
