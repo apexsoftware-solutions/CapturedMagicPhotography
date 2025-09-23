@@ -10,6 +10,8 @@ export default {
         'script': ['Dancing Script', 'Great Vibes', 'cursive'],
         'serif': ['Playfair Display', 'serif'],
         'sans': ['Lato', 'sans-serif'],
+        'lancelot': ['Lancelot', 'serif'],
+        'niconne': ['Niconne', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
