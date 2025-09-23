@@ -60,21 +60,21 @@ export default function SessionPage() {
       {isNewbornSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-niconne text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
               Some of the sweetest photos happen in mama's arms—right where they feel most at peace.
             </p>
             
             {/* Content Paragraphs */}
             <div className="max-w-3xl mx-auto space-y-6 text-left">
-              <p className="font-lancelot text-lg leading-relaxed text-gray-700">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
                 There's nothing quite like the first days with a new baby. The tiny sounds. The way their whole body curls against you. The quiet hush that settles over a home when everyone is learning to breathe in rhythm with someone new. These moments are tender and slow and sacred—and they are gone before you know it.
               </p>
               
-              <p className="font-lancelot text-lg leading-relaxed text-gray-700">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
                 My newborn sessions are held in the comfort of your home, where you can stay barefoot and relaxed with everything you need close by. There's no need to clean or fuss—just open the door and welcome me into your little world. I'll gently guide when needed, but mostly I'll observe quietly, capturing the way your baby nestles in your arms, the soft glances between you and your spouse, and the sweet chaos of siblings falling in love with the new baby.
               </p>
               
-              <p className="font-lancelot text-lg leading-relaxed text-gray-700">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
                 You don't need to be perfect. You don't need matching outfits or tidy rooms. All you need is to be together, just as you are.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function SessionPage() {
                 className="flex items-center justify-between w-full text-left py-4 border-b border-gray-200 hover:border-gray-400 transition-colors duration-200"
                 data-testid="button-whats-included"
               >
-                <h3 className="font-lancelot text-xl font-medium text-gray-800 uppercase tracking-wide">
+                <h3 className="font-sans text-xl font-medium text-gray-800 uppercase tracking-wide">
                   What's included
                 </h3>
                 <ChevronDown 
@@ -97,7 +97,7 @@ export default function SessionPage() {
               
               {isIncludedOpen && (
                 <div className="py-6 text-left animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="space-y-3 font-lancelot text-lg leading-relaxed text-gray-700">
+                  <div className="space-y-3 font-sans text-lg leading-relaxed text-gray-700">
                     <p>— A 1.5–2 hour in-home session at your pace</p>
                     <p>— Up to 90 hand-edited, high-resolution images in a private gallery</p>
                     <p>— Full printing rights</p>
