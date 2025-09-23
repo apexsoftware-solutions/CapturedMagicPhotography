@@ -47,9 +47,12 @@ export default function SessionPage() {
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90">
+            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90 mb-8">
               NEWBORN
             </h1>
+            <p className="font-gravity2 font-normal text-2xl md:text-3xl lg:text-4xl leading-relaxed">
+              Some of the sweetest photos happen in mama's arms—right where they feel most at peace.
+            </p>
           </div>
         </section>
       )}
