@@ -1,4 +1,4 @@
-import aboutImage from "@assets/IMG_0843_1749569934112.jpg";
+import aboutImage from "@assets/about-image-new.jpg";
 import { Link } from "wouter";
 
 export default function AboutSection() {
