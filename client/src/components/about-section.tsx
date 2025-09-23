@@ -14,9 +14,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[2fr_3fr] gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
-              HEY, WE'RE KIMBERLY & JEFF
-            </h2>
+            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">HEY, I'm KIMBERLY</h2>
             <div className="mb-8">
               <h3 className="font-script text-xl text-foreground/80 mb-4 italic">your storytelling family photographers based in Fredericksburg, VA</h3>
             </div>
