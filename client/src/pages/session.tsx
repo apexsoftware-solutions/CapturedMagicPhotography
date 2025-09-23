@@ -47,7 +47,7 @@ export default function SessionPage() {
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90">
+            <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
               NEWBORN
             </h1>
           </div>
