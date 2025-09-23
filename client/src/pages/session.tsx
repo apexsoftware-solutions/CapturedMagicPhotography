@@ -12,11 +12,7 @@ export default function SessionPage() {
   const sessionTitle = sessionSlug ? sessionSlug.charAt(0).toUpperCase() + sessionSlug.slice(1) : '';
 
   useEffect(() => {
-    const handleScroll = () => {
-      const newScrollY = window.scrollY;
-      console.log(`Scroll Y: ${newScrollY}, Transform: translateY(${newScrollY * 0.5}px)`);
-      setScrollY(newScrollY);
-    };
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -51,8 +47,8 @@ export default function SessionPage() {
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-gravity2 font-normal text-[80px] md:text-[100px] lg:text-[120px] leading-tight">
-              newborn sessions
+            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90">
+              NEWBORN
             </h1>
           </div>
         </section>
