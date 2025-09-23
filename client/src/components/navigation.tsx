@@ -124,15 +124,6 @@ export default function Navigation() {
               </button>
             </div>
 
-            {/* Logo - Center */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-2">
-              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-                <div className="font-serif text-xs text-center leading-tight text-white">
-                  <div className="font-semibold">CAPTURED</div>
-                  <div className="font-semibold">MAGIC</div>
-                </div>
-              </div>
-            </div>
 
             {/* Right side social and info */}
             <div className="hidden lg:flex items-center space-x-6 text-sm font-sans uppercase tracking-wider">
