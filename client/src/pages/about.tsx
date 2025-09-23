@@ -23,7 +23,6 @@ export default function About() {
           </Link>
         </div>
       </div>
-
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-6 lg:px-12 py-16">
         {/* Header */}
@@ -63,9 +62,7 @@ export default function About() {
 
           {/* Our Philosophy */}
           <div className="mb-12">
-            <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">
-              OUR PHILOSOPHY
-            </h3>
+            <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">MY PHILOSOPHY</h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
               Every session with us is designed to feel natural and comfortable. We guide you gently through moments that feel authentic to your family's dynamic. Whether it's the way your toddler reaches for you when they're tired, or how your partner looks at you when you're laughing together – these are the moments that matter.
             </p>
