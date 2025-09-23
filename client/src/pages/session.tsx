@@ -47,10 +47,18 @@ export default function SessionPage() {
           />
           <div className="absolute inset-0 bg-black/20" />
           <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90 mb-8">
+            <h1 className="font-sans text-sm uppercase tracking-[0.2em] opacity-90">
               NEWBORN
             </h1>
-            <p className="font-gravity2 font-normal text-2xl md:text-3xl lg:text-4xl leading-relaxed">
+          </div>
+        </section>
+      )}
+
+      {/* Tagline Section - Below Photo */}
+      {isNewbornSession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-gravity2 font-normal text-2xl md:text-3xl lg:text-4xl leading-relaxed text-gray-800">
               Some of the sweetest photos happen in mama's arms—right where they feel most at peace.
             </p>
           </div>
