@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { ArrowLeft, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import newbornImage from "@assets/DSC06818_1758668103121.jpg";
+import newbornCollage from "@assets/newborn-collage.jpg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -112,6 +113,15 @@ export default function SessionPage() {
               <p className="font-lancelot text-lg leading-relaxed text-gray-700 text-left">
                 Whether this is your first baby or your fifth, I would be honored to document the quiet beauty of these early days—so you can return to them again and again, long after the newborn smell has faded.
               </p>
+            </div>
+
+            {/* Newborn Photo Collage */}
+            <div className="max-w-5xl mx-auto mt-16">
+              <img
+                src={newbornCollage}
+                alt="Beautiful collage of intimate newborn moments - tiny hands, gentle touches, and peaceful sleeping baby"
+                className="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </section>
