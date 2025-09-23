@@ -166,32 +166,38 @@ export default function Navigation() {
 
       {/* Mobile Menu - only show when at top of page */}
       {isMenuOpen && !isScrolled && (
-        <div className="lg:hidden bg-background border-t border-accent">
-          <div className="px-6 py-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
-            >
-              HOME
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
-            >
-              ABOUT US
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
-            >
-              PRICING
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left py-2 font-sans text-sm uppercase tracking-wider text-foreground"
-            >
-              ENQUIRE
-            </button>
+        <div className="lg:hidden flex justify-end pr-6 pt-4">
+          <div className="bg-background border border-accent rounded-lg shadow-lg w-fit animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="px-4 py-3 space-y-2">
+              <button
+                onClick={() => scrollToSection("home")}
+                className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
+                data-testid="button-home-mobile"
+              >
+                HOME
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
+                data-testid="button-about-mobile"
+              >
+                ABOUT US
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
+                data-testid="button-pricing-mobile"
+              >
+                PRICING
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
+                data-testid="button-enquire-mobile"
+              >
+                ENQUIRE
+              </button>
+            </div>
           </div>
         </div>
       )}
