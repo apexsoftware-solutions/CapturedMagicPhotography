@@ -34,7 +34,7 @@ export default function AboutSection() {
                 onClick={() => scrollToSection("contact")}
                 className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
               >
-                GET TO KNOW US
+                GET TO KNOW ME
               </button>
               <Link
                 href="/about"
