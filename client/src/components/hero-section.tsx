@@ -31,9 +31,6 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 text-center text-white px-4 max-w-2xl mx-auto">
-        <div className="font-sans text-sm uppercase tracking-[0.2em] mb-4 opacity-90">
-          CAPTURED MAGIC PHOTOGRAPHY
-        </div>
         <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-6 leading-tight tracking-wide font-thin text-center" style={{fontFamily: 'Gravity2, cursive'}}>
           Capturing the magic <em>in the ordinary</em>
         </h1>
