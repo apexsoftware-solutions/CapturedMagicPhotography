@@ -86,7 +86,7 @@ export default function About() {
           {/* Our Journey */}
           <div className="mb-12">
             <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">
-              OUR JOURNEY
+              MY JOURNEY
             </h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
               We started this journey over five years ago, and each session has taught us something new about the art of storytelling through photography. We've learned that the best photographs happen when families feel completely at ease – when children can be children, when parents can simply be present with each other.
