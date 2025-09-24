@@ -14,19 +14,13 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[2fr_3fr] gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">HEY, I'm KIMBERLY</h2>
-            <div className="mb-8">
-              <h3 className="font-script text-xl text-foreground/80 mb-4 italic">your storytelling family photographers based in Fredericksburg, VA</h3>
-            </div>
+            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">HELLO, I'M KIMBERLY</h2>
             <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
-                We've been capturing people and their stories for over 5 beautiful years. To us it's simple: your life is special and deserves to be documented. Every story is welcome here.
+                Hello, I'm Kimberly—a photographer, mother, and old fashioned homemaker. I live in Fredericksburg, Virginia, where I raise three little ones, homeschool Charlotte Mason style. I spend my days noticing the beauty tucked into the folds of our ordinary family life.
               </p>
               <p>
-                We value <em>real</em> stories over all else. The carefree, organic moments that make your life beautiful. We'll guide you gently through your session, moving with the light and laughing alongside you. The best moments happen when you allow yourself to just <em>be</em>.
-              </p>
-              <p>
-                Come as you are, honestly, openly, perfectly you.
+                My sessions are soft and simple. A little light, a little laughter, a little stillness. I don't chase perfection—I look for the truth of love as it really is, right now.
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
