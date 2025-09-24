@@ -38,12 +38,12 @@ export default function About() {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-          {/* Headshot Photo - Small and Centered */}
-          <div className="mb-12 flex justify-center">
+          {/* Headshot Photo */}
+          <div className="mb-12">
             <img
               src={aboutImage3}
               alt="Kimberly, photographer and mother"
-              className="w-64 h-auto rounded-lg shadow-sm"
+              className="w-full h-auto rounded-lg shadow-sm"
             />
           </div>
 
