@@ -9,21 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout (disable default creds; we'll use your PAT)
+      # 1) Checkout (disable default creds; we'll use your PAT instead)
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      # 2) Node setup (pin a modern Node so npm ci/build is predictable)
+      # 2) Setup Node (no cache, simplest)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: client/package-lock.json
 
-      # 3) Install frontend deps
+      # 3) Install frontend dependencies
       - name: Install frontend dependencies
         working-directory: client
         run: npm ci
@@ -33,26 +31,23 @@ jobs:
         working-directory: client
         run: npm run build
 
-      # (Optional but helpful) Show where the build actually ended up
+      # 5) Inspect build output (optional but very helpful if deploy path is wrong)
       - name: Inspect build output
         run: |
-          echo "Repo root contents:"
-          ls -la
-          echo "Client dir contents:"
-          ls -la client || true
-          echo "Built artifacts (common locations):"
+          echo "Root contents:" && ls -la
+          echo "Client contents:" && ls -la client || true
+          echo "Build artifacts (check which folder exists):"
           ls -la client/dist || true
           ls -la client/build || true
 
-      # 5) Deploy to external repo (Hostinger deploy repo) using your PAT secret
+      # 6) Deploy to Hostinger repo (using your DEPLOY_TOKEN secret)
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}  
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
           publish_branch: main
-          # If your build is Vite (default): client/dist
-          # If it's Create React App:     client/build
+          # Adjust this line if your build goes to "client/build" instead of "client/dist"
           publish_dir: client/dist
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
