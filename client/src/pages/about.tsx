@@ -28,23 +28,32 @@ export default function About() {
         {/* Header */}
         <header className="mb-16 text-center">
           <h1 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
-            OUR STORY
+            ABOUT ME
           </h1>
           <h2 className="font-script text-3xl lg:text-4xl text-foreground mb-8 italic leading-relaxed">
-            The heart behind Captured Magic Photography
+            I'm Kimberly
           </h2>
           <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
         </header>
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-          {/* Opening */}
+          {/* Headshot Photo - Small and Centered */}
+          <div className="mb-12 flex justify-center">
+            <img
+              src={aboutImage3}
+              alt="Kimberly, photographer and mother"
+              className="w-64 h-auto rounded-lg shadow-sm"
+            />
+          </div>
+
+          {/* Personal Introduction */}
           <div className="mb-12">
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              Photography found us in the most beautiful way – through our own love story and the journey of building our family. What started as a desire to document our own precious moments has grown into a passion for preserving the stories of families just like ours.
+              I'm a photographer, a mother of three, and a firm believer that the quietest moments often turn out to be the most meaningful ones. I live just outside Fredericksburg, Virginia, where life hums along with garden chores, schoolwork at the kitchen table, and the endless, sacred work of raising children.
             </p>
             <p className="font-sans text-lg leading-relaxed text-foreground">
-              We believe that every family's story deserves to be told with authenticity, warmth, and artistry. Our approach isn't about perfect poses or forced smiles – it's about capturing the real, unscripted moments that make your family uniquely yours.
+              I come from a large, joyfully chaotic homeschool family—twelve children in all—and as the oldest girl, I was a second pair of hands from the beginning. I grew up holding babies, calming tantrums, folding laundry with a baby on my hip, and learning how to be gentle and strong at the same time. That early life taught me to notice people, to serve with love, and to find beauty in the everyday.
             </p>
           </div>
 
@@ -56,18 +65,17 @@ export default function About() {
               className="w-full h-auto rounded-lg shadow-sm"
             />
             <p className="text-sm text-foreground/60 font-sans italic mt-4 text-center">
-              The quiet moments between mother and child – these are the treasures we seek to preserve
+              The gentle moments between mother and child
             </p>
           </div>
 
-          {/* Our Philosophy */}
+          {/* Current Life */}
           <div className="mb-12">
-            <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">MY PHILOSOPHY</h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              Every session with us is designed to feel natural and comfortable. We guide you gently through moments that feel authentic to your family's dynamic. Whether it's the way your toddler reaches for you when they're tired, or how your partner looks at you when you're laughing together – these are the moments that matter.
+              Now, I homeschool my own children and spend weekends capturing photographs of other families in their own beautiful, ordinary rhythm. I work mostly in the evenings or on Saturdays when my husband is home—he's my greatest support, he is a wedding videographer so we often do weddings together, we love being together!
             </p>
             <p className="font-sans text-lg leading-relaxed text-foreground">
-              Our work is heavily inspired by the golden hour light, the changing seasons, and the beautiful landscapes of Virginia. We love incorporating natural elements that speak to your family's story and create images that feel timeless rather than trendy.
+              I photograph newborns, children, couples, and families—especially in the in-between moments. A little girl tangled in her mother's skirt. A toddler asleep on his father's shoulder. The way a grandmother lights up when she holds her grandson. These are the things I love to preserve.
             </p>
           </div>
 
@@ -75,52 +83,21 @@ export default function About() {
           <div className="mb-12">
             <img
               src={aboutImage2}
-              alt="Mother and child reading together on couch in natural light"
+              alt="Quiet family moments captured naturally"
               className="w-full h-auto rounded-lg shadow-sm"
             />
             <p className="text-sm text-foreground/60 font-sans italic mt-4 text-center">
-              Everyday moments like story time become heirlooms when captured with intention
+              Finding beauty in the everyday moments of family life
             </p>
           </div>
 
-          {/* Our Journey */}
+          {/* Photography Style */}
           <div className="mb-12">
-            <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">
-              MY JOURNEY
-            </h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              We started this journey over five years ago, and each session has taught us something new about the art of storytelling through photography. We've learned that the best photographs happen when families feel completely at ease – when children can be children, when parents can simply be present with each other.
+              My style is gentle, natural, and led by emotion rather than expectation. I don't ask your children to perform or pose. I follow their lead and capture the love that's already there.
             </p>
             <p className="font-sans text-lg leading-relaxed text-foreground">
-              Based in the heart of Virginia, we've had the privilege of documenting families across Fredericksburg and the surrounding areas. From the historic charm of downtown to the rolling hills of the countryside, we know all the perfect spots that will complement your family's unique story.
-            </p>
-          </div>
-
-          {/* Third Image */}
-          <div className="mb-12">
-            <img
-              src={aboutImage3}
-              alt="Intimate family moment in warm indoor setting"
-              className="w-full h-auto rounded-lg shadow-sm"
-            />
-            <p className="text-sm text-foreground/60 font-sans italic mt-4 text-center">
-              Creating space for authentic connection in every frame
-            </p>
-          </div>
-
-          {/* What Sets Us Apart */}
-          <div className="mb-12">
-            <h3 className="font-sans text-xl uppercase tracking-wider text-foreground mb-6">
-              WHAT SETS US APART
-            </h3>
-            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              We understand that every family is different. Some families are naturally affectionate and expressive, while others show love in quieter ways. Some children are natural performers, while others are more reserved. We adapt our approach to honor your family's authentic dynamic.
-            </p>
-            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              Our sessions feel more like a gentle adventure than a traditional photo shoot. We might explore a field together, build sandcastles at the beach, or simply snuggle up at home with your favorite books. The goal is always the same – to create an experience that feels true to who you are as a family.
-            </p>
-            <p className="font-sans text-lg leading-relaxed text-foreground">
-              When you receive your gallery, you'll find images that tell the complete story of your session – the laughter, the quiet moments, the in-between expressions that happen when everyone forgets about the camera. These are the photographs that will become treasured family heirlooms.
+              If your life is full of crumbs and cuddles, if your days are sweet but a little messy, if you want photos that feel like memory and not just image—I'd be honored to photograph you.
             </p>
           </div>
 
@@ -130,7 +107,7 @@ export default function About() {
               Ready to tell your story?
             </h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-8">
-              We would love to learn about your family and create something beautiful together.
+              I would love to learn about your family and create something beautiful together.
             </p>
             <Link
               href="/"
