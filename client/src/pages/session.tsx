@@ -62,7 +62,7 @@ export default function SessionPage() {
       {isFamiliesSession && (
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div
-            className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover md:bg-contain bg-center bg-no-repeat"
             style={{ 
               backgroundImage: `url(${familiesImage})`
             }}
