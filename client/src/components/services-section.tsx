@@ -1,4 +1,4 @@
-import familyImage from "@assets/DSC06012_websize_1749561206339.jpg";
+import familyImage from "@assets/families-session-cover.jpg";
 import coupleImage from "@assets/Family Session (1)_1749518229765.jpg";
 import maternityImage from "@assets/IMG_3298_1749572272844.jpg";
 import newbornImage from "@assets/Brielle Enhanced NR (2)_1749518229764.jpg";
