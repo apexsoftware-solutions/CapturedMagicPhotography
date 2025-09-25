@@ -180,7 +180,7 @@ export default function Navigation() {
                 className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
                 data-testid="button-pricing-mobile"
               >
-                PRICING
+                SESSIONS
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
