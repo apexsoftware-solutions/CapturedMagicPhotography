@@ -5,6 +5,7 @@ import newbornImage from "@assets/DSC06818_1758668103121.jpg";
 import newbornCollage from "@assets/newborn-collage.jpg";
 import familiesImage from "@assets/families-session-hero-new.jpg";
 import couplesImage from "@assets/couples-session-hero.jpg";
+import yourStoryImage from "@assets/DSC03025_1758844287458.jpeg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -26,6 +27,8 @@ export default function SessionPage() {
   const isFamiliesSession = sessionSlug === 'families';
   // Check if this is the couples session page
   const isCouplesSession = sessionSlug === 'couples';
+  // Check if this is the your story session page
+  const isYourStorySession = sessionSlug === 'your-story';
 
   return (
     <div className="min-h-screen bg-white">
@@ -309,8 +312,127 @@ export default function SessionPage() {
         </section>
       )}
 
+      {/* Your Story Hero Section - Full Width Scaling */}
+      {isYourStorySession && (
+        <section className="relative w-full">
+          <div className="relative w-full">
+            <img
+              src={yourStoryImage}
+              alt="Beautiful family lifestyle photography session"
+              className="w-full h-auto object-contain"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  YOUR STORY
+                </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Your Story Content Section */}
+      {isYourStorySession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+              Because one day, you'll want to relive this chapter.
+            </p>
+            
+            {/* Content Paragraphs */}
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Every family has a story—made up of the little things you do together, day after day, season after season.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Maybe it's a cozy autumn afternoon with tea and story time, a summer day spent playing on the beach, or a picnic under the shade of your favorite tree. Maybe it's baking in the kitchen with little helpers beside you, building forts in the living room, or wandering barefoot through the garden.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                These sessions are relaxed and unhurried, leaving plenty of room for laughter, play, and the quiet in-between moments. They aren't about stiff poses or forced smiles—they're about you. The way you look at each other. The way your child's hand fits perfectly in yours. The joy of doing something you already love, together.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Your Story Sessions are designed to take your favorite memories with your favorite people and hold onto them in the most beautiful way—so when the season passes, you'll always have more than just the memory. You'll have the feeling, the connection, and the proof of the life you built together.
+              </p>
+            </div>
+
+            {/* Closing Tagline */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+                The simple, beautiful moments you'll never want to forget.
+              </p>
+            </div>
+
+            {/* Recent Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful story sessions</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/qrnWVQWnQMGy6" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Beach
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/ScVWorVtg5pUA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Long Summer Afternoon
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/jjhBKf1538Jgn" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Breedlove Newborn Home Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/JnirKe14AuDvm" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Family Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      )}
+
       {/* Other Sessions - Default Layout */}
-      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && (
+      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && !isYourStorySession && (
         <div className="pt-20 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-script text-5xl lg:text-7xl text-primary mb-8">
