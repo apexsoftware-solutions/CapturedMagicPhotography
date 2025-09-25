@@ -3,6 +3,7 @@ import coupleImage from "@assets/Family Session (1)_1749518229765.jpg";
 import maternityImage from "@assets/IMG_3298_1749572272844.jpg";
 import newbornImage from "@assets/newborn-session-cover.jpg";
 import ourStoryImage from "@assets/our-story-session-cover.jpg";
+import mommyAndMeImage from "@assets/mommy-and-me-session-cover.jpg";
 import collageImage from "@assets/Image 6-9-25 at 9.46 PM_1749520147087.jpeg";
 import { Link } from "wouter";
 
@@ -51,6 +52,15 @@ const sessions = [
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
     positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
     scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
+  },
+  {
+    image: mommyAndMeImage,
+    title: "Mommy & Me",
+    slug: "mommy-and-me",
+    alt: "tender mother and child photoshoot capturing intimate bonding moments",
+    positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
+    positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
+    scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   }
 ];
 
@@ -62,7 +72,7 @@ export default function ServicesSection() {
           <h2 className="font-serif text-3xl mb-8">Explore the sessions</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {sessions.map((session, index) => (
             <Link key={index} href={`/session/${session.slug}`}>
               <div className="group cursor-pointer">
