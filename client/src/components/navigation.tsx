@@ -35,9 +35,9 @@ export default function Navigation() {
       )}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* When scrolled - simple centered navigation */}
+        {/* When scrolled - simple centered navigation - Desktop only */}
         {isScrolled && (
-          <div className="flex justify-center items-center">
+          <div className="hidden lg:flex justify-center items-center">
             <div className="flex space-x-8 text-sm font-sans uppercase tracking-wider">
               <button
                 onClick={() => scrollToSection("about")}
@@ -153,9 +153,21 @@ export default function Navigation() {
             </button>
           </div>
         )}
+
+        {/* Mobile hamburger button when scrolled - always visible */}
+        {isScrolled && (
+          <div className="lg:hidden flex justify-end">
+            <button
+              className="text-foreground hover:opacity-70 transition-opacity duration-300"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        )}
       </div>
-      {/* Mobile Menu - only show when at top of page */}
-      {isMenuOpen && !isScrolled && (
+      {/* Mobile Menu - always available */}
+      {isMenuOpen && (
         <div className="lg:hidden flex justify-start pl-6 pt-4">
           <div className="bg-background border border-accent rounded-lg shadow-lg w-fit animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="px-4 py-3 space-y-2">
