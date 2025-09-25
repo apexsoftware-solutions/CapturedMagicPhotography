@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout (disable default creds; we'll use your PAT instead)
+      # 1) Checkout (disable default creds; we'll use your DEPLOY_TOKEN)
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      # 2) Setup Node (no cache, simplest)
+      # 2) Setup Node (simple)
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,23 +31,22 @@ jobs:
         working-directory: client
         run: npm run build
 
-      # 5) Inspect build output (optional but very helpful if deploy path is wrong)
+      # 5) Inspect build output (helps verify publish_dir)
       - name: Inspect build output
         run: |
           echo "Root contents:" && ls -la
           echo "Client contents:" && ls -la client || true
-          echo "Build artifacts (check which folder exists):"
-          ls -la client/dist || true
-          ls -la client/build || true
+          echo "client/dist:" && ls -la client/dist || true
+          echo "client/build:" && ls -la client/build || true
 
-      # 6) Deploy to Hostinger repo (using your DEPLOY_TOKEN secret)
+      # 6) Deploy to Hostinger repo using your DEPLOY_TOKEN
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
-          publish_branch: main
-          # Adjust this line if your build goes to "client/build" instead of "client/dist"
+          publish_branch: main            # <-- change to target repo's default if not 'main'
+          # adjust this depending on build output (vite -> dist, CRA -> build)
           publish_dir: client/dist
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
