@@ -28,11 +28,11 @@ export default function IntroSection() {
         ))}
       </div>
       
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Dark overlay for text readability - Hidden on mobile */}
+      <div className="absolute inset-0 bg-black/40 hidden lg:block"></div>
       
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
+      {/* Content - Hidden on mobile */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center hidden lg:block">
         <div className="mb-12">
           <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-white/90 drop-shadow-lg">
             HONEST & POETIC CAPTURES OF YOUR LIFE
