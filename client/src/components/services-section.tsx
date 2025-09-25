@@ -2,7 +2,7 @@ import familyImage from "@assets/families-session-cover.jpg";
 import coupleImage from "@assets/Family Session (1)_1749518229765.jpg";
 import maternityImage from "@assets/IMG_3298_1749572272844.jpg";
 import newbornImage from "@assets/newborn-session-cover.jpg";
-import ourStoryImage from "@assets/Family Session (3)_1749518229765.jpg";
+import ourStoryImage from "@assets/our-story-session-cover.jpg";
 import collageImage from "@assets/Image 6-9-25 at 9.46 PM_1749520147087.jpeg";
 import { Link } from "wouter";
 
