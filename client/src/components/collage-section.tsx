@@ -63,8 +63,6 @@ export default function CollageSection() {
         </div>
 
       </div>
-      {/* Bottom spacing */}
-      <div className="py-20"></div>
     </section>
   );
 }
