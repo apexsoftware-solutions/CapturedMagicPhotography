@@ -186,7 +186,7 @@ export default function SessionPage() {
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
                   <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Yant Family Photos '25
+                    Rains Family Photos 2024
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
                 </a>
@@ -210,7 +210,7 @@ export default function SessionPage() {
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
                   <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Family Mini 2025
+                    Yant Family Photos '25
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
                 </a>
@@ -222,7 +222,7 @@ export default function SessionPage() {
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
                   <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Yants 2024
+                    Family Mini 2025
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
                 </a>
@@ -234,7 +234,7 @@ export default function SessionPage() {
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
                   <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Recent Session
+                    Yants 2024
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
                 </a>
