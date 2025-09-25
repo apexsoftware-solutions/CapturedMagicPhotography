@@ -13,7 +13,7 @@ export default function IntroSection() {
   const images = [handsImage, childImage, flowersImage];
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-0 lg:py-32 relative overflow-hidden">
       {/* Background Images - Hidden on mobile */}
       <div className="absolute inset-0 flex hidden lg:flex">
         {images.map((image, index) => (
