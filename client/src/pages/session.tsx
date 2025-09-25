@@ -191,6 +191,9 @@ export default function SessionPage() {
       {isCouplesSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+              Love lived out in ordinary days
+            </p>
             
             {/* Content Paragraphs */}
             <div className="max-w-3xl mx-auto space-y-6 text-left">
