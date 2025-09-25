@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import collageImage from "@assets/Family Session DSC07537_1749518229765.jpg";
+import collageImage from "@assets/Family Session DSC08301_1749518229765.jpg";
 
 export default function CollageSection() {
   const [parallaxOffset, setParallaxOffset] = useState(0);
