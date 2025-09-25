@@ -23,7 +23,7 @@ export default function HeroSection() {
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
       <div
-        className="absolute inset-0 bg-cover bg-left lg:bg-center bg-no-repeat will-change-transform"
+        className="absolute inset-0 bg-cover bg-no-repeat will-change-transform bg-[25%_center] lg:bg-center"
         style={{ 
           backgroundImage: `url(${backgroundImage})`,
           transform: `translateY(${scrollY * 0.5}px)`
