@@ -3,6 +3,7 @@ import { ArrowLeft, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import newbornImage from "@assets/DSC06818_1758668103121.jpg";
 import newbornCollage from "@assets/newborn-collage.jpg";
+import familiesImage from "@assets/families-session-cover.jpg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -21,6 +22,8 @@ export default function SessionPage() {
 
   // Check if this is the newborn session page
   const isNewbornSession = sessionSlug === 'newborn';
+  // Check if this is the families session page
+  const isFamiliesSession = sessionSlug === 'families';
 
   return (
     <div className="min-h-screen bg-white">
@@ -51,6 +54,25 @@ export default function SessionPage() {
           <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
             <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
               NEWBORN
+            </h1>
+          </div>
+        </section>
+      )}
+
+      {/* Families Hero Section with Parallax */}
+      {isFamiliesSession && (
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            style={{ 
+              backgroundImage: `url(${familiesImage})`,
+              transform: `translateY(${scrollY * 0.5}px)`
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+            <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+              FAMILIES
             </h1>
           </div>
         </section>
@@ -127,8 +149,82 @@ export default function SessionPage() {
         </section>
       )}
 
+      {/* Families Content Section */}
+      {isFamiliesSession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+              These are the moments that feel like your best day.
+            </p>
+            
+            {/* Content Paragraphs */}
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Let me tell you about my favorite kind of session.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Wild littles running with delight as daddy chases them. Soft snuggles in mommy's arms while the youngest soaks in a quiet moment of one-on-one time. A dimpled, chubby hand tangled in her hair, just wanting more contact.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                A couple who has lived life together for years, standing side by side at sunset, watching the last pink lines fade while he plants a kiss on her cheek.
+              </p>
+              
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center my-8">
+                These are the moments that feel like your best day.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                And when the laughter quiets and the session is done, you'll open an album that brings you to tears. You'll hang photos on the wall that remind you—and your children—how good this life really is, even on a grey day later.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                That's what I love giving families.
+              </p>
+            </div>
+
+            {/* What's Included Dropdown */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <button
+                onClick={() => setIsIncludedOpen(!isIncludedOpen)}
+                className="flex items-center justify-between w-full text-left py-4 border-b border-gray-200 hover:border-gray-400 transition-colors duration-200"
+                data-testid="button-whats-included"
+              >
+                <h3 className="font-sans text-xl font-medium text-gray-800 uppercase tracking-wide">
+                  What's included
+                </h3>
+                <ChevronDown 
+                  size={20} 
+                  className={`text-gray-600 transition-transform duration-200 ${isIncludedOpen ? 'rotate-180' : ''}`} 
+                />
+              </button>
+              
+              {isIncludedOpen && (
+                <div className="py-6 text-left animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="space-y-3 font-sans text-lg leading-relaxed text-gray-700">
+                    <p>• A 1–2 hour family session at a location of your choice</p>
+                    <p>• Up to 100 hand-edited, high-resolution images in a private gallery</p>
+                    <p>• Full printing rights</p>
+                    <p>• Natural, candid portraits that capture your family's unique dynamic and connections</p>
+                    <p>• Gentle guidance on what to wear and location suggestions, if you'd like it</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Closing Tagline */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+                Photos that remind you—and your children—how good this life really is.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Other Sessions - Default Layout */}
-      {!isNewbornSession && (
+      {!isNewbornSession && !isFamiliesSession && (
         <div className="pt-20 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-script text-5xl lg:text-7xl text-primary mb-8">
