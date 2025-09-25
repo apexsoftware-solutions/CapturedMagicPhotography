@@ -98,11 +98,11 @@ export default function SessionPage() {
               {isIncludedOpen && (
                 <div className="py-6 text-left animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="space-y-3 font-sans text-lg leading-relaxed text-gray-700">
-                    <p>— A 1.5–2 hour in-home session at your pace</p>
-                    <p>— Up to 90 hand-edited, high-resolution images in a private gallery</p>
-                    <p>— Full printing rights</p>
-                    <p>— Natural, unposed portraits of your baby and family, with plenty of room for feeding, rocking, or changing as needed</p>
-                    <p>— Gentle guidance on what to wear and how to prepare, if you'd like it</p>
+                    <p>• A 1.5–2 hour in-home session at your pace</p>
+                    <p>• Up to 90 hand-edited, high-resolution images in a private gallery</p>
+                    <p>• Full printing rights</p>
+                    <p>• Natural, unposed portraits of your baby and family, with plenty of room for feeding, rocking, or changing as needed</p>
+                    <p>• Gentle guidance on what to wear and how to prepare, if you'd like it</p>
                   </div>
                 </div>
               )}
