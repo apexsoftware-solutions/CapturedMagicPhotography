@@ -159,6 +159,87 @@ export default function SessionPage() {
               </p>
             </div>
 
+            {/* Recent Family Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Family Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some of our favorite family moments</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/4KtDyilUtcQLZ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Gallery One
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/-fallsession/gallery?inviteptoken2=AAAAAMMAAAAQTrJ-XFJ7Vw_Nk4Q8_EZjQIpWeI5P1o4%2C" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Fall Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/TAPgt9kDYGu6S" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Gallery Two
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/cZr1HVNjF5ld7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Gallery Three
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/fNc2YHedn8cb4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Gallery Four
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/7qvu0AmKdJxo0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Gallery Five
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
+            </div>
 
           </div>
         </section>
