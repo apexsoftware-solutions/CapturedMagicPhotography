@@ -142,9 +142,6 @@ export default function SessionPage() {
                 A couple who has lived life together for years, standing side by side at sunset, watching the last pink lines fade while he plants a kiss on her cheek.
               </p>
               
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center my-8">
-                These are the moments that feel like your best day.
-              </p>
               
               <p className="font-sans text-lg leading-relaxed text-gray-700">
                 And when the laughter quiets and the session is done, you'll open an album that brings you to tears. You'll hang photos on the wall that remind you—and your children—how good this life really is, even on a grey day later.
