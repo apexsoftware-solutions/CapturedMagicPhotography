@@ -29,7 +29,7 @@ export default function CollageSection() {
   return (
     <section ref={sectionRef} className="bg-background">
       {/* Header content with container */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-2 pb-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-16">
         <div className="text-center mb-16">
           <p className="font-serif text-3xl max-w-2xl mx-auto leading-relaxed text-foreground">
             Those ordinary moments become tomorrow's memories—I'm here to help you keep them.
