@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout (disable default creds; we'll use your DEPLOY_TOKEN)
+      # 1) Checkout (disable default creds - we're using DEPLOY_TOKEN)
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      # 2) Setup Node (simple)
+      # 2) Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -26,27 +26,31 @@ jobs:
         working-directory: client
         run: npm ci
 
-      # 4) Build frontend
+      # 4) Build frontend (this creates dist/public at repo root)
       - name: Build frontend
         working-directory: client
         run: npm run build
 
-      # 5) Inspect build output (helps verify publish_dir)
-      - name: Inspect build output
+      # 5) Show where your built files are (debug)
+      - name: Inspect build output (debug)
         run: |
-          echo "Root contents:" && ls -la
-          echo "Client contents:" && ls -la client || true
-          echo "client/dist:" && ls -la client/dist || true
-          echo "client/build:" && ls -la client/build || true
+          echo "=== repo root contents ==="
+          ls -la
+          echo "=== dist contents ==="
+          ls -la dist || true
+          echo "=== dist/public contents ==="
+          ls -la dist/public || true
+          echo "=== client contents ==="
+          ls -la client || true
 
-      # 6) Deploy to Hostinger repo using your DEPLOY_TOKEN
+      # 6) Deploy to external deploy repo - publish dist/public
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
-          publish_branch: main            # <-- change to target repo's default if not 'main'
-          # adjust this depending on build output (vite -> dist, CRA -> build)
-          publish_dir: client/dist
+          publish_branch: main            # change if target default is not 'main'
+          publish_dir: dist/public        # <--- CORRECT FOLDER FROM YOUR LOGS
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
+          # optional: set commit_message: "Deploy: ${{ github.sha }}" if you want a custom commit message
