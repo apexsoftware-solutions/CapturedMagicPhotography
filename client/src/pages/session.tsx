@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import newbornImage from "@assets/DSC06818_1758668103121.jpg";
 import newbornCollage from "@assets/newborn-collage.jpg";
-import familiesImage from "@assets/families-session-cover.jpg";
+import familiesImage from "@assets/families-session-hero-new.jpg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -62,10 +62,9 @@ export default function SessionPage() {
       {isFamiliesSession && (
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            className="absolute inset-0 bg-contain bg-center bg-no-repeat"
             style={{ 
-              backgroundImage: `url(${familiesImage})`,
-              transform: `translateY(${scrollY * 0.5}px)`
+              backgroundImage: `url(${familiesImage})`
             }}
           />
           <div className="absolute inset-0 bg-black/20" />
