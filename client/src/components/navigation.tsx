@@ -144,27 +144,19 @@ export default function Navigation() {
               </button>
             </div>
 
-            {/* Mobile menu button */}
-            <button
-              className="lg:hidden text-white hover:opacity-70 transition-opacity duration-300"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         )}
 
-        {/* Mobile hamburger button when scrolled - always visible */}
-        {isScrolled && (
-          <div className="lg:hidden flex justify-end">
-            <button
-              className="text-foreground hover:opacity-70 transition-opacity duration-300"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        )}
+        {/* Mobile hamburger button - always visible on mobile */}
+        <div className="lg:hidden absolute right-6">
+          <button
+            className="text-white hover:opacity-70 transition-opacity duration-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
       </div>
       {/* Mobile Menu - always available */}
       {isMenuOpen && (
