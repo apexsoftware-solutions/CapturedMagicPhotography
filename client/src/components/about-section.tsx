@@ -10,7 +10,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="py-16 lg:py-32 bg-white">
+    <section id="about" className="py-8 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-[2fr_3fr] gap-20 items-center">
           <div className="order-2 lg:order-1">
