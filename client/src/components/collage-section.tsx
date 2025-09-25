@@ -33,8 +33,7 @@ export default function CollageSection() {
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl mb-8">Moments beautifully captured</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Every session tells a unique story. From intimate family moments to joyful celebrations, 
-            each photograph preserves the essence of your most precious memories.
+            Those ordinary moments become tomorrow's memories—I'm here to help you keep them.
           </p>
         </div>
       </div>
