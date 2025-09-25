@@ -217,6 +217,13 @@ export default function SessionPage() {
                 If you choose a couples session, it won't be about performance or posed smiles. It will be about presence. A simple remembering of who you are together—today, in this season—and keeping that memory safe for tomorrow.
               </p>
             </div>
+
+            {/* Closing Tagline */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+                Marriage is the backbone of a family. These sessions are a chance to remember where your story began, to pause and honor the love that holds it all together.
+              </p>
+            </div>
           </div>
         </section>
       )}
