@@ -58,32 +58,24 @@ export default function SessionPage() {
         </section>
       )}
 
-      {/* Families Hero Section with Responsive Scaling */}
+      {/* Families Hero Section - Full Width Scaling */}
       {isFamiliesSession && (
-        <section className="relative w-full overflow-hidden" style={{ height: 'clamp(60vh, calc(100vw * 0.67), 100vh)' }}>
-          {/* Blurred Background Layer */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 blur-sm"
-            style={{ 
-              backgroundImage: `url(${familiesImage})`
-            }}
-          />
-          {/* Main Image Layer */}
-          <div className="absolute inset-0 flex items-center justify-center">
+        <section className="relative w-full">
+          <div className="relative w-full">
             <img
               src={familiesImage}
               alt="Beautiful family photography session"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
-          </div>
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/20" />
-          {/* Title */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white px-4 max-w-4xl mx-auto">
-              <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
-                FAMILIES
-              </h1>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  FAMILIES
+                </h1>
+              </div>
             </div>
           </div>
         </section>
