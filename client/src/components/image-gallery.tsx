@@ -1,6 +1,26 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import firstSlideImage from "@assets/first-slideshow-image.jpg";
+import slide2 from "@assets/slideshow-img_9429.jpg";
+import slide3 from "@assets/slideshow-img_9438.jpg";
+import slide4 from "@assets/slideshow-img_9432.jpg";
+import slide5 from "@assets/slideshow-img_9659.jpg";
+import slide6 from "@assets/slideshow-img_9913.jpg";
+import slide7 from "@assets/slideshow-img_9880.jpg";
+import slide8 from "@assets/slideshow-img_9607.jpg";
+import slide9 from "@assets/slideshow-img_9419.jpg";
+import slide10 from "@assets/slideshow-img_9427.jpg";
+import slide11 from "@assets/slideshow-img_9439.jpg";
+import slide12 from "@assets/slideshow-img_9423.jpg";
+import slide13 from "@assets/slideshow-img_9933.jpg";
+import slide14 from "@assets/slideshow-img_9414.jpg";
+import slide15 from "@assets/slideshow-img_9946.jpg";
+import slide16 from "@assets/slideshow-img_9495.jpg";
+import slide17 from "@assets/slideshow-img_9634.jpg";
+import slide18 from "@assets/slideshow-img_9746.jpg";
+import slide19 from "@assets/slideshow-img_9882.jpg";
+import slide20 from "@assets/slideshow-img_9413.jpg";
+import slide21 from "@assets/slideshow-img_9531.jpg";
 
 interface SlideshowImage {
   src: string;
@@ -12,8 +32,87 @@ const slideshowImages: SlideshowImage[] = [
   {
     src: firstSlideImage,
     alt: "Beautiful family photography collage featuring candid moments of joy, laughter, and connection between parents and children in natural outdoor settings"
+  },
+  {
+    src: slide2,
+    alt: "Tender newborn photography collage showcasing intimate moments between parents and baby, peaceful sleeping portraits, and gentle family connections"
+  },
+  {
+    src: slide3,
+    alt: "Romantic couples and maternity photography in golden field settings with natural light and authentic emotional connections"
+  },
+  {
+    src: slide4,
+    alt: "Mother and children golden hour photography featuring playful moments, genuine laughter, and warm family connections in natural outdoor light"
+  },
+  {
+    src: slide5,
+    alt: "Family lifestyle photography collage with golden hour lighting, showcasing authentic moments between parents and children in beautiful natural settings"
+  },
+  {
+    src: slide6,
+    alt: "Joyful family photography with baby featuring celebration moments, tender embraces, and natural family dynamics in warm golden light"
+  },
+  {
+    src: slide7,
+    alt: "Maternity and family photography on country paths showcasing expectant families, sibling moments, and natural outdoor family connections"
+  },
+  {
+    src: slide8,
+    alt: "Family photography session with architectural elements featuring father-child bonds, family group portraits, and candid joyful moments"
+  },
+  {
+    src: slide9,
+    alt: "Indoor newborn and family lifestyle photography capturing everyday moments, nursery scenes, and intimate family connections at home"
+  },
+  {
+    src: slide10,
+    alt: "Creek and water family adventure photography showcasing children playing, family exploration, and natural outdoor family bonding experiences"
+  },
+  {
+    src: slide11,
+    alt: "Romantic couple photography in natural field settings with dreamy lighting and authentic emotional connections between partners"
+  },
+  {
+    src: slide12,
+    alt: "Intimate newborn and maternity photography featuring tender family moments, baby details, and the beauty of new life and motherhood"
+  },
+  {
+    src: slide13,
+    alt: "Expectant family maternity photography showcasing the anticipation of new life, sibling excitement, and family love in golden hour light"
+  },
+  {
+    src: slide14,
+    alt: "Lifestyle library photography session featuring reading, learning, and quiet family moments in beautiful natural indoor lighting"
+  },
+  {
+    src: slide15,
+    alt: "Autumn family photography with warm seasonal colors, showcasing multi-generational family connections and joyful group dynamics"
+  },
+  {
+    src: slide16,
+    alt: "Golden hour family photography in open fields featuring children's natural curiosity, family adventures, and authentic outdoor connections"
+  },
+  {
+    src: slide17,
+    alt: "Intimate bedroom family photography showcasing comfortable family moments, sibling bonds, and the warmth of home life"
+  },
+  {
+    src: slide18,
+    alt: "Large family group photography capturing multi-generational connections, genuine laughter, and the joy of extended family gatherings"
+  },
+  {
+    src: slide19,
+    alt: "Creek adventure family photography featuring children's wonder, family exploration, and natural outdoor play in beautiful settings"
+  },
+  {
+    src: slide20,
+    alt: "Joyful family photography showcasing authentic laughter, parent-child connections, and the pure happiness of family life"
+  },
+  {
+    src: slide21,
+    alt: "Autumn family photography in warm tones featuring intimate family moments, seasonal beauty, and natural family connections"
   }
-  // Additional photos will be added here
 ];
 
 interface ImageGalleryProps {
