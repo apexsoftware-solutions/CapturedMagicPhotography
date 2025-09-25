@@ -55,7 +55,7 @@ const sessions = [
   },
   {
     image: ourStoryImage,
-    title: "our story",
+    title: "Your Story",
     slug: "our-story",
     alt: "couple's story photoshoot capturing their journey together",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
