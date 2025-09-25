@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import firstSlideImage from "@assets/first-slideshow-image.jpg";
 
 interface SlideshowImage {
   src: string;
   alt: string;
 }
 
-// Placeholder for when photos are added
+// Slideshow photos
 const slideshowImages: SlideshowImage[] = [
-  // New photos will be added here
+  {
+    src: firstSlideImage,
+    alt: "Beautiful family photography collage featuring candid moments of joy, laughter, and connection between parents and children in natural outdoor settings"
+  }
+  // Additional photos will be added here
 ];
 
 interface ImageGalleryProps {
