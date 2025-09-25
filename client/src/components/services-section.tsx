@@ -45,19 +45,19 @@ const sessions = [
     scale: 110     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
-    image: ourStoryImage,
-    title: "our story",
-    slug: "our-story",
-    alt: "couple's story photoshoot capturing their journey together",
+    image: mommyAndMeImage,
+    title: "Mommy & Me",
+    slug: "mommy-and-me",
+    alt: "tender mother and child photoshoot capturing intimate bonding moments",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
     positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
     scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
   },
   {
-    image: mommyAndMeImage,
-    title: "Mommy & Me",
-    slug: "mommy-and-me",
-    alt: "tender mother and child photoshoot capturing intimate bonding moments",
+    image: ourStoryImage,
+    title: "our story",
+    slug: "our-story",
+    alt: "couple's story photoshoot capturing their journey together",
     positionX: 50, // Horizontal position: 0 = far left, 50 = center, 100 = far right
     positionY: 50, // Vertical position: 0 = top, 50 = center, 100 = bottom
     scale: 100     // Scale: 100 = default fit, 120 = 20% larger, 80 = 20% smaller
