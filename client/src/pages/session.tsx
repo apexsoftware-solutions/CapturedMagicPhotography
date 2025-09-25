@@ -58,20 +58,33 @@ export default function SessionPage() {
         </section>
       )}
 
-      {/* Families Hero Section with Parallax */}
+      {/* Families Hero Section with Responsive Scaling */}
       {isFamiliesSession && (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full overflow-hidden" style={{ height: 'clamp(60vh, calc(100vw * 0.67), 100vh)' }}>
+          {/* Blurred Background Layer */}
           <div
-            className="absolute inset-0 bg-cover md:bg-contain bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 blur-sm"
             style={{ 
               backgroundImage: `url(${familiesImage})`
             }}
           />
+          {/* Main Image Layer */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img
+              src={familiesImage}
+              alt="Beautiful family photography session"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Overlay */}
           <div className="absolute inset-0 bg-black/20" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
-              FAMILIES
-            </h1>
+          {/* Title */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white px-4 max-w-4xl mx-auto">
+              <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                FAMILIES
+              </h1>
+            </div>
           </div>
         </section>
       )}
