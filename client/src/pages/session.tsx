@@ -160,83 +160,149 @@ export default function SessionPage() {
             </div>
 
             {/* Recent Family Sessions Gallery Links */}
-            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+            <div className="max-w-5xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
                 <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Family Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some of our favorite family moments</p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-2 gap-6">
                 <a 
                   href="https://rosegoldphotography.pic-time.com/4KtDyilUtcQLZ" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Gallery One
+                  <div className="aspect-[16/9] bg-gradient-to-br from-amber-50 to-orange-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Rains Family Photos 2024</div>
+                        <div className="font-sans text-sm text-gray-600">Professional family session</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
                 
                 <a 
                   href="https://rosegoldphotography.pic-time.com/-fallsession/gallery?inviteptoken2=AAAAAMMAAAAQTrJ-XFJ7Vw_Nk4Q8_EZjQIpWeI5P1o4%2C" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Fall Session
+                  <div className="aspect-[16/9] bg-gradient-to-br from-orange-100 to-red-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Autumn Family Session</div>
+                        <div className="font-sans text-sm text-gray-600">Beautiful fall photography</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
                 
                 <a 
                   href="https://rosegoldphotography.pic-time.com/TAPgt9kDYGu6S" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Gallery Two
+                  <div className="aspect-[16/9] bg-gradient-to-br from-blue-50 to-purple-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Spring Family Session</div>
+                        <div className="font-sans text-sm text-gray-600">Captured memories together</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
                 
                 <a 
                   href="https://rosegoldphotography.pic-time.com/cZr1HVNjF5ld7" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Gallery Three
+                  <div className="aspect-[16/9] bg-gradient-to-br from-green-50 to-teal-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Summer Family Session</div>
+                        <div className="font-sans text-sm text-gray-600">Golden hour memories</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
                 
                 <a 
                   href="https://rosegoldphotography.pic-time.com/fNc2YHedn8cb4" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Gallery Four
+                  <div className="aspect-[16/9] bg-gradient-to-br from-pink-50 to-rose-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Winter Family Session</div>
+                        <div className="font-sans text-sm text-gray-600">Cozy family moments</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
                 
                 <a 
                   href="https://rosegoldphotography.pic-time.com/7qvu0AmKdJxo0" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                  className="block border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-300 group bg-white"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Gallery Five
+                  <div className="aspect-[16/9] bg-gradient-to-br from-yellow-50 to-amber-100 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded px-3 py-2">
+                        <div className="font-serif text-lg text-gray-800">Holiday Family Session</div>
+                        <div className="font-sans text-sm text-gray-600">Festive family joy</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                  <div className="p-4">
+                    <div className="font-sans text-sm text-gray-500 flex items-center justify-between">
+                      <span>rosegoldphotography.pic-time.com</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
                 </a>
               </div>
             </div>
