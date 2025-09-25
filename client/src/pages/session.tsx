@@ -156,12 +156,6 @@ export default function SessionPage() {
             </div>
 
 
-            {/* Closing Tagline */}
-            <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
-                Photos that remind you—and your children—how good this life really is.
-              </p>
-            </div>
           </div>
         </section>
       )}
