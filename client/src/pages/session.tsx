@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import newbornImage from "@assets/DSC06818_1758668103121.jpg";
 import newbornCollage from "@assets/newborn-collage.jpg";
 import familiesImage from "@assets/families-session-hero-new.jpg";
+import couplesImage from "@assets/couples-session-hero.jpg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -23,6 +24,8 @@ export default function SessionPage() {
   const isNewbornSession = sessionSlug === 'newborn';
   // Check if this is the families session page
   const isFamiliesSession = sessionSlug === 'families';
+  // Check if this is the couples session page
+  const isCouplesSession = sessionSlug === 'couples';
 
   return (
     <div className="min-h-screen bg-white">
@@ -161,8 +164,62 @@ export default function SessionPage() {
         </section>
       )}
 
+      {/* Couples Hero Section - Full Width Scaling */}
+      {isCouplesSession && (
+        <section className="relative w-full">
+          <div className="relative w-full">
+            <img
+              src={couplesImage}
+              alt="Beautiful couples photography session"
+              className="w-full h-auto object-contain"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  COUPLES
+                </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Couples Content Section */}
+      {isCouplesSession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            
+            {/* Content Paragraphs */}
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                Every family begins with two individuals who decide that they will belong to one another and walk through life side by side. This is the beginning of your story. The story of your family starts here.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                I love these sessions because they feel like stepping into a book that has only just begun. We don't know yet what twists and turns the story will take, but we know this moment—this chapter—is Chapter One.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                I love young couples, with their glow of youth and excitement, standing at the threshold of all that's ahead. I love couples in the thick of it—with littles tugging at their hands, busy schedules, and very full plates—taking a pause to remember how much they love each other in the middle of it all. And I love couples who are more seasoned, their story tested and proven, their love deepened through years of shared life.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                To an outside eye, their love may seem quieter. But what I see is strength—friendship, forgiveness, and faithfulness built through countless days of choosing one another, of saying "I love you" not just in words, but in the way they live.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                If you choose a couples session, it won't be about performance or posed smiles. It will be about presence. A simple remembering of who you are together—today, in this season—and keeping that memory safe for tomorrow.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Other Sessions - Default Layout */}
-      {!isNewbornSession && !isFamiliesSession && (
+      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && (
         <div className="pt-20 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-script text-5xl lg:text-7xl text-primary mb-8">
