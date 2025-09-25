@@ -165,7 +165,7 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
   }
 
   return (
-    <section className="py-24">
+    <section className="py-12 lg:py-24">
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         <div 
           className="relative h-[60vh] overflow-hidden rounded-lg shadow-lg group"
