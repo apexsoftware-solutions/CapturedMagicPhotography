@@ -14,8 +14,8 @@ export default function IntroSection() {
 
   return (
     <section className="py-32 relative overflow-hidden">
-      {/* Background Images */}
-      <div className="absolute inset-0 flex">
+      {/* Background Images - Hidden on mobile */}
+      <div className="absolute inset-0 flex hidden lg:flex">
         {images.map((image, index) => (
           <div key={index} className="flex-1 relative">
             <img
