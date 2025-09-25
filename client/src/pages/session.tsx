@@ -1,5 +1,5 @@
 import { useParams, Link } from "wouter";
-import { ArrowLeft, ChevronDown } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import newbornImage from "@assets/DSC06818_1758668103121.jpg";
 import newbornCollage from "@assets/newborn-collage.jpg";
@@ -9,7 +9,6 @@ export default function SessionPage() {
   const params = useParams();
   const sessionSlug = params.slug;
   const [scrollY, setScrollY] = useState(0);
-  const [isIncludedOpen, setIsIncludedOpen] = useState(false);
 
   // Capitalize first letter for display
   const sessionTitle = sessionSlug ? sessionSlug.charAt(0).toUpperCase() + sessionSlug.slice(1) : '';
@@ -101,34 +100,6 @@ export default function SessionPage() {
               </p>
             </div>
 
-            {/* What's Included Dropdown */}
-            <div className="max-w-3xl mx-auto mt-12">
-              <button
-                onClick={() => setIsIncludedOpen(!isIncludedOpen)}
-                className="flex items-center justify-between w-full text-left py-4 border-b border-gray-200 hover:border-gray-400 transition-colors duration-200"
-                data-testid="button-whats-included"
-              >
-                <h3 className="font-sans text-xl font-medium text-gray-800 uppercase tracking-wide">
-                  What's included
-                </h3>
-                <ChevronDown 
-                  size={20} 
-                  className={`text-gray-600 transition-transform duration-200 ${isIncludedOpen ? 'rotate-180' : ''}`} 
-                />
-              </button>
-              
-              {isIncludedOpen && (
-                <div className="py-6 text-left animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="space-y-3 font-sans text-lg leading-relaxed text-gray-700">
-                    <p>• A 1.5–2 hour in-home session at your pace</p>
-                    <p>• Up to 90 hand-edited, high-resolution images in a private gallery</p>
-                    <p>• Full printing rights</p>
-                    <p>• Natural, unposed portraits of your baby and family, with plenty of room for feeding, rocking, or changing as needed</p>
-                    <p>• Gentle guidance on what to wear and how to prepare, if you'd like it</p>
-                  </div>
-                </div>
-              )}
-            </div>
 
             {/* Closing Paragraph */}
             <div className="max-w-3xl mx-auto mt-12">
@@ -184,34 +155,6 @@ export default function SessionPage() {
               </p>
             </div>
 
-            {/* What's Included Dropdown */}
-            <div className="max-w-3xl mx-auto mt-12">
-              <button
-                onClick={() => setIsIncludedOpen(!isIncludedOpen)}
-                className="flex items-center justify-between w-full text-left py-4 border-b border-gray-200 hover:border-gray-400 transition-colors duration-200"
-                data-testid="button-whats-included"
-              >
-                <h3 className="font-sans text-xl font-medium text-gray-800 uppercase tracking-wide">
-                  What's included
-                </h3>
-                <ChevronDown 
-                  size={20} 
-                  className={`text-gray-600 transition-transform duration-200 ${isIncludedOpen ? 'rotate-180' : ''}`} 
-                />
-              </button>
-              
-              {isIncludedOpen && (
-                <div className="py-6 text-left animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="space-y-3 font-sans text-lg leading-relaxed text-gray-700">
-                    <p>• A 1–2 hour family session at a location of your choice</p>
-                    <p>• Up to 100 hand-edited, high-resolution images in a private gallery</p>
-                    <p>• Full printing rights</p>
-                    <p>• Natural, candid portraits that capture your family's unique dynamic and connections</p>
-                    <p>• Gentle guidance on what to wear and location suggestions, if you'd like it</p>
-                  </div>
-                </div>
-              )}
-            </div>
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
