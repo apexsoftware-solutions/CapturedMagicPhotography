@@ -6,6 +6,7 @@ import newbornCollage from "@assets/newborn-collage.jpg";
 import familiesImage from "@assets/families-session-hero-new.jpg";
 import couplesImage from "@assets/couples-session-hero.jpg";
 import yourStoryImage from "@assets/DSC03025_1758844287458.jpeg";
+import mommyMeImage from "@assets/DSC09432_1758844759151.jpeg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -29,6 +30,8 @@ export default function SessionPage() {
   const isCouplesSession = sessionSlug === 'couples';
   // Check if this is the your story session page
   const isYourStorySession = sessionSlug === 'your-story';
+  // Check if this is the mommy and me session page
+  const isMommyMeSession = sessionSlug === 'mommy-me';
 
   return (
     <div className="min-h-screen bg-white">
@@ -431,8 +434,179 @@ export default function SessionPage() {
         </section>
       )}
 
+      {/* Mommy & Me Hero Section - Full Width Scaling */}
+      {isMommyMeSession && (
+        <section className="relative w-full">
+          <div className="relative w-full">
+            <img
+              src={mommyMeImage}
+              alt="Beautiful mommy and me photography session"
+              className="w-full h-auto object-contain"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  MOMMY & ME
+                </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Mommy & Me Content Section */}
+      {isMommyMeSession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+              The time with this little one is something you cherish, guard, and will remember with fondness for the rest of your life.
+            </p>
+            
+            {/* Content Paragraphs */}
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                So often, it's mama holding the camera. Capturing the first steps, the messy faces, the sleepy snuggles. Always watching, always recording. But rarely in the frame herself.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                And yet—it is mama who is most present. In the rhythms of the day, in the tiny routines no one else sees. In the folding of clothes, the brushing of curls, the steady arms that carry everything.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                These sessions are a way to honor that. A way to slow down and turn the camera toward the heart of the home. Toward you.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                We can stay in the quiet comfort of your house—on the bed, in the kitchen, curled up in a chair—or we can step into the soft golden light outdoors, letting your little one run barefoot while you gather them in again and again. There's no pressure to perform. Just space to be together.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                I'll gently guide you, but mostly I'll follow the way your love already flows—because that's the part worth remembering. The way you held them. The way they clung to you. The way you were, in all the ways they'll never forget.
+              </p>
+            </div>
+
+            {/* Closing Tagline */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+                You love them so much—let me get some pictures that show it.
+              </p>
+            </div>
+
+            {/* Recent Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Mommy & Me Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful moments between mama and baby</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/YyuRlrUN4zoUE" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Eliza Baby Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/9HO2pdK7Eij9N" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Eden
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/DqG1UgSN3YuLf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Mommy and Me Summer '24
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/CmQTYSpxjJXOe" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Morning Snuggles
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/fyPFVNL5bIfUb" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Springtime
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/34M0G3Fp7tJ2B" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Giggles and Hugs
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/PWDjScc9BA801" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Cherry Blossom Mini Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/fHQD0YvX0bwt8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Mommy and Me
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      )}
+
       {/* Other Sessions - Default Layout */}
-      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && !isYourStorySession && (
+      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && !isYourStorySession && !isMommyMeSession && (
         <div className="pt-20 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-script text-5xl lg:text-7xl text-primary mb-8">
