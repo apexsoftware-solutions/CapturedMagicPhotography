@@ -19,12 +19,32 @@ export default function TestimonialsSection() {
                 L O V E N O T E S
               </h2>
             </div>
-            <div className="space-y-10">
-              <blockquote className="font-sans text-lg leading-relaxed text-foreground">
-                "From the second you meet her, Aimee puts you at ease. Her personality is magic and she makes you feel like you've known her forever<strong>.</strong> She captured such a wide array of details and moments that I will <strong>cherish forever</strong>. Her ability to capture <strong>natural</strong>, <strong>candid</strong> and <strong>fun</strong> moments is a true art and completely down to her gorgeous personality. Thank you so much Aimee for capturing my family, such wonderful memories we'll have on our walls <strong>forever</strong>!"
-              </blockquote>
-              <div className="font-serif text-xl">
-                <strong>- Kirstin and family</strong>
+            <div className="space-y-12">
+              <div className="space-y-4">
+                <blockquote className="font-sans text-lg leading-relaxed text-foreground">
+                  "Kimberly is the absolute best! When we arrived to our photo session, she made us feel so relaxed and at ease. She truly embraces our chaos with multiple little kids. It's quick and painless and you almost wonder if it's possible she has enough for one good photo. Imagine our surprise when we have the most beautiful pictures that capture every little moment that makes our family special- the snuggles, giggles, joy, smiles, and love. Our photos are timeless and authentic and we will treasure them for years to come. I recommend Captured Magic to all my friends, and I will only go to Kimberly for our family photos."
+                </blockquote>
+                <div className="font-serif text-xl">
+                  <strong>- Rebecca VanSant</strong>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <blockquote className="font-sans text-lg leading-relaxed text-foreground">
+                  "Kimberly has photographed different seasons our lives, and every time I am blown away by how she manages to capture such beautiful snapshots of our family. Amidst a crying baby and toddler chaos, she has a magical talent of putting everyone at ease and creating the timeless photos every parent wants. My daughter has gone from resisting photos to begging "again, again!" because of the creative games Kimberly plays with her. You are truly getting the best of the best with Kimberly, from her welcoming personality to her eye for beautiful, candid shots. Thank you Kimberly for the gorgeous memories of our family, we will treasure them always."
+                </blockquote>
+                <div className="font-serif text-xl">
+                  <strong>- Emma Schumacher</strong>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <blockquote className="font-sans text-lg leading-relaxed text-foreground">
+                  "I usually dread photo sessions because I never feel photogenic and end up looking so awkward, and my husband isn't a fan either. But Kimberly completely changed that for us! She somehow made it fun and exciting even for our grumpy 2-year-old, and the whole session felt more like a family snuggle than a photoshoot. The pictures turned out absolutely beautiful—I'll always be coming back to her for our family photos."
+                </blockquote>
+                <div className="font-serif text-xl">
+                  <strong>- Melody Castellanos</strong>
+                </div>
               </div>
             </div>
             <div className="mt-16">
