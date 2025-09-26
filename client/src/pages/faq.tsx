@@ -1,40 +1,45 @@
 import { Link } from "wouter";
+import { ArrowLeft } from "lucide-react";
+import { useEffect } from "react";
 
 export default function FAQ() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
-    <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-accent/20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="font-serif text-2xl tracking-wide text-foreground hover:text-accent transition-colors">
-              Captured Magic Photography
-            </Link>
-            <Link 
-              href="/" 
-              className="font-sans text-sm uppercase tracking-wider text-foreground hover:text-accent transition-colors"
-            >
-              ← Back to Home
-            </Link>
-          </div>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <div className="py-8 px-6 lg:px-12 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors duration-300 font-sans text-sm uppercase tracking-wider"
+          >
+            <ArrowLeft size={16} />
+            BACK TO HOME
+          </Link>
         </div>
-      </nav>
+      </div>
 
       {/* FAQ Content */}
-      <article className="pt-24 pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="font-sans text-4xl md:text-5xl tracking-[0.1em] font-light text-foreground mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="font-sans text-lg leading-relaxed text-foreground/80 max-w-2xl mx-auto">
-              Everything you need to know about working together to capture your family's story.
-            </p>
-          </div>
+      <article className="max-w-4xl mx-auto px-6 lg:px-12 py-16">
+        {/* Header */}
+        <header className="mb-16 text-center">
+          <h1 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
+            FREQUENTLY ASKED QUESTIONS
+          </h1>
+          <h2 className="font-script text-3xl lg:text-4xl text-foreground mb-8 italic leading-relaxed">
+            Everything you need to know
+          </h2>
+          <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
+        </header>
+
+        {/* Content */}
+        <div className="prose prose-lg max-w-none">
 
           {/* FAQ Items */}
-          <div className="space-y-12">
+          <div className="space-y-12 mb-16">
             {/* What should we wear? */}
             <div className="border-b border-gray-100 pb-8">
               <h2 className="font-sans text-2xl md:text-3xl tracking-[0.05em] font-light text-foreground mb-6">
@@ -103,7 +108,7 @@ export default function FAQ() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center pt-16 border-t border-gray-100 mt-16">
+          <div className="text-center pt-16 border-t border-gray-100">
             <h3 className="font-sans text-2xl md:text-3xl tracking-[0.1em] font-light text-foreground mb-6">
               Still have questions?
             </h3>
