@@ -23,10 +23,10 @@ export default function FAQ() {
       </div>
 
       {/* FAQ Content */}
-      <article className="max-w-4xl mx-auto px-6 lg:px-12 py-16">
+      <article className="max-w-4xl mx-auto px-6 lg:px-12 pt-24 pb-16">
         {/* Header */}
-        <header className="mb-16 text-center">
-          <h1 className="font-sans text-lg uppercase tracking-[0.2em] mb-6 text-foreground/80">
+        <header className="mb-12 text-center">
+          <h1 className="font-sans text-lg uppercase tracking-[0.2em] mb-3 text-foreground/80">
             FREQUENTLY ASKED QUESTIONS
           </h1>
           <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
