@@ -113,42 +113,33 @@ export default function ServicesSection() {
           <p className="font-sans text-lg text-gray-700 mb-4">
             Don't see what you're looking for?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <div className="relative">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-all duration-300 font-sans text-gray-700"
-                data-testid="button-see-more"
-              >
-                See More
-                <ChevronDown 
-                  size={16} 
-                  className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-              
-              {isDropdownOpen && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="py-2">
-                    {additionalSessions.map((session, index) => (
-                      <div
-                        key={index}
-                        className="px-4 py-3 hover:bg-gray-50 transition-colors duration-200 font-sans text-gray-700 cursor-pointer"
-                      >
-                        {session}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-            <a
-              href="/faq"
-              className="px-6 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-all duration-300 font-sans text-gray-700"
-              data-testid="link-faq-homepage"
+          <div className="relative inline-block">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-all duration-300 font-sans text-gray-700"
+              data-testid="button-see-more"
             >
-              FAQ
-            </a>
+              See More
+              <ChevronDown 
+                size={16} 
+                className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+            
+            {isDropdownOpen && (
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="py-2">
+                  {additionalSessions.map((session, index) => (
+                    <div
+                      key={index}
+                      className="px-4 py-3 hover:bg-gray-50 transition-colors duration-200 font-sans text-gray-700 cursor-pointer"
+                    >
+                      {session}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

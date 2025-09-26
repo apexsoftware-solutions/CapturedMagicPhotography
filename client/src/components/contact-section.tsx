@@ -89,6 +89,20 @@ export default function ContactSection() {
           </a>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mb-12">
+          <p className="font-sans text-lg text-white/90 mb-4">
+            Have questions about sessions, what to expect, or pricing?
+          </p>
+          <a
+            href="/faq"
+            className="inline-block border border-white hover:bg-white hover:text-black text-white px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
+            data-testid="link-faq-contact"
+          >
+            VIEW FAQ
+          </a>
+        </div>
+
         {/* Contact Form */}
         <div className="backdrop-blur-sm p-8 rounded-lg bg-[#ffffff40]">
           <h3 className="font-serif text-2xl mb-8">Get in Touch</h3>
