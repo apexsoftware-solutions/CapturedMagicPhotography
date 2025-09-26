@@ -29,9 +29,6 @@ export default function FAQ() {
           <h1 className="font-sans text-lg uppercase tracking-[0.2em] mb-6 text-foreground/80">
             FREQUENTLY ASKED QUESTIONS
           </h1>
-          <h2 className="font-sans text-2xl lg:text-3xl text-foreground mb-8 italic leading-relaxed">
-            Everything you need to know
-          </h2>
           <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
         </header>
 
