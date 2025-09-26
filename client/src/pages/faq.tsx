@@ -9,27 +9,27 @@ export default function FAQ() {
   
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="py-8 px-6 lg:px-12 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-foreground/70 hover:text-foreground transition-colors duration-300 font-sans text-sm uppercase tracking-wider"
+      {/* Return Arrow - Top Left */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link href="/">
+          <button 
+            className="flex items-center gap-2 bg-white/90 hover:bg-white backdrop-blur-sm border border-gray-200 rounded-full px-4 py-2 transition-all duration-300 shadow-lg hover:shadow-xl"
+            data-testid="button-return-home"
           >
-            <ArrowLeft size={16} />
-            BACK TO HOME
-          </Link>
-        </div>
+            <ArrowLeft size={20} className="text-gray-700" />
+            <span className="font-sans text-sm text-gray-700">Back to Home</span>
+          </button>
+        </Link>
       </div>
 
       {/* FAQ Content */}
       <article className="max-w-4xl mx-auto px-6 lg:px-12 py-16">
         {/* Header */}
         <header className="mb-16 text-center">
-          <h1 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
+          <h1 className="font-sans text-lg uppercase tracking-[0.2em] mb-6 text-foreground/80">
             FREQUENTLY ASKED QUESTIONS
           </h1>
-          <h2 className="font-script text-3xl lg:text-4xl text-foreground mb-8 italic leading-relaxed">
+          <h2 className="font-sans text-2xl lg:text-3xl text-foreground mb-8 italic leading-relaxed">
             Everything you need to know
           </h2>
           <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
