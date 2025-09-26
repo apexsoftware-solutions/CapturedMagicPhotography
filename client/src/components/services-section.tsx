@@ -98,7 +98,7 @@ export default function ServicesSection() {
                     }}
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="font-script text-3xl text-white text-center px-6 py-3 group-hover:opacity-80 transition-all duration-300 font-light border-b border-white pb-2">
+                    <h3 className="font-sans text-2xl md:text-3xl uppercase tracking-[0.2em] opacity-90 font-light text-white text-center px-6 py-3 group-hover:opacity-80 transition-all duration-300 border-b border-white pb-2">
                       {session.title}
                     </h3>
                   </div>

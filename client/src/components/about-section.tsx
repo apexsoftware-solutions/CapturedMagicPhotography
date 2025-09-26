@@ -13,7 +13,7 @@ export default function AboutSection() {
     <section id="about" className="py-8 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="relative">
-          <h2 className="font-sans text-3xl lg:text-4xl font-light mb-8 text-foreground text-center">About Me</h2>
+          <h2 className="font-sans text-3xl lg:text-4xl font-light mb-8 text-foreground">About Me</h2>
           <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
             <img
               src={aboutImage}
