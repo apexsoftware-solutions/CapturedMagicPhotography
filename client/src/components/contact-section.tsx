@@ -255,13 +255,13 @@ export default function ContactSection() {
         </div>
 
         {/* FAQ Section - Mobile */}
-        <div className="mt-16 mb-16 md:hidden flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-sans text-lg text-white/90 text-center sm:text-left">
+        <div className="mt-16 mb-16 md:hidden flex items-center justify-between gap-3">
+          <p className="font-sans text-base text-white/90 text-left flex-1">
             Have questions about sessions, what to expect, or pricing?
           </p>
           <a
             href="/faq"
-            className="inline-block border border-white hover:bg-white hover:text-black text-white px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap"
+            className="inline-block border border-white hover:bg-white hover:text-black text-white px-6 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap flex-shrink-0"
             data-testid="link-faq-contact-mobile"
           >
             VIEW FAQ
