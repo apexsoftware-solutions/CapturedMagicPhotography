@@ -21,7 +21,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import { emailJSService } from "@/lib/emailjs-service";
 import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
 import contactBgImage from "@assets/image_1749565660062.png";
 
@@ -43,17 +43,25 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactInquiry) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
+      return await emailJSService.sendContactInquiry(data);
     },
-    onSuccess: () => {
-      toast({
-        title: "Thank you for your inquiry!",
-        description: "I'll get back to you within 24 hours.",
-      });
-      form.reset();
+    onSuccess: (result) => {
+      if (result.success) {
+        toast({
+          title: "Thank you for your inquiry!",
+          description: "I'll get back to you within 24 hours.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error sending inquiry",
+          description: result.error || "Please try again or contact me directly.",
+          variant: "destructive",
+        });
+      }
     },
     onError: (error) => {
+      console.error('Contact form submission error:', error);
       toast({
         title: "Error sending inquiry",
         description: "Please try again or contact me directly.",
