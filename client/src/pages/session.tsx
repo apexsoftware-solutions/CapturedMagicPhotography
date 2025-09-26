@@ -23,6 +23,11 @@ export default function SessionPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll to top when session page changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [sessionSlug]);
+
   // Check if this is the newborn session page
   const isNewbornSession = sessionSlug === 'newborn';
   // Check if this is the families session page
