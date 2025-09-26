@@ -74,7 +74,7 @@ export default function About() {
             </p>
             
             {/* Morning coffee moment */}
-            <div className="my-8 grid md:grid-cols-2 gap-6 items-center">
+            <div className="my-6 grid md:grid-cols-2 gap-3 items-center">
               <img
                 src={morningCoffee}
                 alt="Quiet morning moment with coffee"
@@ -108,8 +108,8 @@ export default function About() {
             </p>
             
             {/* Homeschool and family life images */}
-            <div className="my-8">
-              <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="my-6">
+              <div className="grid md:grid-cols-3 gap-3 mb-4">
                 <img
                   src={tableLessons}
                   alt="Homeschool lessons at the kitchen table"
@@ -126,7 +126,7 @@ export default function About() {
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-3">
                 <img
                   src={mountainCouple}
                   alt="Marriage and partnership - couple on mountain overlook"
@@ -164,8 +164,8 @@ export default function About() {
             </p>
             
             {/* Daily life and beautiful ordinary moments */}
-            <div className="my-8">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="my-6">
+              <div className="grid md:grid-cols-2 gap-3 mb-4">
                 <img
                   src={chickenCoop}
                   alt="Homestead life - mother and daughter with chickens"
@@ -178,7 +178,7 @@ export default function About() {
                 />
               </div>
               
-              <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="grid md:grid-cols-3 gap-3 mb-4">
                 <img
                   src={laundryLine}
                   alt="Simple daily rhythms - hanging laundry"
@@ -196,7 +196,7 @@ export default function About() {
                 />
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="grid md:grid-cols-2 gap-3 mb-4">
                 <img
                   src={bakingTime}
                   alt="Kitchen moments and baking together"
@@ -212,10 +212,10 @@ export default function About() {
               <img
                 src={familyHug}
                 alt="The heart of family - mother embracing her three children"
-                className="w-full h-auto rounded-lg shadow-sm mb-6"
+                className="w-full h-auto rounded-lg shadow-sm mb-4"
               />
               
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-3 gap-3">
                 <img
                   src={familyCuddles}
                   alt="Tender family moments"
