@@ -89,8 +89,8 @@ export default function ContactSection() {
           </a>
         </div>
 
-        {/* FAQ Section */}
-        <div className="mb-12">
+        {/* FAQ Section - Desktop */}
+        <div className="mb-12 hidden md:block">
           <p className="font-sans text-lg text-white/90 mb-4">
             Have questions about sessions, what to expect, or pricing?
           </p>
@@ -252,6 +252,20 @@ export default function ContactSection() {
               </Button>
             </form>
           </Form>
+        </div>
+
+        {/* FAQ Section - Mobile */}
+        <div className="mt-8 md:hidden text-center">
+          <p className="font-sans text-lg text-white/90 mb-4">
+            Have questions about sessions, what to expect, or pricing?
+          </p>
+          <a
+            href="/faq"
+            className="inline-block border border-white hover:bg-white hover:text-black text-white px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
+            data-testid="link-faq-contact-mobile"
+          >
+            VIEW FAQ
+          </a>
         </div>
       </div>
     </section>
