@@ -33,8 +33,8 @@ export class EmailService {
       const emailTemplate = this.createContactNotificationEmail(inquiry);
       
       const { data, error } = await resend.emails.send({
-        from: 'website@capturedmagicphoto.com', // Use your verified domain
-        to: 'kimberly@capturedmagicphoto.com', // Photographer's email
+        from: 'website@capturedmagicfxbg.com', // Use your verified domain
+        to: 'kim@capturedmagicfxbg.com', // Photographer's email
         subject: emailTemplate.subject,
         html: emailTemplate.html,
       });
@@ -63,7 +63,7 @@ export class EmailService {
       const emailTemplate = this.createClientConfirmationEmail(inquiry);
       
       const { data, error } = await resend.emails.send({
-        from: 'kimberly@capturedmagicphoto.com', // Photographer's email
+        from: 'kim@capturedmagicfxbg.com', // Photographer's email
         to: inquiry.email,
         subject: emailTemplate.subject,
         html: emailTemplate.html,
@@ -89,7 +89,7 @@ export class EmailService {
     const sessionTypeFormatted = inquiry.sessionType.charAt(0).toUpperCase() + inquiry.sessionType.slice(1);
     
     return {
-      to: 'kimberly@capturedmagicphoto.com',
+      to: 'kim@capturedmagicfxbg.com',
       subject: `New Photography Inquiry - ${inquiry.firstName} ${inquiry.lastName}`,
       html: `
         <!DOCTYPE html>
@@ -210,7 +210,7 @@ export class EmailService {
           
           <div class="footer">
             <p>This is an automated confirmation. I will personally respond to your inquiry soon!</p>
-            <p>📧 kimberly@capturedmagicphoto.com | 📍 Fredericksburg, VA</p>
+            <p>📧 kim@capturedmagicfxbg.com | 📍 Fredericksburg, VA</p>
           </div>
         </body>
         </html>

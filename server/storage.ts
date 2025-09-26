@@ -95,6 +95,7 @@ export class MemStorage implements IStorage {
     const now = new Date();
     const notification: EmailNotification = {
       ...insertNotification,
+      contactInquiryId: insertNotification.contactInquiryId || 0,
       resendMessageId: insertNotification.resendMessageId || null,
       resendStatus: insertNotification.resendStatus || null,
       id,
