@@ -35,9 +35,9 @@ export default function SessionPage() {
   // Check if this is the couples session page
   const isCouplesSession = sessionSlug === 'couples';
   // Check if this is the your story session page
-  const isYourStorySession = sessionSlug === 'your-story';
+  const isYourStorySession = sessionSlug === 'our-story';
   // Check if this is the mommy and me session page
-  const isMommyMeSession = sessionSlug === 'mommy-me';
+  const isMommyMeSession = sessionSlug === 'mommy-and-me';
   // Check if this is the maternity session page
   const isMaternitySession = sessionSlug === 'maternity';
 
