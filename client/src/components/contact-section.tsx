@@ -69,7 +69,7 @@ export default function ContactSection() {
   return (
     <section 
       id="contact" 
-      className="py-32 bg-cover bg-center bg-no-repeat relative"
+      className="pt-32 pb-16 bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${contactBgImage})` }}
     >
       {/* Background overlay */}
@@ -254,14 +254,14 @@ export default function ContactSection() {
           </Form>
 
           {/* FAQ Section - Mobile */}
-          <div className="md:hidden pt-6 mt-6 border-t border-white/20">
+          <div className="md:hidden pt-6 mt-6 border-t border-gray-300/30">
             <div className="flex items-center justify-between gap-3">
-              <p className="font-sans text-base text-foreground text-left flex-1">
+              <p className="font-sans text-base text-gray-800 text-left flex-1">
                 Have questions about sessions, what to expect, or pricing?
               </p>
               <a
                 href="/faq"
-                className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-6 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="inline-block border border-gray-800 hover:bg-gray-800 hover:text-white text-gray-800 px-6 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 data-testid="link-faq-contact-mobile"
               >
                 VIEW FAQ
