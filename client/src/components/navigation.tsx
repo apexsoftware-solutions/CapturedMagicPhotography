@@ -53,6 +53,13 @@ export default function Navigation() {
                 PRICING
               </button>
               <span className="text-foreground/40">/</span>
+              <a
+                href="/faq"
+                className="text-foreground hover:opacity-70 transition-opacity duration-300"
+              >
+                FAQ
+              </a>
+              <span className="text-foreground/40">/</span>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-foreground hover:opacity-70 transition-opacity duration-300"
@@ -115,6 +122,13 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
+              <span className="text-white/40">/</span>
+              <a
+                href="/faq"
+                className="text-white hover:opacity-70 transition-opacity duration-300"
+              >
+                FAQ
+              </a>
               <span className="text-white/40">/</span>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -182,6 +196,14 @@ export default function Navigation() {
               >
                 SESSIONS
               </button>
+              <a
+                href="/faq"
+                className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
+                data-testid="link-faq-mobile"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
+              </a>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="block text-left py-2 px-2 font-sans text-sm uppercase tracking-wider text-foreground hover:bg-accent/20 rounded transition-colors duration-200"
