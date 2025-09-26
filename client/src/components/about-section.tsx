@@ -12,9 +12,9 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-8 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-[2fr_3fr] gap-20 items-center">
+        <div className="grid lg:grid-cols-[3fr_2fr] gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">HELLO, I'M KIMBERLY</h2>
+            <h2 className="font-sans text-3xl lg:text-4xl font-light mb-8 text-foreground">About Me</h2>
             <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
                 Hello, I'm Kimberly—a photographer, mother, and old fashioned homemaker. I live in Fredericksburg, Virginia, where I raise three little ones, homeschool Charlotte Mason style. I spend my days noticing the beauty tucked into the folds of our ordinary family life.
@@ -38,11 +38,13 @@ export default function AboutSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <img
-              src={aboutImage}
-              alt="mother embracing young child in warm indoor family session"
-              className="w-full h-auto object-cover"
-            />
+            <div className="lg:pl-8">
+              <img
+                src={aboutImage}
+                alt="mother embracing young child in warm indoor family session"
+                className="w-full max-w-md lg:max-w-lg mx-auto h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
