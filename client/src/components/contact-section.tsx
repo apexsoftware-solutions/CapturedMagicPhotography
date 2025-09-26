@@ -174,10 +174,16 @@ export default function ContactSection() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="family">Family Session</SelectItem>
-                        <SelectItem value="maternity">Maternity & Newborn</SelectItem>
-                        <SelectItem value="couples">Couples Session</SelectItem>
-                        <SelectItem value="portrait">Portrait Session</SelectItem>
+                        <SelectItem value="families">Families</SelectItem>
+                        <SelectItem value="couples">Couples</SelectItem>
+                        <SelectItem value="newborn">Newborn</SelectItem>
+                        <SelectItem value="maternity">Maternity</SelectItem>
+                        <SelectItem value="mommy-and-me">Mommy & Me</SelectItem>
+                        <SelectItem value="your-story">Your Story</SelectItem>
+                        <SelectItem value="senior">Senior Sessions</SelectItem>
+                        <SelectItem value="engagement">Engagement Sessions</SelectItem>
+                        <SelectItem value="weddings">Weddings</SelectItem>
+                        <SelectItem value="birthing">Birthing Sessions</SelectItem>
                         <SelectItem value="custom">Custom Package</SelectItem>
                       </SelectContent>
                     </Select>
