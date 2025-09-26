@@ -103,7 +103,7 @@ export default function About() {
 
           {/* Call to Action */}
           <div className="text-center pt-12 border-t border-gray-100">
-            <h3 className="font-script text-2xl text-foreground mb-6 italic">
+            <h3 className="font-sans text-2xl md:text-3xl tracking-[0.1em] font-light text-foreground mb-6">
               Ready to tell your story?
             </h3>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-8">
