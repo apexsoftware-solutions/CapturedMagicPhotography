@@ -99,9 +99,6 @@ export default function About() {
               alt="Mother and child embracing in warm natural light"
               className="w-full h-auto rounded-lg shadow-sm"
             />
-            <p className="text-sm text-foreground/60 font-sans italic mt-4 text-center">
-              The gentle moments between mother and child
-            </p>
           </div>
 
           {/* Current Life */}
@@ -155,9 +152,6 @@ export default function About() {
               alt="Quiet family moments captured naturally"
               className="w-full h-auto rounded-lg shadow-sm"
             />
-            <p className="text-sm text-foreground/60 font-sans italic mt-4 text-center">
-              Finding beauty in the everyday moments of family life
-            </p>
           </div>
 
           {/* Photography Style */}
