@@ -22,8 +22,8 @@ export const contactInquiries = pgTable("contact_inquiries", {
   message: text("message").notNull(),
   status: varchar("status", { length: 50 }).default("pending").notNull(), // pending, contacted, completed, archived
   emailSent: boolean("email_sent").default(false).notNull(),
-  sesMessageId: text("ses_message_id"), // Amazon SES message ID for tracking
-  sesStatus: varchar("ses_status", { length: 50 }), // sent, delivered, bounced, complained
+  resendMessageId: text("resend_message_id"), // Resend message ID for tracking
+  resendStatus: varchar("resend_status", { length: 50 }), // sent, delivered, bounced, complained
   notes: text("notes"), // Internal notes for follow-up
   followUpDate: timestamp("follow_up_date"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -36,8 +36,8 @@ export const emailNotifications = pgTable("email_notifications", {
   emailType: varchar("email_type", { length: 50 }).notNull(), // welcome, followup, confirmation
   recipientEmail: text("recipient_email").notNull(),
   subject: text("subject").notNull(),
-  sesMessageId: text("ses_message_id"),
-  sesStatus: varchar("ses_status", { length: 50 }), // sent, delivered, bounced, complained
+  resendMessageId: text("resend_message_id"),
+  resendStatus: varchar("resend_status", { length: 50 }), // sent, delivered, bounced, complained
   sentAt: timestamp("sent_at").defaultNow().notNull(),
   deliveredAt: timestamp("delivered_at"),
   error: text("error"),
@@ -55,8 +55,8 @@ export const insertContactInquirySchema = createInsertSchema(contactInquiries).o
   updatedAt: true,
   status: true,
   emailSent: true,
-  sesMessageId: true,
-  sesStatus: true,
+  resendMessageId: true,
+  resendStatus: true,
   notes: true,
   followUpDate: true,
 });
