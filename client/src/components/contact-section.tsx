@@ -152,7 +152,7 @@ export default function ContactSection() {
                       Phone Number
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} type="tel" className="border-gray-200 focus:border-foreground bg-white" />
+                      <Input {...field} type="tel" className="border-gray-200 focus:border-foreground bg-white" value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -201,7 +201,7 @@ export default function ContactSection() {
                       Preferred Date
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} type="date" className="border-gray-200 focus:border-foreground bg-white" />
+                      <Input {...field} type="date" className="border-gray-200 focus:border-foreground bg-white" value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

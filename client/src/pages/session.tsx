@@ -413,7 +413,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
                 Marriage is the backbone of a family. These sessions are a chance to remember where your story began, to pause and honor the love that holds it all together.
               </p>
             </div>
@@ -520,7 +520,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
                 The simple, beautiful moments you'll never want to forget.
               </p>
             </div>
@@ -643,7 +643,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
                 You love them so much—let me get some pictures that show it.
               </p>
             </div>
@@ -810,7 +810,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
                 Soft and relaxed sessions, with space for snuggles, joy, and the quiet beauty of waiting.
               </p>
             </div>
