@@ -412,6 +412,53 @@ export default function SessionPage() {
                 Marriage is the backbone of a family. These sessions are a chance to remember where your story began, to pause and honor the love that holds it all together.
               </p>
             </div>
+
+            {/* Recent Couples Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Couples Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful couples moments</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/LPskwdZcDS1hk" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Anniversary Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/lHjS1pFib5AA6" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Save the Date
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/mli55JdN5amy2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Spring Mini '24
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
+            </div>
+
           </div>
         </section>
       )}
