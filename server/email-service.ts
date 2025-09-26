@@ -104,11 +104,11 @@ export class EmailService {
               max-width: 600px; 
               margin: 0 auto; 
               padding: 0; 
-              background-color: #f9f7f4; 
+              background-color: #f8f9fa; 
             }
             .container { background: #ffffff; margin: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
             .header { 
-              background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); 
+              background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
               color: white; 
               padding: 30px; 
               text-align: center; 
@@ -134,7 +134,7 @@ export class EmailService {
             .field:last-child { border-bottom: none; margin-bottom: 0; }
             .label { 
               font-weight: 600; 
-              color: #8B4513; 
+              color: #5a6c7d; 
               font-size: 14px; 
               text-transform: uppercase; 
               letter-spacing: 0.5px; 
@@ -145,39 +145,39 @@ export class EmailService {
               color: #2c2c2c; 
             }
             .value a { 
-              color: #8B4513; 
+              color: #5a6c7d; 
               text-decoration: none; 
             }
             .value a:hover { 
               text-decoration: underline; 
             }
             .highlight { 
-              background: #faf8f5; 
+              background: #f8f9fa; 
               padding: 20px; 
               border-radius: 8px; 
-              border-left: 4px solid #D2B48C; 
+              border-left: 4px solid #5a6c7d; 
               font-style: italic; 
               line-height: 1.7; 
             }
             .footer { 
-              background: #f8f6f3; 
+              background: #f8f9fa; 
               padding: 20px 30px; 
               text-align: center; 
               font-size: 13px; 
-              color: #8B4513; 
-              border-top: 1px solid #f0f0f0; 
+              color: #5a6c7d; 
+              border-top: 1px solid #e9ecef; 
             }
             .client-name { 
               font-size: 20px; 
               font-weight: 600; 
-              color: #8B4513; 
+              color: #5a6c7d; 
             }
           </style>
         </head>
         <body>
           <div class="container">
             <div class="header">
-              <h2>✨ New Photography Inquiry</h2>
+              <h2>New Photography Inquiry</h2>
               <p>A potential client is interested in your services!</p>
             </div>
             
@@ -256,7 +256,7 @@ export class EmailService {
               max-width: 600px; 
               margin: 0 auto; 
               padding: 0; 
-              background-color: #f9f7f4; 
+              background-color: #f8f9fa; 
             }
             .container { background: #ffffff; margin: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
             .header { 
@@ -282,7 +282,7 @@ export class EmailService {
             .greeting { 
               font-size: 20px; 
               margin-bottom: 25px; 
-              color: #8B4513; 
+              color: #5a6c7d; 
               font-weight: 600; 
             }
             .message { 
@@ -294,18 +294,18 @@ export class EmailService {
               margin-bottom: 18px; 
             }
             .highlight-box { 
-              background: #faf8f5; 
+              background: #f8f9fa; 
               padding: 20px; 
               border-radius: 8px; 
-              border-left: 4px solid #D2B48C; 
+              border-left: 4px solid #5a6c7d; 
               margin: 25px 0; 
               font-style: italic; 
             }
             .signature { 
               margin-top: 35px; 
               padding-top: 25px; 
-              border-top: 1px solid #f0f0f0; 
-              color: #8B4513; 
+              border-top: 1px solid #e9ecef; 
+              color: #5a6c7d; 
               font-style: italic; 
             }
             .signature-name { 
@@ -318,18 +318,18 @@ export class EmailService {
               opacity: 0.8; 
             }
             .footer { 
-              background: #f8f6f3; 
+              background: #f8f9fa; 
               padding: 25px 30px; 
               text-align: center; 
               font-size: 13px; 
-              color: #8B4513; 
-              border-top: 1px solid #f0f0f0; 
+              color: #5a6c7d; 
+              border-top: 1px solid #e9ecef; 
             }
             .footer p { 
               margin: 5px 0; 
             }
             .session-type { 
-              color: #8B4513; 
+              color: #5a6c7d; 
               font-weight: 600; 
             }
           </style>
@@ -366,8 +366,8 @@ export class EmailService {
             </div>
             
             <div class="footer">
-              <p>✨ This is an automated confirmation, but I will personally respond to your inquiry very soon!</p>
-              <p>📧 kim@capturedmagicfxbg.com • 📍 Fredericksburg, Virginia</p>
+              <p>This is an automated confirmation, but I will personally respond to your inquiry very soon!</p>
+              <p>kim@capturedmagicfxbg.com • Fredericksburg, Virginia</p>
             </div>
           </div>
         </body>
