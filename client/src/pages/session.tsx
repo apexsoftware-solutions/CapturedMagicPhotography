@@ -7,6 +7,7 @@ import familiesImage from "@assets/families-session-hero-new.jpg";
 import couplesImage from "@assets/couples-session-hero.jpg";
 import yourStoryImage from "@assets/DSC03025_1758844287458.jpeg";
 import mommyMeImage from "@assets/DSC09432_1758844759151.jpeg";
+import maternityImage from "@assets/DSC09702_1758845275898.jpeg";
 
 export default function SessionPage() {
   const params = useParams();
@@ -32,6 +33,8 @@ export default function SessionPage() {
   const isYourStorySession = sessionSlug === 'your-story';
   // Check if this is the mommy and me session page
   const isMommyMeSession = sessionSlug === 'mommy-me';
+  // Check if this is the maternity session page
+  const isMaternitySession = sessionSlug === 'maternity';
 
   return (
     <div className="min-h-screen bg-white">
@@ -703,8 +706,139 @@ export default function SessionPage() {
         </section>
       )}
 
+      {/* Maternity Hero Section - Full Width Scaling */}
+      {isMaternitySession && (
+        <section className="relative w-full">
+          <div className="relative w-full">
+            <img
+              src={maternityImage}
+              alt="Beautiful maternity photography session"
+              className="w-full h-auto object-contain"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  MATERNITY
+                </h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Maternity Content Section */}
+      {isMaternitySession && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto text-center px-6">
+            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+              You're growing a whole person. That's worth remembering.
+            </p>
+            
+            {/* Content Paragraphs */}
+            <div className="max-w-3xl mx-auto space-y-6 text-left">
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                There's a hush to this season. A sense of quiet preparation, even when life feels loud. You're growing a baby—but you're also growing into a mother again (or for the very first time). And that matters. These days deserve to be remembered.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                My maternity sessions are peaceful, unhurried, and shaped gently around you. Whether we walk through golden fields, curl up at home with bare feet and soft fabrics, or chase toddlers in the late light, the goal is always the same: to hold onto the beauty of what is already here.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                You don't have to be used to being in front of a camera. In fact, most of the mothers I photograph start by telling me they're awkward or unsure. But with a little guidance and a quiet rhythm, something lovely unfolds. I'll gently coach you, offer soft direction when needed, and keep the energy light and encouraging—so what we capture feels honest, full of connection, and surprisingly effortless.
+              </p>
+              
+              <p className="font-sans text-lg leading-relaxed text-gray-700">
+                I look for real moments—the way your hands settle on your belly, the smile you give your little one, the way your spouse glances at you when you're not looking. These are the details that matter. These are the things you'll want to remember.
+              </p>
+            </div>
+
+            {/* Closing Tagline */}
+            <div className="max-w-3xl mx-auto mt-12">
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-gray-800 italic text-center">
+                Soft and relaxed sessions, with space for snuggles, joy, and the quiet beauty of waiting.
+              </p>
+            </div>
+
+            {/* Recent Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Maternity Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful maternity moments</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/LObzvQqX2WQG2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Kimber
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/7E1DQfBp2kh4V" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Maternity
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/0znOFu78q44hL" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Maternity Family Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/nlpqHMvlJZjLi" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Maternity Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/zyAQ6rjXobOS4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Maternity Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      )}
+
       {/* Other Sessions - Default Layout */}
-      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && !isYourStorySession && !isMommyMeSession && (
+      {!isNewbornSession && !isFamiliesSession && !isCouplesSession && !isYourStorySession && !isMommyMeSession && !isMaternitySession && (
         <div className="pt-20 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-script text-5xl lg:text-7xl text-primary mb-8">
