@@ -106,7 +106,7 @@ export default function SessionPage() {
       {isNewbornSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Some of the sweetest photos happen in mama's arms—right where they feel most at peace.
             </p>
             
@@ -243,7 +243,7 @@ export default function SessionPage() {
       {isFamiliesSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               These are the moments that feel like your best day.
             </p>
             
@@ -384,7 +384,7 @@ export default function SessionPage() {
       {isCouplesSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Love lived out in ordinary days
             </p>
             
@@ -495,7 +495,7 @@ export default function SessionPage() {
       {isYourStorySession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Because one day, you'll want to relive this chapter.
             </p>
             
@@ -614,7 +614,7 @@ export default function SessionPage() {
       {isMommyMeSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               The time with this little one is something you cherish, guard, and will remember with fondness for the rest of your life.
             </p>
             
@@ -785,7 +785,7 @@ export default function SessionPage() {
       {isMaternitySession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-gray-800 mb-16 italic">
+            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               You're growing a whole person. That's worth remembering.
             </p>
             
