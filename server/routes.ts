@@ -22,14 +22,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const confirmationResult = await emailService.sendClientConfirmation(inquiry);
       
       // Update the inquiry with email status
-      if (notificationResult.success || confirmationResult.success) {
-        await storage.updateContactInquiryEmailStatus(
-          inquiry.id,
-          notificationResult.success && confirmationResult.success,
-          notificationResult.messageId || confirmationResult.messageId,
-          notificationResult.success && confirmationResult.success ? 'sent' : 'failed'
-        );
-      }
+      const bothEmailsSuccessful = notificationResult.success && confirmationResult.success;
+      await storage.updateContactInquiryEmailStatus(
+        inquiry.id,
+        bothEmailsSuccessful,
+        notificationResult.messageId || confirmationResult.messageId,
+        bothEmailsSuccessful ? 'sent' : 'failed'
+      );
       
       // Log email results for debugging
       if (!notificationResult.success) {
@@ -39,8 +38,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.error('Failed to send confirmation email:', confirmationResult.error);
       }
       
+      // If both emails failed, return error to user
+      if (!notificationResult.success && !confirmationResult.success) {
+        return res.status(502).json({ 
+          success: false, 
+          message: "Inquiry saved but email delivery failed. Please try again or contact us directly.",
+          inquiry,
+          emailError: notificationResult.error || confirmationResult.error
+        });
+      }
+      
+      // If only one email failed, still return success but include warning
+      if (!bothEmailsSuccessful) {
+        return res.json({ 
+          success: true, 
+          message: "Inquiry submitted successfully, but there was an issue with email delivery.",
+          inquiry,
+          emailNotification: notificationResult.success,
+          emailConfirmation: confirmationResult.success,
+          warning: "Some emails may not have been delivered"
+        });
+      }
+      
+      // Both emails successful
       res.json({ 
         success: true, 
+        message: "Inquiry submitted successfully!",
         inquiry,
         emailNotification: notificationResult.success,
         emailConfirmation: confirmationResult.success
