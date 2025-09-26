@@ -252,20 +252,22 @@ export default function ContactSection() {
               </Button>
             </form>
           </Form>
-        </div>
 
-        {/* FAQ Section - Mobile */}
-        <div className="mt-16 mb-16 md:hidden flex items-center justify-between gap-3">
-          <p className="font-sans text-base text-white/90 text-left flex-1">
-            Have questions about sessions, what to expect, or pricing?
-          </p>
-          <a
-            href="/faq"
-            className="inline-block border border-white hover:bg-white hover:text-black text-white px-6 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap flex-shrink-0"
-            data-testid="link-faq-contact-mobile"
-          >
-            VIEW FAQ
-          </a>
+          {/* FAQ Section - Mobile */}
+          <div className="md:hidden pt-6 mt-6 border-t border-white/20">
+            <div className="flex items-center justify-between gap-3">
+              <p className="font-sans text-base text-foreground text-left flex-1">
+                Have questions about sessions, what to expect, or pricing?
+              </p>
+              <a
+                href="/faq"
+                className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-6 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                data-testid="link-faq-contact-mobile"
+              >
+                VIEW FAQ
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
