@@ -165,6 +165,9 @@ export default function About() {
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
               My style is gentle, natural, and led by emotion rather than expectation. I don't ask your children to perform or pose. I follow their lead and capture the love that's already there.
             </p>
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              If your life is full of crumbs and cuddles, if your days are sweet but a little messy, if you want photos that feel like memory and not just image—I'd be honored to photograph you.
+            </p>
             
             {/* Daily life and beautiful ordinary moments */}
             <div className="my-8">
@@ -236,10 +239,6 @@ export default function About() {
                 />
               </div>
             </div>
-            
-            <p className="font-sans text-lg leading-relaxed text-foreground">
-              If your life is full of crumbs and cuddles, if your days are sweet but a little messy, if you want photos that feel like memory and not just image—I'd be honored to photograph you.
-            </p>
           </div>
 
           {/* Call to Action */}
