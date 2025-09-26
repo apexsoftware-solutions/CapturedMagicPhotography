@@ -1,7 +1,7 @@
 import { useParams, Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
-import newbornImage from "@assets/DSC06818_1758668103121.jpg";
+import newbornImage from "@assets/DSC05225_1758845092286.jpeg";
 import newbornCollage from "@assets/newborn-collage.jpg";
 import familiesImage from "@assets/families-session-hero-new.jpg";
 import couplesImage from "@assets/couples-session-hero.jpg";
@@ -48,21 +48,25 @@ export default function SessionPage() {
         </Link>
       </div>
 
-      {/* Newborn Hero Section with Parallax */}
+      {/* Newborn Hero Section - Full Width Scaling */}
       {isNewbornSession && (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
-            style={{ 
-              backgroundImage: `url(${newbornImage})`,
-              transform: `translateY(${scrollY * 0.5}px)`
-            }}
-          />
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
-              NEWBORN
-            </h1>
+        <section className="relative w-full">
+          <div className="relative w-full">
+            <img
+              src={newbornImage}
+              alt="Beautiful newborn photography session"
+              className="w-full h-auto object-contain"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* Title */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-4 max-w-4xl mx-auto">
+                <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.2em] opacity-90 font-light">
+                  NEWBORN
+                </h1>
+              </div>
+            </div>
           </div>
         </section>
       )}
@@ -128,6 +132,100 @@ export default function SessionPage() {
                 alt="Beautiful collage of intimate newborn moments - tiny hands, gentle touches, and peaceful sleeping baby"
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
               />
+            </div>
+
+            {/* Recent Newborn Sessions Gallery Links */}
+            <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
+              <div className="text-center mb-8">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Newborn Sessions</h3>
+                <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful newborn moments</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/5ChO4h9oA6sIG" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Amelia & Adeline
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/iWKGyYIOugchY" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Twins
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/IGgmHXVlumhea" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Newborn Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/pkCGDrQwlD8QQ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Brielle
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/O0u9jawxbz3y4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Baby Archer
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/8EvboNluGOK9B" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Twins First Session
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+                
+                <a 
+                  href="https://rosegoldphotography.pic-time.com/2Ih1cTznUyozG" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
+                >
+                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                    Micah
+                  </div>
+                  <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
