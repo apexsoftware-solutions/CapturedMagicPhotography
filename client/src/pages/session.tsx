@@ -106,7 +106,7 @@ export default function SessionPage() {
       {isNewbornSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Some of the sweetest photos happen in mama's arms—right where they feel most at peace.
             </p>
             
@@ -243,7 +243,7 @@ export default function SessionPage() {
       {isFamiliesSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               These are the moments that feel like your best day.
             </p>
             
@@ -384,7 +384,7 @@ export default function SessionPage() {
       {isCouplesSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Love lived out in ordinary days
             </p>
             
@@ -413,7 +413,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 italic text-center">
                 Marriage is the backbone of a family. These sessions are a chance to remember where your story began, to pause and honor the love that holds it all together.
               </p>
             </div>
@@ -495,7 +495,7 @@ export default function SessionPage() {
       {isYourStorySession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               Because one day, you'll want to relive this chapter.
             </p>
             
@@ -520,7 +520,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 italic text-center">
                 The simple, beautiful moments you'll never want to forget.
               </p>
             </div>
@@ -614,7 +614,7 @@ export default function SessionPage() {
       {isMommyMeSession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               The time with this little one is something you cherish, guard, and will remember with fondness for the rest of your life.
             </p>
             
@@ -643,7 +643,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 italic text-center">
                 You love them so much—let me get some pictures that show it.
               </p>
             </div>
@@ -785,7 +785,7 @@ export default function SessionPage() {
       {isMaternitySession && (
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto text-center px-6">
-            <p className="font-serif text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
+            <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 mb-12 italic">
               You're growing a whole person. That's worth remembering.
             </p>
             
@@ -810,7 +810,7 @@ export default function SessionPage() {
 
             {/* Closing Tagline */}
             <div className="max-w-3xl mx-auto mt-12">
-              <p className="font-serif text-lg md:text-xl leading-relaxed text-gray-600 italic text-center">
+              <p className="font-sans text-xl md:text-2xl leading-relaxed text-gray-600 italic text-center">
                 Soft and relaxed sessions, with space for snuggles, joy, and the quiet beauty of waiting.
               </p>
             </div>
