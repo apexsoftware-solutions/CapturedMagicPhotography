@@ -21,10 +21,13 @@ export default function AboutSection() {
               className="float-right ml-6 mb-4 w-32 sm:w-40 lg:w-48 h-auto object-cover"
             />
             <p>
-              Hello, I'm Kimberly—a photographer, mother, and old fashioned homemaker. I live in Fredericksburg, Virginia, where I raise three little ones, homeschool Charlotte Mason style. I spend my days noticing the beauty tucked into the folds of our ordinary family life.
+              Hello, I'm Kimberly—a photographer, mother, and old-fashioned homemaker. I live in Fredericksburg, Virginia, where I raise three little ones and homeschool Charlotte Mason style. I spend my days noticing the beauty tucked into the folds of our ordinary family life.
             </p>
             <p>
               My sessions are soft and simple. A little light, a little laughter, a little stillness. I don't chase perfection—I look for the truth of love as it really is, right now.
+            </p>
+            <p>
+              I'm a Christian, which means I am a sinner, who recognized that I need a Savior. I trusted in Jesus to save me, and I belong to Him now!
             </p>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 clear-right">
