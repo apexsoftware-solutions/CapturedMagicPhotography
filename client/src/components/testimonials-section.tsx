@@ -1,4 +1,4 @@
-import testimonialsImage from "@assets/Brielle Enhanced NR (5)_1749518229764.jpg";
+import testimonialsImage from "@assets/DSC04852_1758849034580.jpg";
 
 export default function TestimonialsSection() {
   return (
