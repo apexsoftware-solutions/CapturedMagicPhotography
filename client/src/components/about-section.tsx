@@ -14,8 +14,8 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-[2fr_1fr] lg:grid-cols-[3fr_2fr] gap-4 lg:gap-16 items-center">
           <div>
-            <h2 className="font-sans text-2xl lg:text-3xl font-light mb-6 text-foreground">About Me</h2>
-            <div className="space-y-5 font-sans text-sm lg:text-base leading-relaxed text-foreground">
+            <h2 className="font-sans text-3xl lg:text-4xl font-light mb-8 text-foreground">About Me</h2>
+            <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
                 Hello, I'm Kimberly—a photographer, mother, and old fashioned homemaker. I live in Fredericksburg, Virginia, where I raise three little ones, homeschool Charlotte Mason style. I spend my days noticing the beauty tucked into the folds of our ordinary family life.
               </p>
@@ -42,7 +42,7 @@ export default function AboutSection() {
               <img
                 src={aboutImage}
                 alt="mother embracing young child in warm indoor family session"
-                className="w-full max-w-[100px] sm:max-w-[140px] lg:max-w-lg mx-auto h-auto object-cover"
+                className="w-full max-w-[80px] sm:max-w-[120px] lg:max-w-lg mx-auto h-auto object-cover"
               />
             </div>
           </div>
