@@ -12,8 +12,8 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-8 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-16 items-center">
-          <div className="order-1">
+        <div className="grid grid-cols-[2fr_1fr] lg:grid-cols-[3fr_2fr] gap-4 lg:gap-16 items-center">
+          <div>
             <h2 className="font-sans text-3xl lg:text-4xl font-light mb-8 text-foreground">About Me</h2>
             <div className="space-y-6 font-sans text-base leading-relaxed text-foreground">
               <p>
@@ -37,12 +37,12 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="order-2">
-            <div className="lg:pl-8">
+          <div>
+            <div className="pl-2 lg:pl-8">
               <img
                 src={aboutImage}
                 alt="mother embracing young child in warm indoor family session"
-                className="w-full max-w-xs sm:max-w-md lg:max-w-lg mx-auto h-auto object-cover"
+                className="w-full max-w-[80px] sm:max-w-[120px] lg:max-w-lg mx-auto h-auto object-cover"
               />
             </div>
           </div>
