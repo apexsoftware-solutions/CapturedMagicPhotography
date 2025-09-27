@@ -223,7 +223,7 @@ export default function ContactSection() {
                       Preferred Date
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} type="date" className="border-gray-200 focus:border-foreground bg-white" value={field.value || ""} />
+                      <Input {...field} type="date" className="w-full border-gray-200 focus:border-foreground bg-white" value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
