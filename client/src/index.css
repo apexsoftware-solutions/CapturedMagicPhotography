@@ -138,13 +138,21 @@
 }
 
 /* Fix date input width to match other inputs */
-input[type="date"] {
+.date-input-fixed {
   width: 100% !important;
   max-width: 100% !important;
   min-width: 0 !important;
   box-sizing: border-box !important;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+.date-input-fixed::-webkit-calendar-picker-indicator {
   opacity: 1;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Fallback for all date inputs */
+input[type="date"] {
+  max-width: 100% !important;
+  width: 100% !important;
 }

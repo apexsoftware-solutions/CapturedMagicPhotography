@@ -223,9 +223,7 @@ export default function ContactSection() {
                       Preferred Date
                     </FormLabel>
                     <FormControl>
-                      <div className="w-full">
-                        <Input {...field} type="date" className="w-full border-gray-200 focus:border-foreground bg-white [&::-webkit-calendar-picker-indicator]:opacity-100" value={field.value || ""} />
-                      </div>
+                      <Input {...field} type="date" className="date-input-fixed border-gray-200 focus:border-foreground bg-white" value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
