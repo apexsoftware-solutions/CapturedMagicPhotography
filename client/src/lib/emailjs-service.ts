@@ -6,6 +6,17 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
+// Deployment debugging (remove in production)
+if (import.meta.env.DEV) {
+  console.log('EmailJS Debug Info:', {
+    hasServiceId: !!EMAILJS_SERVICE_ID,
+    hasTemplateId: !!EMAILJS_TEMPLATE_ID,
+    hasPublicKey: !!EMAILJS_PUBLIC_KEY,
+    serviceIdPrefix: EMAILJS_SERVICE_ID ? EMAILJS_SERVICE_ID.substring(0, 8) + '...' : 'missing',
+    env: import.meta.env.MODE
+  });
+}
+
 export interface EmailJSResponse {
   status: number;
   text: string;
@@ -54,7 +65,11 @@ export class EmailJSService {
     try {
       // Check if EmailJS is configured
       if (!this.isConfigured()) {
-        console.error('EmailJS is not properly configured. Missing environment variables.');
+        console.error('EmailJS is not properly configured. Missing environment variables:', {
+          hasServiceId: !!EMAILJS_SERVICE_ID,
+          hasTemplateId: !!EMAILJS_TEMPLATE_ID,
+          hasPublicKey: !!EMAILJS_PUBLIC_KEY
+        });
         return {
           success: false,
           error: 'Email service not configured. Please check environment variables.',

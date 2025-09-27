@@ -1,0 +1,173 @@
+Nice — thanks for the clear description. Based on that error message and your pipeline, the most likely problem is the EmailJS credentials aren’t actually present in the environment that Hostinger is serving, so the running site complains “Email service not configured.” I’ll give a prioritized checklist (fast wins first), how to test/confirm, and concrete fixes + example code you can drop in right away.
+
+⸻
+
+Quick likely root cause (1-sentence)
+
+Your Replit/GitHub/Hostinger flow probably never delivered the environment variables (or they were misnamed) to the Hostinger runtime, so the deployed site can’t find the EmailJS keys.
+
+⸻
+
+Priority checklist (do these in order)
+	1.	Confirm where the code expects the keys.
+	•	If your code reads process.env.EMAILJS_USER / process.env.EMAILJS_SERVICE / process.env.EMAILJS_TEMPLATE (or similar) that only works if the server/runtime has those env vars. Static HTML hosted on Hostinger won’t have process.env at runtime in the browser.
+	2.	Check how you stored credentials in Replit.
+	•	If you used Replit Secrets (.env or Replit secrets), those are not automatically committed to GitHub. They won’t appear in the repo and hence won’t be on Hostinger.
+	3.	Verify Hostinger has the env vars.
+	•	Log into Hostinger control panel (hPanel) → your Hosting → if it’s a Node app, there is an environment variables section. If static, Hostinger won’t provide process.env to client-side code.
+	•	Make sure the exact variable names match (case sensitive).
+	4.	If your site is static (HTML/JS) on Hostinger:
+	•	You cannot rely on process.env on the client. You either:
+	•	Put the EmailJS public key into the front-end code (EmailJS provides a public key for client-side use), OR
+	•	Move sending to a server endpoint (recommended for secret keys).
+	5.	Check the exact error origin.
+	•	Open browser devtools → Console and Network tab. Reproduce submit and inspect the failing request & stack trace. Is the error produced by your code (e.g., a guard that checks if (!SERVICE || !TEMPLATE)) or by EmailJS SDK? That tells you whether keys are empty or call failing.
+	6.	Check build/deploy logs on Hostinger/GitHub Actions.
+	•	Look for warnings about missing env variables or build-time variables.
+
+⸻
+
+How to test quickly (non-destructive)
+	1.	In your deployed site (temporarily) add a small diagnostic snippet to print whether the variables are present (mask secrets):
+
+// Only for debugging — remove afterwards
+console.log('emailjs service:', typeof EMAILJS_SERVICE !== 'undefined' ? 'present' : 'missing');
+console.log('from client process.env (window):', !!window.EMAILJS_PUBLIC_KEY); // if you put it on window
+
+	2.	If your code uses server-side Node, create a test endpoint:
+
+// /ping-env route (Node)
+app.get('/_envtest', (req, res) => {
+  res.json({
+    service: !!process.env.EMAILJS_SERVICE,
+    template: !!process.env.EMAILJS_TEMPLATE,
+    user: !!process.env.EMAILJS_USER // mask true/false only
+  });
+});
+
+Hitting / _envtest should show true/false. If all false on Hostinger you know the vars aren’t set there.
+
+⸻
+
+Correct ways to configure EmailJS depending on hosting type
+
+A — If your site is client-side only (static) and you used EmailJS client SDK:
+
+EmailJS supports public keys for client use. You must include the public key and service/template IDs directly in front-end code (not secret keys). Example:
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // initialize with public key provided by EmailJS (not your secret)
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // ← must be present on deployed site
+  })();
+
+  function sendInquiry(form) {
+    emailjs.sendForm('service_xxx', 'template_xxx', form)
+      .then(function() { alert('sent');}, function(err){ console.error(err); alert('send failed: '+err.text);});
+  }
+</script>
+
+If you store those IDs in your repo as build-time env vars, make sure your build step actually injects them into the built files (for example via a build-time replace). Hostinger static hosting won’t run Replit secrets.
+
+Security note: The EmailJS public key is fine in client code; do not publish secret keys.
+
+B — If your site runs a Node server on Hostinger:
+
+Set environment variables in Hostinger’s app settings (hPanel → Node app → Environment variables). Use process.env.EMAILJS_USER, etc., and ensure the Node app restarts after adding vars.
+
+C — Best practice (recommended): Move to a server-side endpoint
+
+Create a small server endpoint (on Hostinger, Replit, or a serverless function) that receives form data and calls EmailJS or your SMTP provider server-side. That keeps secrets off the client and avoids exposing service keys.
+
+Example Node endpoint (using fetch to EmailJS REST API):
+
+// server-side endpoint (express)
+app.post('/send-inquiry', express.json(), async (req, res) => {
+  const { name, message, email } = req.body;
+  const serviceId = process.env.EMAILJS_SERVICE;
+  const templateId = process.env.EMAILJS_TEMPLATE;
+  const userId = process.env.EMAILJS_USER; // or public key
+  if (!serviceId || !templateId || !userId) {
+    return res.status(500).json({ error: 'Email service not configured. Please check environment variables' });
+  }
+  try {
+    const resp = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: userId,
+        template_params: { name, message, email }
+      })
+    });
+    if (!resp.ok) throw new Error(await resp.text());
+    res.json({ ok: true });
+  } catch (e) {
+    console.error('email send error', e);
+    res.status(500).json({ error: 'Email send failed' });
+  }
+});
+
+Then the client posts to /send-inquiry. Hostinger must run this Node app for process.env to exist.
+
+⸻
+
+Common mistakes I see with your exact setup
+	•	You put credentials into Replit secrets (so dev runs in Replit), but never included them in GitHub repo or Hostinger env — dev works locally but deployed site has none.
+	•	Using process.env in client-side JavaScript (that only exists at build time, not in the browser).
+	•	Variable name mismatch (e.g., EMAILJS_USER vs EMAILJS_PUBLIC_KEY).
+	•	Using EmailJS server secret on the client (it gets blocked by EmailJS, or the site rejects because you didn’t init with a public key).
+	•	Hostinger static deploy doesn’t support server-side env vars — you must use their Node app or serverless functions if you need env vars.
+
+⸻
+
+Concrete next steps for you to run now
+	1.	Check what your deployed code is actually doing: open the deployed site → DevTools Console → submit form → copy the exact error stack and the network request that failed. Paste it here if you want me to interpret it.
+	2.	If your code uses process.env in browser code: Replace with one of:
+	•	inject public keys at build time into the built assets (make sure GitHub Actions / Hostinger build sets them), OR
+	•	move email sending to a server endpoint as shown above.
+	3.	If you run Node on Hostinger:
+	•	Go to Hostinger hPanel → your Node app → Environment variables → add the variables (names must match exactly). Restart the app. Test / _envtest route from above.
+	4.	If you host static files (no server):
+	•	Put EmailJS public key and service/template IDs in the client code (or better: use a serverless function on Replit/AWS/Netlify/Vercel that has the secrets).
+	5.	Temporary debug: Add the / _envtest endpoint (if Node) or console.log checks (if client) so you can confirm presence/absence of keys.
+
+⸻
+
+Example: Minimal client-side EmailJS form (static host)
+
+If you want a quick test you can drop into your static site:
+
+<form id="contact">
+  <input name="from_name" />
+  <input name="reply_to" />
+  <textarea name="message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("YOUR_PUBLIC_KEY"); // must be present in deployed HTML
+
+  document.getElementById('contact').addEventListener('submit', function(e){
+    e.preventDefault();
+    emailjs.sendForm('service_xxx', 'template_xxx', this)
+      .then(_ => alert('sent'), err => {
+        console.error('send err', err);
+        alert('Error sending inquiry: ' + (err.text || err.message || 'unknown'));
+      });
+  });
+</script>
+
+Replace YOUR_PUBLIC_KEY, service_xxx, template_xxx with the values EmailJS gave you.
+
+⸻
+
+Security reminder
+	•	Don’t commit secret keys to GitHub. Public keys okay for EmailJS client usage; secrets (server secret keys) must be kept on server envs.
+
+⸻
+
+If you want, paste the exact form-handling JS (the code that does emailjs.init / send or that checks env vars) and I’ll point out the exact line that’s failing and show the smallest change to fix it. Or tell me whether your Hostinger deploy is static or a Node app and I’ll give exact Hostinger steps.
