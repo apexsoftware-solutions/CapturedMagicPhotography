@@ -21,15 +21,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { emailJSService } from "@/lib/emailjs-service";
-import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
+import { emailJSService, type ContactInquiry } from "@/lib/emailjs-service";
+import { z } from "zod";
 import contactBgImage from "@assets/image_1749565660062.png";
+
+// Contact form validation schema
+const contactInquirySchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  sessionType: z.string().min(1, "Please select a session type"),
+  eventDate: z.string().optional(),
+  message: z.string().min(10, "Please provide at least 10 characters"),
+});
 
 export default function ContactSection() {
   const { toast } = useToast();
 
-  const form = useForm<InsertContactInquiry>({
-    resolver: zodResolver(insertContactInquirySchema),
+  const form = useForm<ContactInquiry>({
+    resolver: zodResolver(contactInquirySchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -42,7 +53,7 @@ export default function ContactSection() {
   });
 
   const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactInquiry) => {
+    mutationFn: async (data: ContactInquiry) => {
       return await emailJSService.sendContactInquiry(data);
     },
     onSuccess: (result) => {

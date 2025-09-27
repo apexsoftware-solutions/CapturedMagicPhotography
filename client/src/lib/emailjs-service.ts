@@ -1,5 +1,15 @@
 import emailjs from '@emailjs/browser';
-import type { InsertContactInquiry } from '@shared/schema';
+
+// Contact inquiry interface for EmailJS
+export interface ContactInquiry {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+  sessionType: string;
+  eventDate?: string;
+  message: string;
+}
 
 // EmailJS configuration - these will be set as environment variables
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
@@ -50,7 +60,7 @@ export class EmailJSService {
   /**
    * Send contact inquiry email using EmailJS
    */
-  async sendContactInquiry(inquiry: InsertContactInquiry): Promise<EmailSendResult> {
+  async sendContactInquiry(inquiry: ContactInquiry): Promise<EmailSendResult> {
     try {
       // Check if EmailJS is configured
       if (!this.isConfigured()) {
