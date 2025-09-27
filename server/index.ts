@@ -1,39 +1,70 @@
-#!/usr/bin/env tsx
+import express, { type Request, Response, NextFunction } from "express";
+import { registerRoutes } from "./routes";
+import { setupVite, serveStatic, log } from "./vite";
 
-// Frontend-only development server entry point
-// This replaces the old backend server for Hostinger deployment
-import { spawn } from 'child_process';
-import path from 'path';
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-console.log('🚀 Starting frontend-only development server...');
-console.log('📁 Perfect for Hostinger static hosting deployment');
+app.use((req, res, next) => {
+  const start = Date.now();
+  const path = req.path;
+  let capturedJsonResponse: Record<string, any> | undefined = undefined;
 
-// Start Vite development server from client directory to avoid Replit plugin issues
-const viteProcess = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000', '--config', '../vite-simple.config.ts'], {
-  cwd: 'client',
-  stdio: 'inherit',
-  env: { ...process.env }
+  const originalResJson = res.json;
+  res.json = function (bodyJson, ...args) {
+    capturedJsonResponse = bodyJson;
+    return originalResJson.apply(res, [bodyJson, ...args]);
+  };
+
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    if (path.startsWith("/api")) {
+      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
+      if (capturedJsonResponse) {
+        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      }
+
+      if (logLine.length > 80) {
+        logLine = logLine.slice(0, 79) + "…";
+      }
+
+      log(logLine);
+    }
+  });
+
+  next();
 });
 
-viteProcess.on('error', (error) => {
-  console.error('❌ Failed to start Vite development server:', error);
-  process.exit(1);
-});
+(async () => {
+  const server = await registerRoutes(app);
 
-viteProcess.on('close', (code) => {
-  if (code !== 0) {
-    console.log(`❌ Vite development server exited with code ${code}`);
+  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+    const status = err.status || err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
+
+    res.status(status).json({ message });
+    throw err;
+  });
+
+  // importantly only setup vite in development and after
+  // setting up all the other routes so the catch-all route
+  // doesn't interfere with the other routes
+  if (app.get("env") === "development") {
+    await setupVite(app, server);
+  } else {
+    serveStatic(app);
   }
-  process.exit(code);
-});
 
-// Handle graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('⏹️  Shutting down development server...');
-  viteProcess.kill('SIGTERM');
-});
-
-process.on('SIGINT', () => {
-  console.log('⏹️  Shutting down development server...');
-  viteProcess.kill('SIGINT');
-});
+  // ALWAYS serve the app on port 5000
+  // this serves both the API and the client.
+  // It is the only port that is not firewalled.
+  const port = 5000;
+  server.listen({
+    port,
+    host: "0.0.0.0",
+    reusePort: true,
+  }, () => {
+    log(`serving on port ${port}`);
+  });
+})();
