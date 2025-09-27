@@ -23,5 +23,6 @@ export default defineConfig({
       strict: false,
       allow: ['..']
     },
+    allowedHosts: true, // Allow all hosts for Replit preview
   },
 });
