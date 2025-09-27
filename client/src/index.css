@@ -137,26 +137,7 @@
   }
 }
 
-/* Aggressive fix for date input width - override everything */
-input[type="date"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  flex: 1 1 auto !important;
-}
-
-/* Force container to constrain date input */
-.space-y-6 > div input[type="date"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  flex: 1 1 auto !important;
-}
-
+/* Fix date input styling */
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
-  width: 16px !important;
-  height: 16px !important;
 }
