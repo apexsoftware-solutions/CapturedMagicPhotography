@@ -109,7 +109,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Don't see what you're looking for section */}
-        <div className="text-center mt-12 mb-8">
+        <div className="text-center mt-12 mb-4">
           <p className="font-sans text-lg text-gray-700 mb-4">
             Don't see what you're looking for?
           </p>
