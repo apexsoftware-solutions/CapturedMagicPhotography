@@ -8,8 +8,9 @@ import path from 'path';
 console.log('🚀 Starting frontend-only development server...');
 console.log('📁 Perfect for Hostinger static hosting deployment');
 
-// Start Vite development server from project root
-const viteProcess = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000'], {
+// Start Vite development server from client directory to avoid Replit plugin issues
+const viteProcess = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000', '--config', '../vite-simple.config.ts'], {
+  cwd: 'client',
   stdio: 'inherit',
   env: { ...process.env }
 });
