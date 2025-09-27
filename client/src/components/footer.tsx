@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-white py-16 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center">
-          <div className="font-serif text-2xl mb-4">
+          <div className="font-sans text-2xl mb-4">
             Captured Magic Photography
           </div>
           <p className="font-sans text-sm text-foreground/60 mb-2">

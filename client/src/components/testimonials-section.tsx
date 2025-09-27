@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
                 <blockquote className="font-sans text-lg leading-relaxed text-foreground">
                   "Kimberly is the absolute best! When we arrived to our photo session, she made us feel so relaxed and at ease. She truly embraces our chaos with multiple little kids. It's quick and painless and you almost wonder if it's possible she has enough for one good photo. Imagine our surprise when we have the most beautiful pictures that capture every little moment that makes our family special- the snuggles, giggles, joy, smiles, and love. Our photos are timeless and authentic and we will treasure them for years to come. I recommend Captured Magic to all my friends, and I will only go to Kimberly for our family photos."
                 </blockquote>
-                <div className="font-serif text-xl">
+                <div className="font-sans text-xl">
                   <strong>- Rebecca VanSant</strong>
                 </div>
               </div>
@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
                 <blockquote className="font-sans text-lg leading-relaxed text-foreground">
                   "Kimberly has photographed different seasons our lives, and every time I am blown away by how she manages to capture such beautiful snapshots of our family. Amidst a crying baby and toddler chaos, she has a magical talent of putting everyone at ease and creating the timeless photos every parent wants. My daughter has gone from resisting photos to begging "again, again!" because of the creative games Kimberly plays with her. You are truly getting the best of the best with Kimberly, from her welcoming personality to her eye for beautiful, candid shots. Thank you Kimberly for the gorgeous memories of our family, we will treasure them always."
                 </blockquote>
-                <div className="font-serif text-xl">
+                <div className="font-sans text-xl">
                   <strong>- Emma Schumacher</strong>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
                 <blockquote className="font-sans text-lg leading-relaxed text-foreground">
                   "I usually dread photo sessions because I never feel photogenic and end up looking so awkward, and my husband isn't a fan either. But Kimberly completely changed that for us! She somehow made it fun and exciting even for our grumpy 2-year-old, and the whole session felt more like a family snuggle than a photoshoot. The pictures turned out absolutely beautiful—I'll always be coming back to her for our family photos."
                 </blockquote>
-                <div className="font-serif text-xl">
+                <div className="font-sans text-xl">
                   <strong>- Melody Castellanos</strong>
                 </div>
               </div>

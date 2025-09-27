@@ -66,7 +66,7 @@ export default function PortfolioSection({ onImageClick }: PortfolioSectionProps
           <h2 className="font-script text-4xl lg:text-6xl text-primary mb-6">
             Portfolio
           </h2>
-          <p className="font-serif text-xl text-foreground max-w-3xl mx-auto">
+          <p className="font-sans text-xl text-foreground max-w-3xl mx-auto">
             A collection of treasured moments, from intimate family sessions to romantic wedding celebrations
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function PortfolioSection({ onImageClick }: PortfolioSectionProps
               <div className="absolute inset-0 photo-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center text-white">
                   <Search className="mx-auto text-3xl mb-2" size={32} />
-                  <p className="font-serif text-lg">{portfolioImages[0].category}</p>
+                  <p className="font-sans text-lg">{portfolioImages[0].category}</p>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function PortfolioSection({ onImageClick }: PortfolioSectionProps
                 <div className="absolute inset-0 photo-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-center text-white">
                     <image.icon className="mx-auto text-2xl mb-1" size={24} />
-                    <p className="font-serif">{image.category}</p>
+                    <p className="font-sans">{image.category}</p>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export default function PortfolioSection({ onImageClick }: PortfolioSectionProps
         <div className="text-center">
           <button
             onClick={() => scrollToSection("contact")}
-            className="inline-block bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full font-serif text-xl transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-primary hover:bg-primary/80 text-white px-10 py-4 rounded-full font-sans text-xl transition-all duration-300 transform hover:scale-105"
           >
             Book Your Session
           </button>

@@ -37,7 +37,7 @@ export default function IntroSection() {
           <h2 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-white/90 drop-shadow-lg">
             HONEST & POETIC CAPTURES OF YOUR LIFE
           </h2>
-          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 text-white drop-shadow-xl">
+          <h3 className="font-sans text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 text-white drop-shadow-xl">
             MAKING <strong className="text-white">art</strong> OUT OF <strong className="text-white">ordinary moments</strong>
           </h3>
           <h4 className="font-sans text-lg mb-8 text-white/90 drop-shadow-lg">

@@ -145,7 +145,7 @@ export default function SessionPage() {
             {/* Recent Newborn Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Newborn Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Newborn Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful newborn moments</p>
               </div>
               
@@ -156,7 +156,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Amelia & Adeline
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -168,7 +168,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Twins
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -180,7 +180,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Newborn Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -192,7 +192,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Brielle
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -204,7 +204,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Baby Archer
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -216,7 +216,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Twins First Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -228,7 +228,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Micah
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -274,7 +274,7 @@ export default function SessionPage() {
             {/* Recent Family Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Family Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Family Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some of our favorite family moments</p>
               </div>
               
@@ -285,7 +285,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Fall Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -297,7 +297,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Rains Family Photos 2024
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -309,7 +309,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Family Mini 2024
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -321,7 +321,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Yant Family Photos '25
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -333,7 +333,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Family Mini 2025
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -345,7 +345,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Yants 2024
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -421,7 +421,7 @@ export default function SessionPage() {
             {/* Recent Couples Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Couples Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Couples Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful couples moments</p>
               </div>
               
@@ -432,7 +432,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Anniversary Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -444,7 +444,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Save the Date
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -456,7 +456,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Spring Mini '24
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -528,7 +528,7 @@ export default function SessionPage() {
             {/* Recent Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful story sessions</p>
               </div>
               
@@ -539,7 +539,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Beach
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -551,7 +551,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Long Summer Afternoon
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -563,7 +563,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Breedlove Newborn Home Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -575,7 +575,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Family Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -651,7 +651,7 @@ export default function SessionPage() {
             {/* Recent Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Mommy & Me Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Mommy & Me Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful moments between mama and baby</p>
               </div>
               
@@ -662,7 +662,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Eliza Baby Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -674,7 +674,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Eden
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -686,7 +686,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Mommy and Me Summer '24
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -698,7 +698,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Morning Snuggles
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -710,7 +710,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Springtime
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -722,7 +722,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Giggles and Hugs
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -734,7 +734,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Cherry Blossom Mini Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -746,7 +746,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Mommy and Me
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -818,7 +818,7 @@ export default function SessionPage() {
             {/* Recent Sessions Gallery Links */}
             <div className="max-w-4xl mx-auto mt-16 pt-12 border-t border-gray-200">
               <div className="text-center mb-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-gray-800 mb-4">Recent Maternity Sessions</h3>
+                <h3 className="font-sans text-2xl md:text-3xl text-gray-800 mb-4">Recent Maternity Sessions</h3>
                 <p className="font-sans text-lg text-gray-600">Take a peek into some beautiful maternity moments</p>
               </div>
               
@@ -829,7 +829,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Kimber
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -841,7 +841,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Maternity
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -853,7 +853,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Maternity Family Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -865,7 +865,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Maternity Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>
@@ -877,7 +877,7 @@ export default function SessionPage() {
                   rel="noopener noreferrer"
                   className="block p-6 border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-md transition-all duration-300 text-center group"
                 >
-                  <div className="font-serif text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
+                  <div className="font-sans text-lg text-gray-700 group-hover:text-gray-900 transition-colors">
                     Maternity Session
                   </div>
                   <div className="font-sans text-sm text-gray-500 mt-1">View Session →</div>

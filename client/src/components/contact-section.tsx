@@ -113,7 +113,7 @@ export default function ContactSection() {
 
         {/* Contact Form */}
         <div className="backdrop-blur-sm p-8 rounded-lg bg-[#ffffff40]">
-          <h3 className="font-serif text-2xl mb-8">Get in Touch</h3>
+          <h3 className="font-sans text-2xl mb-8">Get in Touch</h3>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">

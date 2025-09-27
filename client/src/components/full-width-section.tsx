@@ -9,7 +9,7 @@ export default function FullWidthSection() {
   return (
     <section className="py-32 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-8">
+        <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl leading-tight mb-8">
           NATURAL AND ARTISTIC FAMILY & NEWBORN PHOTOGRAPHY IN BRISTOL, BATH, THE COTSWOLDS AND BEYOND
         </h2>
         <h3 className="font-sans text-lg mb-12 text-foreground/80">
