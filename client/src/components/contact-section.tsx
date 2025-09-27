@@ -81,7 +81,7 @@ export default function ContactSection() {
     },
   });
 
-  const onSubmit = (data: InsertContactInquiry) => {
+  const onSubmit = (data: ContactInquiry) => {
     contactMutation.mutate(data);
   };
 
