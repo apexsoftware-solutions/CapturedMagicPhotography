@@ -1,0 +1,108 @@
+Perfect — since you’re on an iPad (no desktop DevTools), our next step will be to add a tiny diagnostic snippet to the contact page so the page itself tells us exactly what environment info is present when the form is submitted. You’ll paste this into the HTML file that contains your contact form (usually index.html, contact.html, or the template file your site uses). I’ll show the exact code and give exact save / deploy instructions for Replit or GitHub web.
+
+Step 2 (do this now): Add the diagnostic snippet to your contact page
+	1.	Open your Replit project or your GitHub repo in your iPad browser.
+	•	Replit: open the project, tap the file that contains the contact form (e.g., index.html or contact.html).
+	•	GitHub: open the repo → navigate to that HTML file → tap the pencil icon (Edit file).
+	2.	Find the end of the HTML page and paste this exact block of code just before the closing </body> tag (replace nothing else):
+
+<!-- START EMAIL DEBUG SNIPPET - REMOVE AFTER DEBUG -->
+<div id="email-debug" style="position:fixed;right:10px;bottom:10px;z-index:9999;
+  background:#fff;border:2px solid #333;padding:12px;max-width:360px;font-family:Arial;font-size:13px;">
+  <strong>Email debug info</strong>
+  <div id="email-debug-content" style="margin-top:8px;white-space:pre-wrap;"></div>
+  <button id="email-debug-clear" style="margin-top:8px;">Clear</button>
+  <div style="margin-top:8px;color:#666;font-size:11px;">(Remove this snippet after debugging)</div>
+</div>
+
+<script>
+(function(){
+  const out = msg => {
+    const el = document.getElementById('email-debug-content');
+    el.textContent = (el.textContent ? el.textContent + "\n\n" : "") + msg;
+  };
+
+  // Basic checks for common patterns
+  out('Page URL: ' + location.href);
+  out('User agent: ' + navigator.userAgent);
+
+  // Check EmailJS client-side SDK presence
+  out('window.emailjs exists: ' + (typeof window.emailjs !== 'undefined'));
+  if (window.emailjs) {
+    out('emailjs.sendForm exists: ' + (typeof emailjs.sendForm === 'function'));
+    out('emailjs.init exists: ' + (typeof emailjs.init === 'function'));
+  }
+
+  // Check for common variable names that people try to use
+  const vars = [
+    'EMAILJS_PUBLIC_KEY','EMAILJS_SERVICE_ID','EMAILJS_TEMPLATE_ID',
+    'EMAILJS_USER','EMAILJS_SERVICE','EMAILJS_TEMPLATE'
+  ];
+  vars.forEach(k => out(k + ' on window: ' + (typeof window[k] !== 'undefined' ? String(window[k]) : 'MISSING')));
+
+  // If your client-side JS puts config into a global object named `emailConfig` check that
+  out('window.emailConfig present: ' + (typeof window.emailConfig !== 'undefined'));
+  if (window.emailConfig) out('emailConfig: ' + JSON.stringify(window.emailConfig));
+
+  // Intercept form submit (if your form has id="contact" or name="contact")
+  const f = document.querySelector('form#contact, form[name="contact"], form[action*="send-inquiry"], form');
+  if (!f) {
+    out('Form element NOT found with selectors: form#contact, form[name=\"contact\"], form[action*=\"send-inquiry\"], or first <form>');
+  } else {
+    out('Form element FOUND. Will attach debug submit listener to it.');
+    f.addEventListener('submit', function(ev){
+      try {
+        ev.preventDefault();
+        out('--- Form submit intercepted ---');
+
+        // Show form field names and values (mask anything that looks like a key)
+        const data = {};
+        new FormData(f).forEach((v,k) => {
+          const masked = /key|token|secret|password|user_id|public/i.test(k) ? '***masked***' : v;
+          data[k] = masked;
+        });
+        out('Form fields: ' + JSON.stringify(data, null, 2));
+
+        // If emailjs is available, attempt a sendForm to see response (this may actually attempt to send)
+        if (window.emailjs && typeof emailjs.sendForm === 'function') {
+          out('Calling emailjs.sendForm(...) to test — this will attempt to send if config exists.');
+          emailjs.sendForm(window.EMAILJS_SERVICE_ID || window.EMAILJS_SERVICE || 'service_xxx',
+                            window.EMAILJS_TEMPLATE_ID || window.EMAILJS_TEMPLATE || 'template_xxx',
+                            f)
+            .then(function(resp){
+              out('emailjs.sendForm SUCCESS: ' + JSON.stringify(resp));
+            }, function(err){
+              out('emailjs.sendForm ERROR: ' + (err && err.text ? err.text : JSON.stringify(err)));
+            });
+        } else {
+          out('emailjs.sendForm not available — cannot call EmailJS from client.');
+        }
+      } catch(e){
+        out('Exception in debug submit handler: ' + String(e));
+      }
+    }, {once:false});
+  }
+
+  // Clear button
+  document.getElementById('email-debug-clear').addEventListener('click', function(){ document.getElementById('email-debug-content').textContent='';});
+})();
+</script>
+<!-- END EMAIL DEBUG SNIPPET -->
+
+	3.	Save and commit the change
+	•	Replit: after pasting, tap Save (usually a disk icon or the editor auto-saves). Then open the Version control / Git pane and Commit with message debug: add email debug snippet and Push to GitHub (tap the Git icon → fill commit message → Commit & Push).
+	•	GitHub web editor: after editing, scroll down and type commit message debug: add email debug snippet, choose “Create a new branch for this commit and start a pull request” or commit directly to main if you prefer, then tap Commit changes. (Your pipeline will run from the commit.)
+	4.	Open your live site (the published URL) on your iPad and go to the contact form page.
+	•	The debug box should be visible in the lower-right corner. If you don’t see it, reload the page.
+	5.	Submit the contact form normally (fill fields and press Send).
+	•	The debug panel will capture and display:
+	•	whether emailjs is present,
+	•	whether common EmailJS keys exist on window,
+	•	the form fields (with likely secrets masked),
+	•	and, if possible, the result/error of calling emailjs.sendForm.
+	6.	Copy everything shown in that debug panel (tap-and-hold to select text, then Copy) and paste it back here.
+	7.	After you paste the debug output here, I’ll analyze it and tell you the exact next step.
+
+Important security note: This debug snippet masks likely secret values in form fields but will display any global string values. Do not paste any long-looking secret keys in chat. If the debug output shows an actual secret value (very unlikely), redact it before pasting.
+
+When you’re done, paste the debug panel text here and I’ll give the next step.
