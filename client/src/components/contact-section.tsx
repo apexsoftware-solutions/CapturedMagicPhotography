@@ -223,19 +223,18 @@ export default function ContactSection() {
                       Preferred Date
                     </FormLabel>
                     <FormControl>
-                      <Input 
-                        {...field} 
-                        type="date" 
-                        className="border-gray-200 focus:border-foreground bg-white" 
-                        style={{ 
-                          width: '100%', 
-                          maxWidth: '100%', 
-                          minWidth: '0', 
-                          boxSizing: 'border-box',
-                          flex: '1 1 auto'
-                        }} 
-                        value={field.value || ""} 
-                      />
+                      <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
+                        <Input 
+                          {...field} 
+                          type="date" 
+                          className="border-gray-200 focus:border-foreground bg-white" 
+                          style={{ 
+                            width: '100%',
+                            maxWidth: '100%'
+                          }}
+                          value={field.value || ""} 
+                        />
+                      </div>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
