@@ -36,7 +36,7 @@ export default function AboutSection() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 clear-right">
             <Link
               href="/about"
-              className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
+              className="inline-block border border-foreground hover:bg-foreground hover:text-white text-foreground px-8 py-3 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 text-center"
             >
               MORE ABOUT ME
             </Link>
