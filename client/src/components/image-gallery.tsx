@@ -116,8 +116,11 @@ const slideshowImages: SlideshowImage[] = [
 ];
 
 interface ImageGalleryProps {
-  onImageClick?: (src: string, alt: string) => void;
+  onImageClick?: (src: string, alt: string, index: number) => void;
 }
+
+// Export the slideshow images array so the lightbox can access all images
+export { slideshowImages };
 
 export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -175,7 +178,7 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
           {/* Current Image */}
           <div 
             className="w-full h-full cursor-pointer"
-            onClick={() => onImageClick?.(slideshowImages[currentIndex].src, slideshowImages[currentIndex].alt)}
+            onClick={() => onImageClick?.(slideshowImages[currentIndex].src, slideshowImages[currentIndex].alt, currentIndex)}
           >
             <img
               src={slideshowImages[currentIndex].src}
