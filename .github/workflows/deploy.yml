@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout (disable default creds - we're using DEPLOY_TOKEN)
+      # 1) Checkout (disable default creds - we'll use DEPLOY_TOKEN)
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -26,22 +26,17 @@ jobs:
         working-directory: client
         run: npm ci
 
-      # 4) Build frontend
+      # 4) Build frontend with EmailJS secrets injected as VITE_* env vars
+      #    These will be available in your client code as import.meta.env.VITE_EMAILJS_...
       - name: Build frontend
         working-directory: client
+        env:
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
         run: npm run build
 
-      # 5) Inject SMTP environment variables into your build (so frontend can use them)
-      - name: Configure SMTP secrets
-        run: |
-          echo "VITE_SMTP_HOST=${{ secrets.SMTP_HOST }}" >> $GITHUB_ENV
-          echo "VITE_SMTP_PORT=${{ secrets.SMTP_PORT }}" >> $GITHUB_ENV
-          echo "VITE_SMTP_USER=${{ secrets.SMTP_USER }}" >> $GITHUB_ENV
-          echo "VITE_SMTP_PASS=${{ secrets.SMTP_PASS }}" >> $GITHUB_ENV
-          echo "VITE_SMTP_TO=${{ secrets.SMTP_TO }}" >> $GITHUB_ENV
-          echo "VITE_SMTP_FROM=${{ secrets.SMTP_FROM }}" >> $GITHUB_ENV
-
-      # 6) Inspect build output (debug)
+      # 5) Inspect build output (debug) - helpful to confirm dist/public exists and contains index.html
       - name: Inspect build output (debug)
         run: |
           echo "=== repo root contents ==="
@@ -50,17 +45,27 @@ jobs:
           ls -la dist || true
           echo "=== dist/public contents ==="
           ls -la dist/public || true
-          echo "=== client/dist contents ==="
-          ls -la client/dist || true
+          echo "=== client contents ==="
+          ls -la client || true
 
-      # 7) Deploy to Hostinger repo - publish dist/public
+      # 6) Ensure publish dir has a hidden file so the peaceiris cp '.*' glob doesn't fail
+      - name: Ensure publish dir has a dotfile (fix cp .* issue)
+        run: |
+          mkdir -p dist/public
+          # create a tiny placeholder hidden file so cp '.*' expands to something
+          touch dist/public/.placeholder
+          echo "Created placeholder in dist/public:"
+          ls -la dist/public || true
+
+      # 7) Deploy to external deploy repo - publish dist/public
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: apexsoftware-solutions/CapturedMagicDeploy
-          publish_branch: main
+          publish_branch: main            # change to target branch if needed
           publish_dir: dist/public
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: "Deploy: ${{ github.sha }}"
+          keep_files: false               # remove files not present in the new build
