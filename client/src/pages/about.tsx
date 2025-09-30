@@ -41,10 +41,6 @@ export default function About() {
           <h1 className="font-sans text-sm uppercase tracking-[0.2em] mb-6 text-foreground/80">
             ABOUT ME
           </h1>
-          <h2 className="font-script text-3xl lg:text-4xl text-foreground mb-8 italic leading-relaxed">
-            I'm Kimberly
-          </h2>
-          <div className="w-24 h-px bg-foreground/20 mx-auto"></div>
         </header>
 
         {/* Content */}
@@ -60,8 +56,12 @@ export default function About() {
 
           {/* Personal Introduction */}
           <div className="mb-12">
+            <p className="font-sans text-xl leading-relaxed text-foreground mb-6 italic">
+              When I was a teenager, my great-grandmother often called me old-fashioned. She said it with a smile, telling me that was why she loved being around me—that I reminded her of the girls she grew up with. Now that I'm older, I think that quality has only grown stronger.
+            </p>
+            
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              I'm a photographer, a mother of three, and a firm believer that the quietest moments often turn out to be the most meaningful ones. I live just outside Fredericksburg, Virginia, where life hums along with garden chores, schoolwork at the kitchen table, and the endless, sacred work of raising children.
+              I am guided by a strong sense of duty and a deep desire to honor my Lord and Savior, Jesus Christ, in everything I do. I love being married to Jeff, and I work to keep the spark, the friendship, and the trust alive in our marriage. Together, we are raising our children to choose what is right, to grow strong in character, and—most importantly—to become adults who love Jesus even more than we do.
             </p>
             
             {/* Morning coffee moment */}
@@ -78,8 +78,8 @@ export default function About() {
               />
             </div>
             
-            <p className="font-sans text-lg leading-relaxed text-foreground">
-              I come from a large, joyfully chaotic homeschool family—twelve children in all—and as the oldest girl, I was a second pair of hands from the beginning. I grew up holding babies, calming tantrums, folding laundry with a baby on my hip, and learning how to be gentle and strong at the same time. That early life taught me to notice people, to serve with love, and to find beauty in the everyday.
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              A fun fact about me: I am the oldest daughter in a family of twelve kids, and the only girl at the "boy" end of the family. I was VERY much a tomboy for a while, and it took many patient talks from my parents to get me to behave in any way like a lady. But I was also born with a STRONG maternal instinct. It started with my siblings—I loved helping Mom with the babies. I babysat often and had a running series of made-up stories I would tell my younger siblings before bedtime.
             </p>
           </div>
 
@@ -92,10 +92,14 @@ export default function About() {
             />
           </div>
 
-          {/* Current Life */}
+          {/* Photography Journey */}
           <div className="mb-12">
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              Now, I homeschool my own children and spend weekends capturing photographs of other families in their own beautiful, ordinary rhythm. I work mostly in the evenings or on Saturdays when my husband is home—he's my greatest support, he is a wedding videographer so we often do weddings together, we love being together!
+              Photography has always been a love of mine, even before I was a teen. My motive for taking pictures then was to document my little siblings' childhood, to be able to save happy moments where love was abundant even though life was messy.
+            </p>
+            
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              I used to spend any birthday money I got from my grandma on the old Kodak disposable cameras. I LOVED the feeling of having a little camera in my pocket. I was always trying to be ready for those sweet, natural moments to snap a picture of one of my "babies" (a.k.a. youngest siblings).
             </p>
             
             {/* Marriage and work as photographer */}
@@ -113,17 +117,30 @@ export default function About() {
             </div>
             
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              I photograph newborns, children, couples, and families—especially in the in-between moments. A little girl tangled in her mother's skirt. A toddler asleep on his father's shoulder. The way a grandmother lights up when she holds her grandson. These are the things I love to preserve.
+              This has followed me into adulthood (shocking as it may seem to hear coming from a photographer's website blog post, lol).
+            </p>
+            
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              The photos I love the most are the ones with connection in them—spark, emotion, love. The photos that show how you feel about someone.
             </p>
           </div>
 
           {/* Photography Style */}
           <div>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              My style is gentle, natural, and led by emotion rather than expectation. I don't ask your children to perform or pose. I follow their lead and capture the love that's already there.
+              I tried for a year or so to be the photographer who gets the "perfect" shot that makes the main subject look even better than they do in real life. But I found no fulfillment in that, and it was short-lived.
             </p>
+            
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
-              If your life is full of crumbs and cuddles, if your days are sweet but a little messy, if you want photos that feel like memory and not just image—I'd be honored to photograph you.
+              So I pivoted. I started leaning into what I myself loved:
+            </p>
+            
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              Moments snuggled up with my littles on the couch, their messy morning hair and sleepy eyes. Relaxing into a full embrace when my husband walks in the door and feeling my whole body breathe a deep sigh of contentment. The peek-a-boos and tickle fights. The fleeting newborn stage when everything slows down for a month and I soak up the precious new baby we were just blessed with.
+            </p>
+            
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
+              I love this life, and I am so thankful for the beautiful people in it.
             </p>
             
             {/* LARGEST CLUSTER - The variety of moments she captures */}
