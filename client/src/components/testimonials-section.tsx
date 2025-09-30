@@ -1,6 +1,13 @@
 import testimonialsImage from "@assets/DSC04852_1758849034580.jpg";
 
 export default function TestimonialsSection() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -48,7 +55,11 @@ export default function TestimonialsSection() {
               </div>
             </div>
             <div className="mt-16">
-              <button className="border-2 border-foreground hover:bg-foreground hover:text-white text-foreground px-10 py-4 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection("contact")}
+                className="border-2 border-foreground hover:bg-foreground hover:text-white text-foreground px-10 py-4 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300"
+                data-testid="button-capture-your-story"
+              >
                 CAPTURE YOUR STORY
               </button>
             </div>
