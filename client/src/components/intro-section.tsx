@@ -1,8 +1,11 @@
+import { useLocation } from "wouter";
 import handsImage from "@assets/Family Session (5)_1749523168826.jpg";
 import childImage from "@assets/Family Session DSC06856_1749523172272.jpg";
 import flowersImage from "@assets/Family Session (4)_1749523175905.jpg";
 
 export default function IntroSection() {
+  const [, setLocation] = useLocation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -45,22 +48,25 @@ export default function IntroSection() {
           </h4>
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => setLocation("/faq")}
               className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
+              data-testid="button-faq"
             >
               FAQS
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
+              data-testid="button-enquire"
             >
               ENQUIRE
             </button>
             <button
               onClick={() => scrollToSection("services")}
               className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 font-sans text-sm uppercase tracking-[0.1em] transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[120px]"
+              data-testid="button-sessions"
             >
-              PRICING
+              SESSIONS
             </button>
           </div>
         </div>
