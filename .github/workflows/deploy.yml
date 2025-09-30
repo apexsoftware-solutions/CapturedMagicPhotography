@@ -26,7 +26,20 @@ jobs:
         working-directory: client
         run: npm ci
 
-      # 4) Build frontend with EmailJS secrets injected as VITE_* env vars
+      # 4) Verify EmailJS secrets are present (fail fast if missing)
+      - name: Verify EmailJS secrets present
+        run: |
+          if [ -z "${{ secrets.EMAILJS_PUBLIC_KEY }}" ] || [ -z "${{ secrets.EMAILJS_SERVICE_ID }}" ] || [ -z "${{ secrets.EMAILJS_TEMPLATE_ID }}" ]; then
+            echo "❌ One or more EmailJS secrets are missing. Aborting build."
+            echo "Please add the following secrets to your GitHub repository:"
+            echo "  - EMAILJS_PUBLIC_KEY"
+            echo "  - EMAILJS_SERVICE_ID"
+            echo "  - EMAILJS_TEMPLATE_ID"
+            exit 1
+          fi
+          echo "✅ All EmailJS secrets are present"
+
+      # 5) Build frontend with EmailJS secrets injected as VITE_* env vars
       #    These will be available in your client code as import.meta.env.VITE_EMAILJS_...
       - name: Build frontend
         working-directory: client
@@ -36,7 +49,7 @@ jobs:
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
         run: npm run build
 
-      # 5) Inspect build output (debug) - helpful to confirm dist/public exists and contains index.html
+      # 6) Inspect build output (debug) - helpful to confirm dist/public exists and contains index.html
       - name: Inspect build output (debug)
         run: |
           echo "=== repo root contents ==="
@@ -48,7 +61,7 @@ jobs:
           echo "=== client contents ==="
           ls -la client || true
 
-      # 6) Ensure publish dir has a hidden file so the peaceiris cp '.*' glob doesn't fail
+      # 7) Ensure publish dir has a hidden file so the peaceiris cp '.*' glob doesn't fail
       - name: Ensure publish dir has a dotfile (fix cp .* issue)
         run: |
           mkdir -p dist/public
@@ -57,7 +70,7 @@ jobs:
           echo "Created placeholder in dist/public:"
           ls -la dist/public || true
 
-      # 7) Deploy to external deploy repo - publish dist/public
+      # 8) Deploy to external deploy repo - publish dist/public
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:
