@@ -16,7 +16,10 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -196,16 +199,24 @@ export default function ContactSection() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="families">Families</SelectItem>
-                        <SelectItem value="couples">Couples</SelectItem>
-                        <SelectItem value="newborn">Newborn</SelectItem>
-                        <SelectItem value="maternity">Maternity</SelectItem>
-                        <SelectItem value="mommy-and-me">Mommy & Me</SelectItem>
-                        <SelectItem value="your-story">Your Story</SelectItem>
-                        <SelectItem value="senior">Senior Sessions</SelectItem>
-                        <SelectItem value="engagement">Engagement Sessions</SelectItem>
-                        <SelectItem value="weddings">Weddings</SelectItem>
-                        <SelectItem value="birthing">Birthing Sessions</SelectItem>
+                        <SelectGroup>
+                          <SelectLabel>Primary Sessions</SelectLabel>
+                          <SelectItem value="families">Families</SelectItem>
+                          <SelectItem value="couples">Couples</SelectItem>
+                          <SelectItem value="newborn">Newborn</SelectItem>
+                          <SelectItem value="maternity">Maternity</SelectItem>
+                          <SelectItem value="mommy-and-me">Mommy & Me</SelectItem>
+                          <SelectItem value="your-story">Your Story</SelectItem>
+                        </SelectGroup>
+                        <SelectSeparator />
+                        <SelectGroup>
+                          <SelectLabel>Additional Sessions</SelectLabel>
+                          <SelectItem value="senior">Senior Sessions</SelectItem>
+                          <SelectItem value="engagement">Engagement Sessions</SelectItem>
+                          <SelectItem value="weddings">Weddings</SelectItem>
+                          <SelectItem value="birthing">Birthing Sessions</SelectItem>
+                        </SelectGroup>
+                        <SelectSeparator />
                         <SelectItem value="custom">Custom Package</SelectItem>
                       </SelectContent>
                     </Select>
