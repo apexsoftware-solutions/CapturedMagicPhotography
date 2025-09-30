@@ -112,13 +112,13 @@ export default function About() {
               />
             </div>
             
-            <p className="font-sans text-lg leading-relaxed text-foreground">
+            <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
               I photograph newborns, children, couples, and families—especially in the in-between moments. A little girl tangled in her mother's skirt. A toddler asleep on his father's shoulder. The way a grandmother lights up when she holds her grandson. These are the things I love to preserve.
             </p>
           </div>
 
           {/* Photography Style */}
-          <div className="mb-12">
+          <div>
             <p className="font-sans text-lg leading-relaxed text-foreground mb-6">
               My style is gentle, natural, and led by emotion rather than expectation. I don't ask your children to perform or pose. I follow their lead and capture the love that's already there.
             </p>
