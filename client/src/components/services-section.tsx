@@ -132,12 +132,11 @@ export default function ServicesSection() {
                   {additionalSessions.map((session, index) => (
                     <div key={index}>
                       <div
-                        className="px-6 py-3.5 hover:bg-white/80 transition-all duration-300 font-sans text-gray-800 cursor-pointer group flex items-center justify-between"
+                        className="px-6 py-3.5 hover:bg-white/80 transition-all duration-300 font-sans text-gray-800 cursor-pointer group"
                       >
-                        <span className="tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+                        <span className="tracking-wide group-hover:translate-x-1 transition-transform duration-300 inline-block">
                           {session}
                         </span>
-                        <span className="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
                       </div>
                       {index < additionalSessions.length - 1 && (
                         <div className="mx-6 border-t border-gray-200/50"></div>
