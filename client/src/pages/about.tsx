@@ -1,29 +1,20 @@
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
-import aboutImage1 from "@assets/IMG_0843_1749571537894.jpg";
-import aboutImage2 from "@assets/IMG_3279_1749571542677.jpg";
-import aboutImage3 from "@assets/kimberly-headshot.jpg";
+import aboutHeaderImage from "@assets/kimberly-headshot.jpg";
 
 // New lifestyle images
-import morningCoffee from "@assets/DSC01280_1758850014329.jpg";
-import mountainCouple from "@assets/DSC01839_1758850017945.jpg";
-import tireSwingMoment from "@assets/DSC01062_1758850023277.jpg";
-import homeschoolSetup from "@assets/DSC01225_1758850026261.jpg";
-import familyCuddles from "@assets/DSC01362_1758850029208.jpg";
-import couchReading from "@assets/DSC01321_1758850031426.jpg";
-import chickenCoop from "@assets/DSC00776_1758850033848.jpg";
-import laundryLine from "@assets/DSC00951_1758850039563.jpg";
-import childLaundry from "@assets/DSC00966_1758850046546.jpg";
-import familyHug from "@assets/DSC00984_1758850050276.jpg";
-import workingMom from "@assets/DSC01198_1758850053289.jpg";
-import tableLessons from "@assets/DSC01148_1758850056058.jpg";
-import bookshelfDetail from "@assets/DSC00159_1758850062637.jpg";
-import bakingTime from "@assets/IMG_9199_1758850084337.jpg";
-import kitchenHelpers from "@assets/IMG_9193_1758850089863.jpg";
-import youngReader from "@assets/DSC00072_1758850092576.jpg";
-import libraryMoment from "@assets/DSC00074_1758850098478.jpg";
-import toyBlocks from "@assets/DSC00157_1758850101878.jpg";
+import morningCoffee from "@assets/DSC01281_1759240262830.jpg";
+import homeReading from "@assets/DSC01401_1759240262830.jpg";
+import familyBookTime from "@assets/DSC01351_1759240262830.jpg";
+import motherKidsCuddle from "@assets/DSC01335_1759240262830.jpg";
+import couchReading from "@assets/DSC01321_1759240262830.jpg";
+import tireSwingMoment from "@assets/DSC01062_1759240262830.jpg";
+import babyChicks from "@assets/DSC00788_1759240262830.jpg";
+import outdoorPortrait from "@assets/DSC00346_1759240262830.jpg";
+import musicBook from "@assets/DSC00240_1759240262830.jpg";
+import indoorPortrait from "@assets/DSC00229_1759240262830.jpg";
+import mountainCouple from "@assets/DSC01839_1759240262830.jpg";
 
 export default function About() {
   useEffect(() => {
@@ -61,7 +52,7 @@ export default function About() {
           {/* Headshot Photo */}
           <div className="mb-12">
             <img
-              src={aboutImage3}
+              src={aboutHeaderImage}
               alt="Kimberly, photographer and mother"
               className="w-full h-auto rounded-lg shadow-sm"
             />
@@ -81,8 +72,8 @@ export default function About() {
                 className="w-full h-auto rounded-lg shadow-sm"
               />
               <img
-                src={homeschoolSetup}
-                alt="Homeschool workspace with vintage charm"
+                src={homeReading}
+                alt="Reading and learning at home"
                 className="w-full h-auto rounded-lg shadow-sm"
               />
             </div>
@@ -95,8 +86,8 @@ export default function About() {
           {/* First Image */}
           <div className="mb-12">
             <img
-              src={aboutImage1}
-              alt="Mother and child embracing in warm natural light"
+              src={familyBookTime}
+              alt="Family reading together on the couch"
               className="w-full h-auto rounded-lg shadow-sm"
             />
           </div>
@@ -111,8 +102,8 @@ export default function About() {
             <div className="my-6">
               <div className="grid md:grid-cols-3 gap-3 mb-4">
                 <img
-                  src={tableLessons}
-                  alt="Homeschool lessons at the kitchen table"
+                  src={motherKidsCuddle}
+                  alt="Mother embracing her children"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
                 <img
@@ -121,8 +112,8 @@ export default function About() {
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
                 <img
-                  src={libraryMoment}
-                  alt="Reading with children by the bookshelf"
+                  src={musicBook}
+                  alt="Music and hymns at the piano"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
@@ -133,8 +124,8 @@ export default function About() {
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
                 <img
-                  src={workingMom}
-                  alt="Balancing work and motherhood"
+                  src={indoorPortrait}
+                  alt="Capturing authentic moments"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
@@ -148,8 +139,8 @@ export default function About() {
           {/* Second Image */}
           <div className="mb-12">
             <img
-              src={aboutImage2}
-              alt="Quiet family moments captured naturally"
+              src={outdoorPortrait}
+              alt="Natural outdoor portrait in beautiful greenery"
               className="w-full h-auto rounded-lg shadow-sm"
             />
           </div>
@@ -165,70 +156,15 @@ export default function About() {
             
             {/* Daily life and beautiful ordinary moments */}
             <div className="my-6">
-              <div className="grid md:grid-cols-2 gap-3 mb-4">
+              <div className="grid md:grid-cols-2 gap-3">
                 <img
-                  src={chickenCoop}
-                  alt="Homestead life - mother and daughter with chickens"
+                  src={babyChicks}
+                  alt="Homestead life with baby chicks"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
                 <img
                   src={tireSwingMoment}
-                  alt="Playful childhood moments"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-3 mb-4">
-                <img
-                  src={laundryLine}
-                  alt="Simple daily rhythms - hanging laundry"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={childLaundry}
-                  alt="Children helping with daily tasks"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={youngReader}
-                  alt="Quiet learning moments"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-3 mb-4">
-                <img
-                  src={bakingTime}
-                  alt="Kitchen moments and baking together"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={kitchenHelpers}
-                  alt="Family cooking and kitchen life"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-              </div>
-              
-              <img
-                src={familyHug}
-                alt="The heart of family - mother embracing her three children"
-                className="w-full h-auto rounded-lg shadow-sm mb-4"
-              />
-              
-              <div className="grid md:grid-cols-3 gap-3">
-                <img
-                  src={familyCuddles}
-                  alt="Tender family moments"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={bookshelfDetail}
-                  alt="Learning and literature in daily life"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={toyBlocks}
-                  alt="Simple childhood pleasures"
+                  alt="Playful childhood moments on the tire swing"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
