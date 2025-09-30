@@ -190,32 +190,32 @@ export default function ImageGallery({ onImageClick }: ImageGalleryProps) {
           {/* Navigation Arrows - Only visible on hover */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
             data-testid="button-previous-slide"
             aria-label="Previous image"
           >
-            <ChevronLeft size={24} className="text-white" />
+            <ChevronLeft size={32} className="text-white drop-shadow-lg" />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
             data-testid="button-next-slide"
             aria-label="Next image"
           >
-            <ChevronRight size={24} className="text-white" />
+            <ChevronRight size={32} className="text-white drop-shadow-lg" />
           </button>
 
           {/* Dot Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
             {slideshowImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-white scale-125' 
-                    : 'bg-white/50 hover:bg-white/75'
+                    ? 'bg-white/80' 
+                    : 'bg-white/30 hover:bg-white/50'
                 }`}
                 data-testid={`dot-indicator-${index}`}
                 aria-label={`Go to slide ${index + 1}`}
