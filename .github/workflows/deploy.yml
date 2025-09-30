@@ -49,19 +49,7 @@ jobs:
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
         run: npm run build
 
-      # 6) Inspect build output (debug) - helpful to confirm dist/public exists and contains index.html
-      - name: Inspect build output (debug)
-        run: |
-          echo "=== repo root contents ==="
-          ls -la
-          echo "=== dist contents ==="
-          ls -la dist || true
-          echo "=== dist/public contents ==="
-          ls -la dist/public || true
-          echo "=== client contents ==="
-          ls -la client || true
-
-      # 7) Ensure publish dir has a hidden file so the peaceiris cp '.*' glob doesn't fail
+      # 6) Ensure publish dir has a hidden file so the peaceiris cp '.*' glob doesn't fail
       - name: Ensure publish dir has a dotfile (fix cp .* issue)
         run: |
           mkdir -p dist/public
@@ -70,7 +58,7 @@ jobs:
           echo "Created placeholder in dist/public:"
           ls -la dist/public || true
 
-      # 8) Deploy to external deploy repo - publish dist/public
+      # 7) Deploy to external deploy repo - publish dist/public
       - name: Deploy to Hostinger repo
         uses: peaceiris/actions-gh-pages@v3
         with:

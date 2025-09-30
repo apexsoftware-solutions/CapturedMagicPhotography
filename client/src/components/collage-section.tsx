@@ -45,11 +45,6 @@ export default function CollageSection() {
           style={{
             transform: `translateY(-${parallaxOffset}px)`
           }}
-          onError={(e) => {
-            console.error('Image failed to load:', e);
-            console.log('Image source:', collageImage);
-          }}
-          onLoad={() => console.log('Image loaded and should be visible:', collageImage)}
         />
         
         {/* Text overlay */}
