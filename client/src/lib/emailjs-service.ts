@@ -1,20 +1,18 @@
 import emailjs from '@emailjs/browser';
 import type { InsertContactInquiry } from '@shared/schema';
 
-// EmailJS configuration - these will be set as environment variables
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-// Deployment debugging (remove in production)
-if (import.meta.env.DEV) {
-  console.log('EmailJS Debug Info:', {
-    hasServiceId: !!EMAILJS_SERVICE_ID,
-    hasTemplateId: !!EMAILJS_TEMPLATE_ID,
-    hasPublicKey: !!EMAILJS_PUBLIC_KEY,
-    serviceIdPrefix: EMAILJS_SERVICE_ID ? EMAILJS_SERVICE_ID.substring(0, 8) + '...' : 'missing',
-    env: import.meta.env.MODE
+if (!PUBLIC_KEY || !SERVICE_ID || !TEMPLATE_ID) {
+  console.error('EmailJS is not properly configured. Missing environment variables:', {
+    hasPublicKey: !!PUBLIC_KEY,
+    hasServiceId: !!SERVICE_ID,
+    hasTemplateId: !!TEMPLATE_ID
   });
+} else {
+  emailjs.init(PUBLIC_KEY);
 }
 
 export interface EmailJSResponse {
@@ -30,7 +28,6 @@ export interface EmailSendResult {
 
 export class EmailJSService {
   private static instance: EmailJSService;
-  private isInitialized = false;
 
   private constructor() {}
 
@@ -42,20 +39,10 @@ export class EmailJSService {
   }
 
   /**
-   * Initialize EmailJS with the public key
-   */
-  private initialize(): void {
-    if (!this.isInitialized && EMAILJS_PUBLIC_KEY) {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
-      this.isInitialized = true;
-    }
-  }
-
-  /**
    * Check if EmailJS is properly configured
    */
   isConfigured(): boolean {
-    return !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY);
+    return !!(SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY);
   }
 
   /**
@@ -66,18 +53,15 @@ export class EmailJSService {
       // Check if EmailJS is configured
       if (!this.isConfigured()) {
         console.error('EmailJS is not properly configured. Missing environment variables:', {
-          hasServiceId: !!EMAILJS_SERVICE_ID,
-          hasTemplateId: !!EMAILJS_TEMPLATE_ID,
-          hasPublicKey: !!EMAILJS_PUBLIC_KEY
+          hasPublicKey: !!PUBLIC_KEY,
+          hasServiceId: !!SERVICE_ID,
+          hasTemplateId: !!TEMPLATE_ID
         });
         return {
           success: false,
           error: 'Email service not configured. Please check environment variables.',
         };
       }
-
-      // Initialize EmailJS
-      this.initialize();
 
       // Format the session type for display
       const sessionTypeFormatted = inquiry.sessionType
@@ -116,8 +100,8 @@ export class EmailJSService {
 
       // Send email using EmailJS
       const response: EmailJSResponse = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+        SERVICE_ID,
+        TEMPLATE_ID,
         templateParams
       );
 
@@ -147,9 +131,9 @@ export class EmailJSService {
   getConfigStatus(): { configured: boolean; missingVars: string[] } {
     const missingVars: string[] = [];
     
-    if (!EMAILJS_SERVICE_ID) missingVars.push('VITE_EMAILJS_SERVICE_ID');
-    if (!EMAILJS_TEMPLATE_ID) missingVars.push('VITE_EMAILJS_TEMPLATE_ID');
-    if (!EMAILJS_PUBLIC_KEY) missingVars.push('VITE_EMAILJS_PUBLIC_KEY');
+    if (!SERVICE_ID) missingVars.push('VITE_EMAILJS_SERVICE_ID');
+    if (!TEMPLATE_ID) missingVars.push('VITE_EMAILJS_TEMPLATE_ID');
+    if (!PUBLIC_KEY) missingVars.push('VITE_EMAILJS_PUBLIC_KEY');
 
     return {
       configured: missingVars.length === 0,
