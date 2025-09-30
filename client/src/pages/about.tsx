@@ -6,15 +6,15 @@ import aboutHeaderImage from "@assets/kimberly-headshot.jpg";
 // New lifestyle images
 import morningCoffee from "@assets/DSC01281_1759240262830.jpg";
 import homeReading from "@assets/DSC01401_1759240262830.jpg";
-import familyBookTime from "@assets/DSC01351_1759240262830.jpg";
 import motherKidsCuddle from "@assets/DSC01335_1759240262830.jpg";
-import couchReading from "@assets/DSC01321_1759240262830.jpg";
-import tireSwingMoment from "@assets/DSC01062_1759240262830.jpg";
-import babyChicks from "@assets/DSC00788_1759240262830.jpg";
+import mountainCouple from "@assets/DSC01839_1759240262830.jpg";
 import outdoorPortrait from "@assets/DSC00346_1759240262830.jpg";
+import familyBookTime from "@assets/DSC01351_1759240262830.jpg";
+import couchReading from "@assets/DSC01321_1759240262830.jpg";
 import musicBook from "@assets/DSC00240_1759240262830.jpg";
 import indoorPortrait from "@assets/DSC00229_1759240262830.jpg";
-import mountainCouple from "@assets/DSC01839_1759240262830.jpg";
+import tireSwingMoment from "@assets/DSC01062_1759240262830.jpg";
+import babyChicks from "@assets/DSC00788_1759240262830.jpg";
 
 export default function About() {
   useEffect(() => {
@@ -83,11 +83,11 @@ export default function About() {
             </p>
           </div>
 
-          {/* First Image */}
+          {/* First Image - The tenderness she learned growing up */}
           <div className="mb-12">
             <img
-              src={familyBookTime}
-              alt="Family reading together on the couch"
+              src={motherKidsCuddle}
+              alt="Mother embracing her children with tenderness"
               className="w-full h-auto rounded-lg shadow-sm"
             />
           </div>
@@ -98,51 +98,23 @@ export default function About() {
               Now, I homeschool my own children and spend weekends capturing photographs of other families in their own beautiful, ordinary rhythm. I work mostly in the evenings or on Saturdays when my husband is home—he's my greatest support, he is a wedding videographer so we often do weddings together, we love being together!
             </p>
             
-            {/* Homeschool and family life images */}
-            <div className="my-6">
-              <div className="grid md:grid-cols-3 gap-3 mb-4">
-                <img
-                  src={motherKidsCuddle}
-                  alt="Mother embracing her children"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={couchReading}
-                  alt="Family reading time together"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={musicBook}
-                  alt="Music and hymns at the piano"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-3">
-                <img
-                  src={mountainCouple}
-                  alt="Marriage and partnership - couple on mountain overlook"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-                <img
-                  src={indoorPortrait}
-                  alt="Capturing authentic moments"
-                  className="w-full h-auto rounded-lg shadow-sm"
-                />
-              </div>
+            {/* Marriage and work as photographer */}
+            <div className="my-6 grid md:grid-cols-2 gap-3">
+              <img
+                src={mountainCouple}
+                alt="Marriage and partnership - couple on mountain overlook"
+                className="w-full h-auto rounded-lg shadow-sm"
+              />
+              <img
+                src={outdoorPortrait}
+                alt="Kimberly as photographer in her element"
+                className="w-full h-auto rounded-lg shadow-sm"
+              />
             </div>
             
             <p className="font-sans text-lg leading-relaxed text-foreground">
               I photograph newborns, children, couples, and families—especially in the in-between moments. A little girl tangled in her mother's skirt. A toddler asleep on his father's shoulder. The way a grandmother lights up when she holds her grandson. These are the things I love to preserve.
             </p>
-          </div>
-
-          {/* Second Image */}
-          <div className="mb-12">
-            <img
-              src={outdoorPortrait}
-              alt="Natural outdoor portrait in beautiful greenery"
-              className="w-full h-auto rounded-lg shadow-sm"
-            />
           </div>
 
           {/* Photography Style */}
@@ -154,17 +126,43 @@ export default function About() {
               If your life is full of crumbs and cuddles, if your days are sweet but a little messy, if you want photos that feel like memory and not just image—I'd be honored to photograph you.
             </p>
             
-            {/* Daily life and beautiful ordinary moments */}
+            {/* LARGEST CLUSTER - The variety of moments she captures */}
             <div className="my-6">
-              <div className="grid md:grid-cols-2 gap-3">
+              <div className="grid md:grid-cols-2 gap-3 mb-4">
                 <img
-                  src={babyChicks}
-                  alt="Homestead life with baby chicks"
+                  src={familyBookTime}
+                  alt="Family reading together - capturing tender moments"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+                <img
+                  src={couchReading}
+                  alt="Cozy family reading time"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-3 mb-4">
+                <img
+                  src={musicBook}
+                  alt="Music and hymns at the piano"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+                <img
+                  src={indoorPortrait}
+                  alt="Warm, genuine portraits"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
                 <img
                   src={tireSwingMoment}
                   alt="Playful childhood moments on the tire swing"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-3">
+                <img
+                  src={babyChicks}
+                  alt="Simple homestead life with baby chicks"
                   className="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
