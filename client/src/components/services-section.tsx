@@ -127,14 +127,21 @@ export default function ServicesSection() {
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-10 animate-in fade-in slide-in-from-top-2 duration-200">
-                <div className="py-2">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-72 bg-gradient-to-b from-white to-gray-50/50 backdrop-blur-sm border border-gray-200/60 rounded-xl shadow-2xl z-10 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
+                <div className="py-3">
                   {additionalSessions.map((session, index) => (
-                    <div
-                      key={index}
-                      className="px-4 py-3 hover:bg-gray-50 transition-colors duration-200 font-sans text-gray-700 cursor-pointer"
-                    >
-                      {session}
+                    <div key={index}>
+                      <div
+                        className="px-6 py-3.5 hover:bg-white/80 transition-all duration-300 font-sans text-gray-800 cursor-pointer group flex items-center justify-between"
+                      >
+                        <span className="tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+                          {session}
+                        </span>
+                        <span className="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
+                      </div>
+                      {index < additionalSessions.length - 1 && (
+                        <div className="mx-6 border-t border-gray-200/50"></div>
+                      )}
                     </div>
                   ))}
                 </div>
